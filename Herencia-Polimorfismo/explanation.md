@@ -2,7 +2,7 @@
 ### Polimorfismo = Capacidad de un objeto para tomar muchas formas 
 
 
-```
+```php
 <?php
 
 /*
