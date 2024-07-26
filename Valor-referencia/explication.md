@@ -15,6 +15,11 @@ echo $a; // Salida: 5
 echo $b; // Salida: 10
 ```
 
+## Tipos de datos por Valor
+- Primitivos (integers, floats, strings, booleans ....)
+- Arrays
+- Null
+
 ## Por referencia
 
 Ambas variables apuntan al mismo valor. 
@@ -29,4 +34,17 @@ $b = 10;   // Cambiamos el valor de $b, que también cambia el valor de $a
 
 echo $a; // Salida: 10
 echo $b; // Salida: 10
+```
+
+## Tipos de datos por Referencia
+
+- Objetos
+- Recursos (recuros externos, ficheros, conexiones a BD, ...)
+
+```
+$handle = fopen("file.txt", "r");
+$anotherHandle = $handle;
+
+// Ambos manejadores apuntan al mismo recurso de archivo
+
 ```
