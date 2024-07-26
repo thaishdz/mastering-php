@@ -114,7 +114,7 @@ try {
 ?>
 ```
 
-### Jerarquía de Excepciones
+## Jerarquía de Excepciones
 
 Capturar diferentes tipos de excepciones en un orden específico:
 
@@ -135,8 +135,9 @@ try {
 }
 ?>
 ```
+Orden : De la más específica a la más general
 
-### `finally`
+## `finally`
 
 El bloque `finally` se ejecuta independientemente de si se lanzó o no una excepción:
 
