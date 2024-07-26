@@ -1,4 +1,5 @@
-![](https://static.wikia.nocookie.net/losjvenestitanesenaccion/images/1/1c/BeastBoy.png/revision/latest?cb=20130909014653&path-prefix=es)
+![image](https://github.com/user-attachments/assets/25b91e9d-81b7-4ef4-af3e-f4005826b99a)
+
 ### Polimorfismo = Capacidad de un objeto para tomar muchas formas 
 
 
