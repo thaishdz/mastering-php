@@ -1,4 +1,4 @@
-# mastering-php
+# ⭐⭐⭐ Road to PHP Master ⭐⭐⭐
 
 ![image](https://github.com/user-attachments/assets/34c9c4d3-e55e-4c25-9cbe-3633c012c004)
 
