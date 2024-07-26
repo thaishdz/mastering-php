@@ -10,6 +10,12 @@
 - Herencia y Polimorfismo
 - Excepciones
 
-[]
+[-24]
 
--
+- Unit tests
+- Fechas
+- Expresiones Regulares
+
+[-24]
+
+- 
