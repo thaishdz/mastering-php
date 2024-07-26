@@ -1,4 +1,6 @@
-# Por valor
+# Asignación de variables por valor y referencia
+
+## Por valor
 
 Se copia el valor de una variable a otra. 
 Las dos variables son independientes; los cambios en una no afectan a la otra.
@@ -13,7 +15,7 @@ echo $a; // Salida: 5
 echo $b; // Salida: 10
 ```
 
-# Por referencia
+## Por referencia
 
 Ambas variables apuntan al mismo valor. 
 Un cambio en una variable afecta a la otra.
