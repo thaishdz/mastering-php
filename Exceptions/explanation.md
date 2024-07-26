@@ -21,6 +21,47 @@ try {
 ?>
 ```
 
+La clase `Exception` en PHP tiene un constructor predeterminado que permite especificar el mensaje de la excepción, así como otros parámetros opcionales. Aquí está la firma del constructor de la clase `Exception`:
+
+```php
+public Exception::__construct(string $message = "", int $code = 0, ?Throwable $previous = null)
+```
+
+#### Parámetros del Constructor
+
+- **`$message`**: El mensaje descriptivo de la excepción (cadena de texto).
+- **`$code`**: Un código de error opcional (entero).
+- **`$previous`**: Una excepción previa utilizada para encadenar excepciones (instancia de `Throwable` o `null`).
+
+### Ejemplo de Uso
+
+Un ejemplo utilizando los parámetros del constructor:
+
+```php
+<?php
+try {
+    // Lanza una excepción con un mensaje y un código de error
+    throw new Exception("Este es el mensaje de la excepción", 100);
+} catch (Exception $e) {
+    echo "Mensaje: " . $e->getMessage() . "<br>";
+    echo "Código: " . $e->getCode() . "<br>";
+    echo "Archivo: " . $e->getFile() . "<br>";
+    echo "Línea: " . $e->getLine() . "<br>";
+}
+?>
+```
+
+### Resultado
+
+El código anterior producirá una salida similar a:
+
+```
+Mensaje: Este es el mensaje de la excepción
+Código: 100
+Archivo: /ruta/del/archivo.php
+Línea: 4
+```
+
 ## Excepciones Personalizadas
 
 ```php
