@@ -167,7 +167,7 @@ class CalculatorTest extends TestCase
 
 ## Lanzamiento batería de test comprobación ejecución setUp
 
-Aquí se puede ver perfectamente la traza de ejecución, se han lanzado 2 tests individuales
+Aquí se puede ver perfectamente la traza de ejecución, se han lanzado 2 tests individuales (de la misma clase `StudentTest`)
 y en cada uno de ellos se ha ejecutado el `setUp` para instanciar en este caso la clase Student
 
 ```
