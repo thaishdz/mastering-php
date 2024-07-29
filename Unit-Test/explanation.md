@@ -2,9 +2,7 @@
 
 Para crear tests unitarios en PHP, se utiliza comúnmente `PHPUnit`, una herramienta que facilita la creación y ejecución de tests.
 
-# Configuring `phpunit.xml`
-
-Para crear tests unitarios en PHP, se utiliza comúnmente PHPUnit, una herramienta que facilita la creación y ejecución de tests. Aquí te dejo los pasos básicos para configurar y escribir un test unitario:
+# Pasos básicos para configurar y escribir un test unitario:
 
 ### Instalación de PHPUnit
 
@@ -18,7 +16,7 @@ Para crear tests unitarios en PHP, se utiliza comúnmente PHPUnit, una herramien
    vendor/bin/phpunit --version
    ```
 
-### Configuración
+### Configuración `phpunit.xml`
 
 Crea un archivo `phpunit.xml` en la raíz de tu proyecto para configurar PHPUnit:
 
