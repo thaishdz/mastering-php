@@ -1,13 +1,36 @@
 # Autoload
+
+El autoloading se refiere a la __capacidad de cargar clases automáticamente sin tener que incluir manualmente los archivos que las contienen__
+
 Hay 2 formas para cargar clases en los scripts :
 - Autoloading con Composer: Configura Composer para cargar automáticamente tus clases 
 - Incluir Manualmente la Clase: Incluye manualmente el archivo de la clase en el script de prueba -> require_once 'src/Calculator'
 
+### Dónde se coloca la llamada al autoload.php?
+
+Para incluir el archivo de autoloading generalmente se coloca en el archivo principal de entrada de tu aplicación, que suele ser `index.php`
+
+Si estás usando Composer ... 
+
+Debes incluir el archivo vendor/autoload.php generado por Composer. Esto se hace normalmente al principio de index.php.
+
+```
+<?php
+// index.php
+require 'vendor/autoload.php';
+
+// Ahora puedes usar tus clases y las dependencias gestionadas por Composer
+$obj = new MyClass();
+
+```
+En este caso, asegúrate de ejecutar `composer install` para generar el archivo vendor/autoload.php, 
+y asegúrate de que `composer.json` esté correctamente configurado con las dependencias y namespaces necesarios.
+
+
 Para cargar las clases automáticamente en un proyecto PHP utilizando Composer, 
 debes configurar el autoload en tu archivo `composer.json`. 
 
-Solución 1: Autoloading con Composer
-Asegúrate de que Composer esté configurado para el autoloading. Agrega lo siguiente a tu archivo composer.json:
+Solución 1: Autoloading con Composer en el `composer.json`
 
 ```json
 {
@@ -24,6 +47,43 @@ Luego, ejecuta:
 ```sh
 composer dump-autoload
 ```
+
+# A qué te refieres con eso de namespaces?
+
+Cuando usas `namespace App`, estás definiendo el espacio de nombres (namespace) para tus clases en PHP. 
+Esto es una característica __nativa de PHP__ y no está directamente relacionado con el autoloader de Composer, aunque ambos conceptos se usan comúnmente juntos.
+
+### Espacios de Nombres (Namespaces) en PHP
+Los espacios de nombres en PHP permiten organizar el código en diferentes "áreas" o "paquetes", evitando conflictos de nombres entre clases, funciones y constantes. Por ejemplo:
+
+```php
+
+<?php
+namespace App;
+
+class Calculator
+{
+    public function add($a, $b)
+    {
+        return $a + $b;
+    }
+}
+```
+
+En el `composer.json` asociar la estrategia de carga a utilizar con el namespace y el directorio
+
+
+```json
+{
+    "autoload": {
+        "psr-4": {
+            "YourNamespace\\": "src/"
+        }
+    }
+}
+```
+
+Aquí, App es el espacio de nombres que ayuda a organizar la clase Calculator.
 
 # Estrategias para cargar clases
 
@@ -256,6 +316,4 @@ Cuando ejecutas `new Student();` en el método `setUp`, el autoload de Composer 
 - **Declaración `use`:** Simplifica el uso de clases con namespaces largos.
 - **Inclusión de `vendor/autoload.php`:** Configura el autoload para que esté disponible durante la ejecución del script.
 
-El autoload no se "ve" directamente en el código donde instancias las clases; más bien, está en segundo plano, 
-asegurando que las clases se carguen correctamente cuando se necesitan. Por lo tanto, debes incluir el archivo de autoload 
-y usar la declaración `use` para manejar los namespaces en tu código PHP.
+
