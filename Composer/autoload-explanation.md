@@ -2,6 +2,9 @@
 
 El autoloading se refiere a la __capacidad de cargar clases automáticamente sin tener que incluir manualmente los archivos que las contienen__
 
+![image](https://github.com/user-attachments/assets/83559282-00ac-4eb7-8d86-d3b9badc8503)
+
+
 Hay 2 formas para cargar clases en los scripts :
 - Autoloading con Composer: Configura Composer para cargar automáticamente tus clases 
 - Incluir Manualmente la Clase: Incluye manualmente el archivo de la clase en el script de prueba -> require_once 'src/Calculator'
@@ -14,7 +17,7 @@ Si estás usando Composer ...
 
 Debes incluir el archivo vendor/autoload.php generado por Composer. Esto se hace normalmente al principio de index.php.
 
-```
+```php
 <?php
 // index.php
 require 'vendor/autoload.php';
