@@ -1,6 +1,96 @@
 # Unit Testing
 
+Para crear tests unitarios en PHP, se utiliza comúnmente `PHPUnit`, una herramienta que facilita la creación y ejecución de tests.
 
+# Configuring `phpunit.xml`
+
+Para crear tests unitarios en PHP, se utiliza comúnmente PHPUnit, una herramienta que facilita la creación y ejecución de tests. Aquí te dejo los pasos básicos para configurar y escribir un test unitario:
+
+### Instalación de PHPUnit
+
+1. Instala PHPUnit utilizando Composer:
+   ```sh
+   composer require --dev phpunit/phpunit ^9
+   ```
+
+2. Verifica la instalación:
+   ```sh
+   vendor/bin/phpunit --version
+   ```
+
+### Configuración
+
+Crea un archivo `phpunit.xml` en la raíz de tu proyecto para configurar PHPUnit:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+```
+
+### Creación de un Test
+
+1. Crea un directorio llamado `tests` en la raíz de tu proyecto.
+2. Dentro del directorio `tests`, crea un archivo para tus tests, por ejemplo `CalculatorTest.php`.
+
+### Ejemplo de un Test Unitario
+
+Supongamos que tienes una clase `Calculator` con un método `add` que suma dos números. El código de la clase podría ser algo como esto:
+
+```php
+<?php
+// src/Calculator.php
+class Calculator
+{
+    public function add($a, $b)
+    {
+        return $a + $b;
+    }
+}
+```
+
+Ahora, el test unitario para esta clase sería:
+
+```php
+<?php
+// tests/CalculatorTest.php
+use PHPUnit\Framework\TestCase;
+require_once 'src/Calculator';  // adición manual de la carga de la clase (sin autoload)
+
+class CalculatorTest extends TestCase
+{
+    public function testAdd()
+    {
+        $calculator = new Calculator();
+        $result = $calculator->add(2, 3);
+        $this->assertEquals(5, $result);
+    }
+}
+```
+
+### Ejecutar los Tests
+
+Para ejecutar los tests, simplemente corre el siguiente comando en la raíz de tu proyecto:
+
+```sh
+vendor/bin/phpunit
+```
+
+Esto ejecutará todos los tests en el directorio `tests` y mostrará los resultados en la terminal.
+
+### Resumen
+
+1. Instala PHPUnit con Composer.
+2. Configura PHPUnit con un archivo `phpunit.xml`.
+3. Crea tus tests en el directorio `tests`.
+4. Ejecuta los tests con `vendor/bin/phpunit`.
 
 
 ## `setUp()`
