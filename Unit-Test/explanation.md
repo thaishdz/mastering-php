@@ -164,6 +164,32 @@ class CalculatorTest extends TestCase
 
 - __Consistencia__: Es una convención en PHPUnit y en muchos frameworks de pruebas que los métodos de configuración (como `setUp` y `tearDown`) sean protected. Esto ayuda a mantener un estilo de código consistente y fácil de entender para otros desarrolladores que lean o mantengan tus pruebas.
 
+
+## Lanzamiento batería de test comprobación ejecución setUp
+
+Aquí se puede ver perfectamente la traza de ejecución, se han lanzado 2 tests individuales
+y en cada uno de ellos se ha ejecutado el `setUp` para instanciar en este caso la clase Student
+
+```
+EE                                                                  2 / 2 (100%)
+
+Time: 00:00.005, Memory: 8.00 MB
+
+There were 2 errors:
+
+1) StudentTest::testFieldExist
+Error: Class "Student" not found
+
+/var/www/tests/StudentTest.php:14
+
+2) StudentTest::testData
+Error: Class "Student" not found
+
+/var/www/tests/StudentTest.php:14
+
+
+```
+
 # Mostrar valores en el test a través de consola
 
 ```php 
