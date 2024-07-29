@@ -15,7 +15,7 @@ Para incluir el archivo de autoloading generalmente se coloca en el archivo prin
 
 Si estás usando Composer ... 
 
-Debes incluir el archivo vendor/autoload.php generado por Composer. Esto se hace normalmente al principio de index.php.
+Debes incluir el archivo `vendor/autoload.php` generado por Composer. Esto se hace normalmente al principio de `index.php`.
 
 ```php
 <?php
