@@ -21,7 +21,7 @@ Sin embargo, cuando trabajas en un __contexto__ donde estás __usando namespaces
 es una __buena práctica referenciar explícitamente las clases, incluso las nativas__, para evitar cualquier posible conflicto de nombres.
 
 ## Sin Importar
-Usa el nombre completo de la clase con el prefijo "\" para asegurarte de que PHP busca la clase en el espacio de nombres global.
+Usa el nombre completo de la clase con el prefijo `\` para asegurarte de que PHP busca la clase en el espacio de nombres global.
 
 ```php
 <?php
@@ -65,6 +65,11 @@ class Student
 }
 ```
 OJITO a este ejemplo donde en ambas clases usamos el buscador global de namespaces para `DateTinme`
+
+### Resumen
+Cuando trabajas en un contexto de namespaces en PHP, es una buena práctica utilizar el prefijo `\` con las clases nativas de PHP 
+para referenciarlas desde el espacio de nombres global. Esto asegura que PHP busque la clase en el espacio de nombres global, 
+evitando conflictos con cualquier clase definida en tu espacio de nombres actual.
 
 ## Importando
 Usa `use DateTime;` para importar la clase nativa `DateTime` si estás en un archivo con namespaces.
