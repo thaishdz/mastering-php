@@ -17,9 +17,9 @@
 
 [30-07-24]
 
+- Pull Request de Unit Testing Kata a repositorio Mouredev
 - Fechas
-- Expresiones Regulares
 
 [-24]
 
--
+- Expresiones Regulares
