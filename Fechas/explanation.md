@@ -1,6 +1,16 @@
 # Fechas
 
 
+## DateTime
+
+```php
+
+$birthDate = new DateTime('1992-11-10');
+echo $birthDate->format('d-m-Y H:i:s'); // 10-11-1992 00:00:00
+
+```
+
+Nota : La hora por defecto es 00:00:00, por tanto, si no se especifica es la que saldrá
 
 ## Conversión de un Objeto `DateTime` a `string`
 
