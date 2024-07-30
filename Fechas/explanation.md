@@ -70,3 +70,113 @@ Este método te permite definir el formato en el que quieres que se muestre la f
    echo $fechaComoCadena; // Salida: Tuesday, 30 July 2024 at 15:45:12 PM
    ?>
    ```
+
+   La clase `DateTime` en PHP ofrece una amplia variedad de métodos para trabajar con fechas y horas. Aquí te proporciono una lista de los métodos más comunes y útiles que puedes usar con objetos `DateTime`.
+
+### Métodos de la Clase `DateTime`
+
+1. **`__construct()`**
+   - Crea un nuevo objeto `DateTime`.
+   - Ejemplo: `$fecha = new DateTime('2024-07-30 10:00:00');`
+
+2. **`format()`**
+   - Formatea la fecha y la hora según un formato especificado.
+   - Ejemplo: `$fecha->format('Y-m-d H:i:s');`
+
+3. **`modify()`**
+   - Modifica la fecha y hora del objeto `DateTime` según una cadena de modificación.
+   - Ejemplo: `$fecha->modify('+1 day');`
+
+4. **`add()`**
+   - Agrega un intervalo de tiempo.
+   - Ejemplo: `$fecha->add(new DateInterval('P1D'));` (Agrega 1 día)
+
+5. **`sub()`**
+   - Resta un intervalo de tiempo.
+   - Ejemplo: `$fecha->sub(new DateInterval('P1D'));` (Resta 1 día)
+
+6. **`diff()`**
+   - Calcula la diferencia entre dos objetos `DateTime`.
+   - Ejemplo: `$diferencia = $fecha1->diff($fecha2);`
+
+7. **`setDate()`**
+   - Establece la fecha.
+   - Ejemplo: `$fecha->setDate(2024, 7, 30);`
+
+8. **`setTime()`**
+   - Establece la hora.
+   - Ejemplo: `$fecha->setTime(14, 30, 0);` (Establece la hora a las 14:30:00)
+
+9. **`setTimestamp()`**
+   - Establece la fecha y la hora según una marca de tiempo Unix.
+   - Ejemplo: `$fecha->setTimestamp(1609459200);` (1 de enero de 2021)
+
+10. **`getTimestamp()`**
+    - Devuelve la marca de tiempo Unix.
+    - Ejemplo: `$timestamp = $fecha->getTimestamp();`
+
+11. **`setTimezone()`**
+    - Establece la zona horaria.
+    - Ejemplo: `$fecha->setTimezone(new DateTimeZone('Europe/London'));`
+
+12. **`getTimezone()`**
+    - Obtiene la zona horaria del objeto `DateTime`.
+    - Ejemplo: `$timezone = $fecha->getTimezone();`
+
+13. **`createFromFormat()`**
+    - Crea un objeto `DateTime` a partir de un formato específico.
+    - Ejemplo: `$fecha = DateTime::createFromFormat('d/m/Y', '30/07/2024');`
+
+14. **`createFromImmutable()`**
+    - Crea un objeto `DateTime` a partir de un objeto `DateTimeImmutable`.
+    - Ejemplo: `$fecha = DateTime::createFromImmutable($fechaInmutable);`
+
+15. **`createFromInterface()`**
+    - Crea un objeto `DateTime` a partir de una interfaz de `DateTimeInterface`.
+    - Ejemplo: `$fecha = DateTime::createFromInterface($fechaInterface);`
+
+16. **`format()`**
+    - Devuelve la fecha y hora en el formato especificado.
+    - Ejemplo: `$fecha->format('Y-m-d H:i:s');`
+
+17. **`getLastErrors()`**
+    - Devuelve los últimos errores ocurridos.
+    - Ejemplo: `$errors = DateTime::getLastErrors();`
+
+### Métodos Estáticos
+
+1. **`createFromFormat()`**
+   - Crea un objeto `DateTime` a partir de un formato específico.
+   - Ejemplo: `$fecha = DateTime::createFromFormat('Y-m-d', '2024-07-30');`
+
+2. **`createFromImmutable()`**
+   - Crea un objeto `DateTime` a partir de un objeto `DateTimeImmutable`.
+   - Ejemplo: `$fecha = DateTime::createFromImmutable($fechaInmutable);`
+
+3. **`createFromInterface()`**
+   - Crea un objeto `DateTime` a partir de una interfaz de `DateTimeInterface`.
+   - Ejemplo: `$fecha = DateTime::createFromInterface($fechaInterface);`
+
+4. **`getLastErrors()`**
+   - Devuelve los últimos errores ocurridos en la creación/modificación del objeto `DateTime`.
+   - Ejemplo: `$errors = DateTime::getLastErrors();`
+
+### Ejemplo de Uso
+
+Aquí tienes un ejemplo que utiliza varios de estos métodos:
+
+```php
+<?php
+$fecha = new DateTime('2024-07-30 10:00:00');
+echo $fecha->format('Y-m-d H:i:s'); // Salida: 2024-07-30 10:00:00
+
+$fecha->modify('+1 day');
+echo $fecha->format('Y-m-d H:i:s'); // Salida: 2024-07-31 10:00:00
+
+$fecha->setTime(15, 30);
+echo $fecha->format('Y-m-d H:i:s'); // Salida: 2024-07-31 15:30:00
+
+$diferencia = $fecha->diff(new DateTime('2024-08-01 10:00:00'));
+echo $diferencia->format('%a días'); // Salida: 1 días
+?>
+```
