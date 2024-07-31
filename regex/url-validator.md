@@ -1,7 +1,8 @@
 # Validar una URL
 
 ```
-https?:\/\/(?:www\.)?[\w-]+\.[a-zA-Z]{2,}
+https?:\/\/(?:www\.)?[\w-]+\.(?:[\w-]+\.)?[a-zA-Z]{2,}
+
 ```
 Nota: NO valida puertos ni queries ni la de abajo
 
@@ -14,6 +15,32 @@ Nota: NO valida puertos ni queries ni la de abajo
 - `\.[a-zA-Z]{2,}`: Coincide con el TLD, permitiendo entre 2 y más caracteres. Esto cubre la mayoría de los TLDs modernos.
 
 
+### Por qué no haría falta escapar los `:` ?
+
+Ls caracteres especiales como los dos puntos (:) no necesitan ser escapados con una barra invertida (\). 
+Los dos puntos tienen un significado especial en los patrones de expresiones regulares en algunos contextos (como en las clases de caracteres), 
+pero fuera de esos contextos, simplemente se tratan como caracteres literales.
+
+```
+https?:\/\/
+```
+Aquí, `://` se trata como una secuencia literal de caracteres. En este caso, los dos puntos no necesitan ser escapados porque no están en un contexto donde tienen un significado especial. La barra invertida (\) se utiliza principalmente para escapar caracteres que tienen un significado especial en el lenguaje de expresiones regulares, como . (punto), * (asterisco), + (más), ? (signo de interrogación), etc.
+
+### Qué mierdas es ese `?` del principio y por qué se agrupa entre () el `(?:www\.)?`
+
+- `(?:...)`: Es una forma de agrupar sin capturar. Esto significa que el contenido dentro de los paréntesis se agrupa para aplicar cuantificadores o para establecer precedencia, pero no se guarda como un grupo que pueda ser referenciado posteriormente. Es útil cuando deseas agrupar partes del patrón sin crear un grupo de captura.
+
+Ejemplo: `(?:www\.)?` significa que www. es opcional en la URL.
+
+### `?` Después de un Grupo
+?: Colocado después de un grupo o carácter, hace que ese grupo o carácter sea opcional. Es decir, coincide con 0 o 1 ocurrencia del patrón.
+
+Ejemplo: En `(?:www\.)?`, el `?` hace que www. sea opcional, es decir, puede estar presente o no en la URL.
+
+### Corchetes []
+[...]: Se usa para definir una clase de caracteres. Dentro de los corchetes, los caracteres que incluyas se tratarán como un conjunto y la expresión coincidirá con cualquier carácter dentro de ese conjunto. No es necesario escapar los caracteres dentro de una clase de caracteres a menos que el carácter tenga un significado especial dentro de la clase (como el guion - que se usa para definir rangos, o el corchete ] que se usa para cerrar la clase).
+
+Ejemplo: [a-zA-Z\d] coincide con cualquier letra mayúscula o minúscula, o un dígito.
 
 ## Partes de una URL
 
