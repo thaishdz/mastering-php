@@ -126,7 +126,7 @@ if(preg_match($pattern_mail, $mail))
 
 ```
 
-### Explicación del patrón
+### Explicación del primer patrón (clase de caracteres)
 
 - `^`: Inicio de la cadena.
 - `[a-zA-Z0-9._%+-]+`: Uno o más caracteres que pueden ser letras (mayúsculas o minúsculas), dígitos, puntos, guiones bajos, signos de porcentaje, signos más o signos menos.
@@ -217,23 +217,6 @@ Escapado de caracteres especiales:
 Para usar un carácter especial literalmente fuera de una clase de caracteres, debes escaparlo con una barra invertida `\`.
 Por ejemplo, `\.` coincide con un punto literal y `\+` coincide con un signo más literal.
 
-### Ejemplo en código
-
-Validación de un correo electrónico utilizando esta expresión regular:
-
-```php
-<?php
-$pattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
-$email = "user@example.com";
-
-if (preg_match($pattern, $email)) {
-    echo "Correo válido";
-} else {
-    echo "Correo inválido";
-}
-?>
-```
-
 ### Salida esperada
 
 - `user@example.com`: Coincide y será considerado válido.
@@ -248,3 +231,29 @@ En resumen, `\.[a-zA-Z]{2,}` asegura que haya un punto seguido por al menos dos 
 2. **TLD**: El patrón requiere que el TLD tenga al menos dos caracteres, lo cual cubre la mayoría de los casos comunes.
 3. **Casos extremos**: La validación completa y precisa de correos electrónicos puede requerir más lógica adicional para manejar casos extremos que esta regex no cubre (como direcciones que contienen comillas o direcciones con dominios locales no válidos en el DNS público).
 
+
+# Validar un teléfono 
+
+```
+/\+\d{1,3}[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,9}/
+```
+
+## Explicación
+- `\+`: Coincide con el signo + (recuerda que como está fuera de `[]` se tiene que poner \ para especificar que es un `+` literal).
+- `\d{1,3}`: Coincide con el código de país de 1 a 3 dígitos.
+- `[ -]?`: Permite un espacio o guion opcional después del código de país.
+- `\(?\d{1,4}\)?`: Permite opcionalmente paréntesis alrededor del código de área o grupo inicial de dígitos.
+- `[ -]?`: Permite un espacio o guion opcional entre grupos de dígitos.
+- `\d{1,4}`: Coincide con grupos de dígitos de 1 a 4 dígitos.
+- `[ -]?`: Permite un espacio o guion opcional entre grupos de dígitos.
+- `\d{1,9}`: Coincide con el resto del número, de hasta 9 dígitos.
+
+Esta expresión regular debería capturar números en los siguientes formatos:
+```
++1 212 456 7890
++1-212-456-7890
++1(212)456-7890
++44 20 7946 0958
++34 911 123 456
++49 (0) 170 1234567
+```
