@@ -33,7 +33,7 @@ Aquí, `://` se trata como una secuencia literal de caracteres. En este caso, lo
 Ejemplo: `(?:www\.)?` significa que www. es opcional en la URL.
 
 ### `?` Después de un Grupo
-?: Colocado después de un grupo o carácter, hace que ese grupo o carácter sea opcional. Es decir, coincide con 0 o 1 ocurrencia del patrón.
+`?` : Colocado después de un grupo o carácter, hace que ese grupo o carácter sea opcional. Es decir, coincide con 0 o 1 ocurrencia del patrón.
 
 Ejemplo: En `(?:www\.)?`, el `?` hace que www. sea opcional, es decir, puede estar presente o no en la URL.
 
