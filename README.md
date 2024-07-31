@@ -20,6 +20,13 @@
 - Pull Request de Unit Testing Kata a repositorio Mouredev
 - Fechas
 
-[-24]
+[31-07-24]
 
 - Expresiones Regulares
+
+[24]
+
+- Enumeraciones
+- Peticiones Http
+- Callbacks
+
