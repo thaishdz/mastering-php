@@ -1,7 +1,13 @@
 Las expresiones regulares (regex) son una herramienta poderosa para buscar y manipular texto. En PHP, 
 puedes usar las funciones `preg_match`, `preg_match_all`, `preg_replace`, y `preg_split` para trabajar con expresiones regulares.
 
+[Esta web te ayuda a visualizar las regex](https://regex-vis.com/samples)
+
+
 ![image](https://github.com/user-attachments/assets/39c361b5-d0d6-456b-9d37-983ab09d465d)
+
+
+
 
 
 # Ejemplos 
