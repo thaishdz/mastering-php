@@ -40,7 +40,7 @@ Ejemplo: En `(?:www\.)?`, el `?` hace que www. sea opcional, es decir, puede est
 ### Corchetes []
 `[...]`: Se usa para definir una clase de caracteres. Dentro de los corchetes, los caracteres que incluyas se tratarán como un conjunto y la expresión coincidirá con cualquier carácter dentro de ese conjunto. No es necesario escapar los caracteres dentro de una clase de caracteres a menos que el carácter tenga un significado especial dentro de la clase (como el guion - que se usa para definir rangos, o el corchete ] que se usa para cerrar la clase).
 
-Ejemplo: [a-zA-Z\d] coincide con cualquier letra mayúscula o minúscula, o un dígito.
+Ejemplo: `[a-zA-Z\d]` coincide con cualquier letra mayúscula o minúscula, o un dígito.
 
 ## Partes de una URL
 
