@@ -35,7 +35,8 @@ Fragmento: section
 ```
 ## Qué es un TLD
 
-Un **TLD** (Top-Level Domain, o Dominio de Nivel Superior) es la parte final de una dirección web que sigue al último punto en una URL. Es la extensión que aparece después del nombre de dominio principal y del subdominio (si hay alguno). Los TLDs ayudan a identificar el tipo de organización o el país asociado con la dirección web.
+Un **TLD** (Top-Level Domain, o Dominio de Nivel Superior) __es la extensión que aparece después del nombre de dominio principal y del subdominio (si hay alguno)__. 
+Los TLDs ayudan a identificar el tipo de organización o el país asociado con la dirección web.
 
 ### Tipos de TLDs
 
