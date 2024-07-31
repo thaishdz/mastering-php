@@ -257,3 +257,4 @@ Esta expresión regular debería capturar números en los siguientes formatos:
 +34 911 123 456
 +49 (0) 170 1234567
 ```
+
