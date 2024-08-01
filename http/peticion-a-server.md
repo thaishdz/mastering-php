@@ -120,7 +120,33 @@ curl_close($ch);
 composer require guzzlehttp/guzzle
 ```
 
-Puedes usar GuzzleHTTP de la siguiente manera:
+# Kata
+
+```php
+
+<?php
+
+require_once 'vendor/autoload.php';
+
+
+/*
+ * Utilizando un mecanismo de peticiones HTTP de tu lenguaje, realiza
+ * una petición a la web que tú quieras, verifica que dicha petición
+ * fue exitosa y muestra por consola el contenido de la web.
+ */
+
+$client = new \GuzzleHttp\Client();
+
+
+$response = $client->request('GET', 'https://www.instagram.com');
+
+echo $response->getStatusCode();
+echo $response->getHeaderLine('content-type');
+echo $response->getBody();
+
+```
+
+También puedes usar GuzzleHTTP de la siguiente manera:
 ```php
 <?php
 
