@@ -1,10 +1,17 @@
 # Petición HTTP a una web
 
-
 ![image](https://github.com/user-attachments/assets/b27b7f33-6b36-4169-9212-d94c849b8e6a)
 
+- HTTP es el protocolo que usamos para transmitir información en la web. 
+- Cuando visitas una página web, tu navegador envía una solicitud HTTP al servidor donde está alojada esa página.
+- El servidor luego responde enviando los datos de la página de vuelta a tu navegador, que los muestra en tu pantalla.
+- Piensa en HTTP como el lenguaje que tu navegador y el servidor utilizan para "hablar" entre ellos.
+- Cuando escribes una dirección web en tu navegador, es como si estuvieras diciendo "quiero ver esta página". HTTP se encarga de llevar ese mensaje y traer la respuesta.
 
- Puedes usar varias técnicas :
+En resumen: HTTP es el protocolo que hace posible que puedas ver páginas web en tu navegador.
+
+
+ Puedes usar varias técnicas para hacer peticiones http :
  
 - Con la extensión `cURL`
 - La función `file_get_contents`
