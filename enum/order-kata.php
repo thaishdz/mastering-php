@@ -72,7 +72,7 @@ $order_1 = new Order();
 $order_2 = new Order();
 $order_3 = new Order();
 
-echo $order_2->send();
+echo $order_2->ship();
 echo $order_3->deliver();
 
 echo $order_2->status();
