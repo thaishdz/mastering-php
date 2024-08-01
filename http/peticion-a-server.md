@@ -44,8 +44,11 @@ curl_close($ch);
 ```
 
 ## Explicación
+
+```php
+$ch = curl_init();
+```
 `curl_init()` inicializa una nueva sesión cURL y devuelve un manejador de recurso. Este manejador (guardado en $ch) es necesario para realizar operaciones con cURL.
-- 
 ```php
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_POST, true);
