@@ -34,7 +34,7 @@ class Order
         return $this->status->value;
     }
 
-    public function send()
+    public function ship()
     {
         if($this->status == Status::PENDING){
             $this->status = Status::SHIPPED; // Se cambia en el propio objeto y en Base de datos I guess
