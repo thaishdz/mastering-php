@@ -43,6 +43,27 @@ if ($response === false) {
 curl_close($ch);
 ```
 
+## Explicación
+`curl_init()` inicializa una nueva sesión cURL y devuelve un manejador de recurso. Este manejador (guardado en $ch) es necesario para realizar operaciones con cURL.
+- 
+```php
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+```
+En esta sección, curl_setopt() se usa para establecer varias opciones para la sesión cURL. La variable `$ch` se pasa a `curl_setopt()` para especificar a qué sesión de cURL se aplican estas opciones.
+
+```php
+$response = curl_exec($ch);
+```
+`curl_exec()` ejecuta la sesión cURL configurada, y `$ch` indica qué sesión se debe ejecutar. La respuesta de la solicitud se guarda en la variable `$response`.
+
+```php
+curl_close($ch);
+```
+`curl_close()` cierra la sesión cURL identificada por `$ch` y libera cualquier recurso asociado con ella.
+ 
 # Petición HTTP POST con cURL
 Este ejemplo envía datos a un API usando una petición POST.
 
