@@ -34,7 +34,7 @@ enum Status: string {
         return $this->status->value;
     }
 
-    public function send()
+    public function ship()
     {
         if($this->status == Status::PENDING){
             $this->status = Status::SHIPPED; // Se cambia en el propio objeto y en Base de datos I guess
@@ -72,12 +72,9 @@ $order_1 = new Order();
 $order_2 = new Order();
 $order_3 = new Order();
 
-echo $order_2->send();
+echo $order_2->ship();
 echo $order_3->deliver();
 echo $order_3->cancel();
-
-echo $order_2->status();
-echo $order_2->cancel();
 
 echo $order_2->status();
 echo $order_2->cancel();
