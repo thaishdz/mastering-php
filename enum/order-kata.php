@@ -12,7 +12,7 @@ enum Status: string {
     case CANCELLED = 'cancelled';
 }
  
-class Order 
+ class Order 
  {
     private int $id;
     private static int $count = 1;
@@ -34,23 +34,23 @@ class Order
         return $this->status->value;
     }
 
-    public function ship()
+    public function send()
     {
         if($this->status == Status::PENDING){
             $this->status = Status::SHIPPED; // Se cambia en el propio objeto y en Base de datos I guess
-            echo "Pedido enviado\n";
+            echo "El pedido #{$this->id} ha sido enviado\n";
         }else{
-            echo "No se pudo enviar el pedido\n";
+            echo "No se pudo enviar el pedido #{$this->id}, revise el estado del pedido .. o no\n";
         }
     }
 
     public function cancel()
     {
-        if($this->status == Status::PENDING){
+        if($this->status == Status::PENDING || $this->status != Status::DELIVERED){
             $this->status = Status::CANCELLED;
-            echo "Pedido cancelado\n";
+            echo "El pedido #{$this->id} ha sido cancelado\n";
         }else {
-            echo "No se puede cancelar un pedido enviado\n";
+            echo "No se puede cancelar el pedido #{$this->id} porque está en tránsito\n";
         }
     }
 
@@ -59,9 +59,9 @@ class Order
     {
         if($this->status == Status::SHIPPED){
             $this->status = Status::DELIVERED;
-            echo "Pedido entregado\n";
+            echo "El pedido #{$this->id} entregado\n";
         }else{
-            echo "No se puede entregar un pedido que no ha sido enviado\n";
+            echo "No se puede entregar el pedido #{$this->id} porque no ha sido enviado\n";
         }
     }
 
@@ -72,8 +72,12 @@ $order_1 = new Order();
 $order_2 = new Order();
 $order_3 = new Order();
 
-echo $order_2->ship();
+echo $order_2->send();
 echo $order_3->deliver();
+echo $order_3->cancel();
+
+echo $order_2->status();
+echo $order_2->cancel();
 
 echo $order_2->status();
 echo $order_2->cancel();
