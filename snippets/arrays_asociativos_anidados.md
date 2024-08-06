@@ -1,8 +1,8 @@
 
-# Array asociativo multidimensional
+# Array asociativo anidados/multidimensional
 
 
-### Obtener el nombre de estos arrays anidados
+### Obtener el valor de "name" en estos arrays anidados
 
 ```php
 
