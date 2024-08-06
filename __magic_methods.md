@@ -72,6 +72,16 @@ $data = [
 $pokemon = new Pokemon($data);
 echo $pokemon; // Output: ID: 1, Name: Bulbasaur, Weight: 69kg, Height: 70cm, Types: Grass, Poison
 ```
+## `__construct()`
+
+Si no defines un constructor en tu clase, PHP utiliza un constructor por defecto. Esto significa que puedes crear instancias de la clase sin inicializar propiedades u otros datos ...
+
+... 
+
+### AAH FILHO DA PUTA AGORA SIM ENTENDOOOO  
+![image](https://github.com/user-attachments/assets/77de7f67-5552-4aca-aba5-b5a67fd82abd)
+
+SE ACABA DE DESBLOQUEAR EL MISTERIO DE CÓMO SE LLAMABA ✨MÁGICAMENTE✨ a ese constructor por defecto, sin que tuviésemos uno definido.
 
 ## `__get()` - No es lo mismo que un getter 
 
@@ -116,3 +126,5 @@ $suma = new Calculator();
 echo $suma(5,3); // 8
 
 ```
+
+
