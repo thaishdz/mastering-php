@@ -1,7 +1,9 @@
 ![image](https://github.com/user-attachments/assets/98e87e43-7ad1-48cc-a095-2d6a6ef2cbce)
 
-En PHP, __los métodos mágicos son aquellos que comienzan con dos guiones bajos (`__`).__
-Estos métodos proporcionan funcionalidades especiales a las clases y se activan automáticamente en ciertos contextos.
+En PHP, 
+- __Los métodos mágicos son aquellos que comienzan con dos guiones bajos (`__`).__
+- Son llamados sin que nosotros lo hagamos explícitamente.
+- Funcionan como “interceptores “que se autoinvocan cuando se dispara una condición o evento; es decir, sin necesidad de especificar el nombre del método en concreto. Estas particularidades de los métodos mágicos nos permiten saber cuándo un programador está interactuando con un objeto; permitiéndonos realizar acciones antes o después de esto.
 
 El método `__toString()` es uno de estos métodos mágicos.
 
@@ -67,4 +69,9 @@ $pokemon = new Pokemon($data);
 echo $pokemon; // Output: ID: 1, Name: Bulbasaur, Weight: 69kg, Height: 70cm, Types: Grass, Poison
 ```
 
-En este ejemplo, `__toString()` se define para proporcionar una representación legible del objeto `Pokemon` cuando se utiliza en un contexto que espera una cadena.
+## __get() - No es lo mismo que un getter 
+
+- `__get()` recibe un único parámetro que es la propiedad a la que se quiere acceder.
+- Entonces, definir `__get` nos permitirá acceder desde fuera del objeto y “de forma genérica” a cualquier propiedad del mismo, independientemente de que esta esté declara como private o protected. 
+- Por esto mismo debemos ser muy cuidadosos en su implementación ya que, para el caso, es como si hubiéramos declarado todos los atributos como públicos, perdiendo así las ventajas de la ocultación o encapsulamiento.
+- Por lo general este método es reemplazado por los llamados métodos `getters`, que nos permiten “individualizar” los accesos a un atributo. Es decir, la buena práctica seria definir mediante `getters` los accesos a los atributos del objeto evitando declarar el método `__get` que definiría el acceso general a todos los atributos privadas o no declaradas.
