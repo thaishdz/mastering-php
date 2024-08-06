@@ -94,3 +94,25 @@ echo $pokemon; // Output: ID: 1, Name: Bulbasaur, Weight: 69kg, Height: 70cm, Ty
 - Este método mágico __recibe un único argumento que es el nombre del atributo que se quiere analizar__.
   
 - Es importante aclarar que la utilización de la función `empty()` también disparara la ejecución del método mágico `__isset()` ya que según el manual de PHP, `empty()` es equivalente a negar un __isset__ `(!isset($variable))`.
+
+## `__invoke()` - Llamar a un objeto como si fuese una función 
+- __Evento que lo dispara__: Este método es llamado cuando se intenta invocar un objeto como si se tratara de una función.
+
+- __Finalidad__: Permite controlar el comportamiento de un objeto cuando este intenta ser llamado como a una función. Es decir, Si no definiéramos `__invoke` y tratáramos de utilizar el objeto como si se tratara de una función obtendremos un error.
+
+```php
+
+class Calculator
+{
+    public function __invoke($a, $b)
+    {
+        return $a + $b;
+    }
+}
+
+
+$suma = new Calculator();
+
+echo $suma(5,3); // 8
+
+```
