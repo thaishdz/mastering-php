@@ -27,11 +27,11 @@
 [01-08-24]
 
 - Enumeraciones
-- Peticiones Http
+- Peticiones Http (WIP)
 
 [06-08-24]
 
-- Peticiones Http
+- Peticiones Http (Excepciones, devolver evoluciones (WIP), pequeñas mejoras en el código)
 
 [07-08-24]
 
