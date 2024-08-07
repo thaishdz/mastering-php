@@ -20,6 +20,9 @@ En resumen: HTTP es el protocolo que hace posible que puedas ver páginas web en
 
 # Petición HTTP `GET` con `cURL`
 
+> Cuando buscas algo en Google estás haciendo una petición `GET`
+![image](https://github.com/user-attachments/assets/3d468404-a977-4e4a-8945-212ec1639c4c)
+
 Este ejemplo hace una petición `GET` a un API pública y obtiene los datos.
 
 ```php
