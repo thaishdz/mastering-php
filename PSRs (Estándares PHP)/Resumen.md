@@ -32,12 +32,6 @@ Es decir, PSR-0 viene a decirnos como definir los namespaces de cada clase para 
 
 Es decir, indican normas de codificación básica a muy bajo nivel como por ejemplo la codificación de caracteres en UTF-8 o el tipo de escritura que deben seguir los nombres de las clases (StudlyCaps) o métodos (camelCase).
 
-## PSR-2: Coding Style Guide (Status: Accepted ✔️)
-> Este estándar extiende a PSR-1. La finalidad de PSR-2 es reducir la carga cognitiva que supone leer y entender código de diferentes desarrolladores.
-
-Para ello, enumera unas normas de estilo básicas que consiguen hacer que el código de un proyecto sea más simétrico y predecible. En PHP, PSR-2 suponen las normas más básicas de codificación que un equipo de desarrollo debiera tener en cuenta a la hora de programar.
-
-
 
 # PSR-17: HTTP Factories (Status: Accepted ✔️)
 > Describe un estándar común para factorías que crean objetos HTTP compatibles con PSR-7 ya que este no incluye recomendaciones sobre como crear objetos HTTP dificultando el crear nuevos objetos HTTP en componentes que no estén vinculados a PSR-7.
