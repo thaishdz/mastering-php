@@ -37,49 +37,6 @@ Es decir, indican normas de codificación básica a muy bajo nivel como por ejem
 
 Para ello, enumera unas normas de estilo básicas que consiguen hacer que el código de un proyecto sea más simétrico y predecible. En PHP, PSR-2 suponen las normas más básicas de codificación que un equipo de desarrollo debiera tener en cuenta a la hora de programar.
 
-## PSR-3: Looger Interface (Status: Accepted ✔️)
-Entendemos por ‘log’ al registro o grabación secuencial en un sistema de persistencia eventos que ocurren en nuestro sistema, de manera que posteriormente puedan ser procesados y obtener así las evidencias que sean oportunas.
-
-PSR-3 define un interface común para librerías de loggin de manera que pueda utilizarse esta funcionalidad en cualquier aplicación de forma sencilla. Cada librería de log, posteriormente, puede estar implementada como mejor considere, pero, para asegurarse que cualquier aplicación pueda usarla sin problemas debe cumplir PSR-3.
-
-La definición de Logger Interface expone ocho métodos (debug, info, notice, warning, error, critical, alert, emergency), correspondientes a los ocho niveles de log definidos en el RF 5424.
-
-Es decir, si queremos implementar una librería de log que sea compatible con otras aplicaciones, debe cumplir con PSR-3. Y si usamos una librería de loggin que cumpla PSR-3 sabemos que debe funcionar.
-
-Ejemplo de [Logger Inteface](https://github.com/php-fig/log)
-
-
-## PSR-4: Autoloader (Status: Accepted ✔️)
-Muy relacionada con PSR-0. En este caso, PSR-4 describe también una especificación sobre como tiene que ser la autocarga de clases.
-
-Es compatible con PSR-0, aunque con otras características que lo mejoran. Entre sus diferencias más notables tenemos por ejemplo que PSR-0 mantiene compatibilidades con características de PEAR mientras que PSR-4 las elimina. También, PSR-0 obliga a mantener una estructura de directorios similar al espacio de nombres definido mientras que PSR-4 no.
-
-En este [enlace](https://stackoverflow.com/questions/24868586/what-are-the-differences-between-psr-0-and-psr-4) se pueden observar más diferencias.
-
-### Traducción
-
-Son muy similares, por lo que no es sorprendente que sea un poco confuso. El resumen es que PSR-0 tenía algunas características de compatibilidad retroactiva para nombres de clases al estilo PEAR que PSR-4 eliminó; por lo tanto, PSR-4 solo admite código con namespaces. Además, PSR-4 no te obliga a que todo el namespace sea una estructura de directorios, solo la parte que sigue al punto de anclaje.
-
-Por ejemplo, si defines que el namespace `Acme\Foo\` está anclado en `src/`, con PSR-0 significa que buscará `Acme\Foo\Bar` en `src/Acme/Foo/Bar.php`, mientras que en PSR-4 lo buscará en `src/Bar.php`, lo que permite estructuras de directorios más cortas. Por otro lado, algunos prefieren tener toda la estructura de directorios para ver claramente qué está en cada namespace, por lo que también puedes decir que `Acme\Foo\` está en `src/Acme/Foo` con PSR-4, lo cual te dará un comportamiento equivalente al descrito con PSR-0.
-
-En resumen, para nuevos proyectos y para la mayoría de los casos, puedes usar PSR-4 y olvidarte de PSR-0.
-
-### ¿Qué es PEAR-STYLE?
-
-El estilo PEAR (PHP Extension and Application Repository) es un estándar de nomenclatura y organización de archivos en PHP utilizado antes de la adopción general de namespaces. En el estilo PEAR, las clases y sus nombres se organizaban en una jerarquía de directorios que reflejaba el nombre completo de la clase.
-
-**Ejemplo de PEAR-Style:**
-
-Si tienes una clase llamada `Foo_Bar`, su archivo se colocaría en un directorio basado en el nombre de la clase, como `Foo/Bar.php`.
-
-```php
-// PEAR-style classname
-class Foo_Bar {
-    // Código de la clase
-}
-```
-
-Este estilo fue popular antes de que se adoptaran los namespaces en PHP, pero se volvió menos común con la llegada de PSR-0 y PSR-4, que promueven una estructura de directorios y una organización de clases más moderna y flexible.
 
 
 # PSR-17: HTTP Factories (Status: Accepted ✔️)
