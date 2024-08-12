@@ -1,6 +1,6 @@
 # PSR-7: HTTP message interfaces (Status: Accepted ✔️)
 
-> Es un conjunto de interfaces que representan mensajes y URI’s para comunicaciones HTTP.
+> Estándar que define interfaces para las solicitudes `HTTP (Request)` y las respuestas `HTTP (Response)`
 
 
 Los mensajes `HTTP` son la base del desarrollo web. Los navegadores y los clientes HTTP como cURL, crean un mensaje de petición HTTP para enviar al servidor web respondiendo este con un mensaje de respuesta, tamibén `HTTP`.
