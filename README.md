@@ -37,3 +37,14 @@
 
 - Peticiones Http
 - Callbacks
+
+[09-08-24]
+
+- Peticiones Http (Evoluciones ✔️)
+
+[12-08-24]
+
+- Peticiones Http (Aprendiendo sobre PSRs (PSR4 Y PSR7))
+
+[--24]
+- Callbacks
