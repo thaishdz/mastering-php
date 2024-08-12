@@ -3,6 +3,7 @@
 ![image](https://github.com/user-attachments/assets/34c9c4d3-e55e-4c25-9cbe-3633c012c004)
 
 - [Roadmap Retos programacion ~ Mouredev](https://retosdeprogramacion.com/roadmap/#last)
+- [Buenas Prácticas ~ PHPSensei](https://phpsensei.es/category/buenas-practicas/)
 
 
 [26-07-24]
@@ -40,11 +41,12 @@
 
 [09-08-24]
 
-- Peticiones Http (Evoluciones ✔️)
+- Peticiones Http (Evoluciones SIN LV ✔️)
 
 [12-08-24]
 
-- Peticiones Http (Aprendiendo sobre PSRs (PSR4 Y PSR7))
+- Peticiones Http (Descubrí lo que era el PSR por eso del PSR-4 y el PSR-7 sobretodo en HTTP y mejoré el string de evoluciones haciendo ahora que aparezca el lv de evolución)
 
 [--24]
-- Callbacks
+
+- Peticiones Http (Extra, Refactor)
