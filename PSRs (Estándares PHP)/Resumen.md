@@ -27,16 +27,8 @@ Después de la introducción de los namespaces en PHP 5.3, fue cuando se propuso
 
 Es decir, PSR-0 viene a decirnos como definir los namespaces de cada clase para que PHP pueda hacer la “magia” necesaria para encontrarlas.
 
-## PSR-1: Basic Coding Standard (Status: Accepted ✔️)
-> Este estándar comprende como debería ser la codificación de los elementos necesarios para asegurar la interoperabilidad de código compartido. 
+Para saber el resto de estándares revisa los ficheros contenidos dentro de esta carpeta.
 
-Es decir, indican normas de codificación básica a muy bajo nivel como por ejemplo la codificación de caracteres en UTF-8 o el tipo de escritura que deben seguir los nombres de las clases (StudlyCaps) o métodos (camelCase).
-
-
-# PSR-17: HTTP Factories (Status: Accepted ✔️)
-> Describe un estándar común para factorías que crean objetos HTTP compatibles con PSR-7 ya que este no incluye recomendaciones sobre como crear objetos HTTP dificultando el crear nuevos objetos HTTP en componentes que no estén vinculados a PSR-7.
-
-Más información en el siguiente [enlace](https://www.php-fig.org/psr/psr-17/meta/)
 
 # PSR-18: HTTP Client (Status: Accepted ✔️)
 > Este estándar trata de describir un interface común para el envío de peticiones HTTP y la recepción de respuestas HTTP.
