@@ -10,16 +10,18 @@ class Pokemon
     private int $height;
     private array $types;
     private array $gamesIndices;
+    private ?array $evolutionChain;
 
 
     public function __construct(array $data)
     {
-        $this->id           = $data['id'];
-        $this->name         = $data['name'];
-        $this->weight       = $data['weight'];
-        $this->height       = $data['height'];
-        $this->types        = $data['types'];
-        $this->gamesIndices = $data['game_indices'];
+        $this->id                   = $data['id'];
+        $this->name                 = $data['name'];
+        $this->weight               = $data['weight'];
+        $this->height               = $data['height'];
+        $this->types                = $data['types'];
+        $this->gamesIndices         = $data['game_indices'];
+        $this->evolutionChain       = $data['evolution_chain'] ?? []; // evalúa que exista la key "evolution_chain", si no, pone []
 
     }
 
@@ -54,17 +56,52 @@ class Pokemon
         return $this->gamesIndices;
     }
 
+    function evolutionChain() : array 
+    {
+        return $this->evolutionChain;
+    }
+
+    function hasEvolution() : bool 
+    {
+        return empty($this->evolutionChain); // TRUE está vacío, FALSE NO está vacío 👍
+    }
+
+    private function formatTypesToString() : string 
+    {
+        return arrayValuesToCommaString($this->types, ["type","name"]);
+    }
+
+    private function evolutionChainSummary() : string 
+    {
+        if ($this->hasEvolution()) {
+            return 'No Evolutions';
+        }
+        $evolutionDetails = array_map(function ($evolution) 
+        {
+            return $evolution["name"] . " (lv. {$evolution['min_level']})";
+        },
+        $this->evolutionChain);
+        
+        return implode(", ", $evolutionDetails);
+    }
+
+    private function appearanceInGames() : string 
+    {
+        return arrayValuesToCommaString($this->gamesIndices, ["version","name"]);
+    }
+
     function __toString(): string 
     {   
-        $types = arrayValuesToCommaString($this->types, ["type","name"]);
-        $games = arrayValuesToCommaString($this->gamesIndices, ["version","name"]);
-
+        $types                  = $this->formatTypesToString();
+        $gamesSummary           = $this->appearanceInGames();
+        $evolutionChainSummary  = $this->evolutionChainSummary();
         return "
-                ID:         $this->id       \n
-                Name:       $this->name     \n
-                Weight:     $this->weight   \n
-                Height:     $this->height   \n
-                Types:      $types          \n
-                Appears in: $games          \n";
+                ID:         $this->id               \n
+                Name:       $this->name             \n
+                Weight:     $this->weight           \n
+                Height:     $this->height           \n
+                Types:      $types                  \n  
+                Evolutions: $evolutionChainSummary  \n       
+                Appears in: $gamesSummary           \n";
     }
 }
