@@ -8,36 +8,35 @@
 
 [26-07-24]
 
-- Asignación de variables por Valor y Referencia
-- Herencia y Polimorfismo
-- Excepciones
+- Asignación de variables por Valor y Referencia ✔️
+- Herencia y Polimorfismo ✔️
+- Excepciones ✔️
 
 [29-07-24]
 
-- Unit tests 
+- Unit tests ✔️
 
 [30-07-24]
 
-- Pull Request de Unit Testing Kata a repositorio Mouredev
-- Fechas
+- Pull Request de Unit Testing Kata a repositorio Mouredev ✔️
+- Fechas ✔️
 
 [31-07-24]
 
-- Expresiones Regulares
+- Expresiones Regulares ✔️
 
 [01-08-24]
 
-- Enumeraciones
-- Peticiones Http (WIP)
+- Enumeraciones ✔️
+- Peticiones Http (WIP) ✔️
 
 [06-08-24]
 
-- Peticiones Http (Excepciones, devolver evoluciones (WIP), pequeñas mejoras en el código)
+- Peticiones Http (Excepciones, devolver evoluciones (WIP), pequeñas mejoras en el código) ✔️
 
 [07-08-24]
 
-- Peticiones Http
-- Callbacks
+- Peticiones Http ✔️
 
 [09-08-24]
 
@@ -45,8 +44,12 @@
 
 [12-08-24]
 
-- Peticiones Http (Descubrí lo que era el PSR por eso del PSR-4 y el PSR-7 sobretodo en HTTP y mejoré el string de evoluciones haciendo ahora que aparezca el lv de evolución)
+- Peticiones Http (Descubrí lo que era el PSR por eso del PSR-4 y el PSR-7 sobretodo en HTTP y mejoré el string de evoluciones haciendo ahora que aparezca el lv de evolución) ✔️
 
 [13-08-24]
-- Peticiones Http planteado como futuro refactor
+- Peticiones Http planteado como futuro refactor ✔️
+- Callbacks⚠️ Hecho, pero se debe volver una vez se haya hecho la kata de asicronía 
+
+[08-24]
+- Asincronía
 - Callbacks
