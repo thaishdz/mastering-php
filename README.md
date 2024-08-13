@@ -47,6 +47,6 @@
 
 - Peticiones Http (Descubrí lo que era el PSR por eso del PSR-4 y el PSR-7 sobretodo en HTTP y mejoré el string de evoluciones haciendo ahora que aparezca el lv de evolución)
 
-[--24]
-
-- Peticiones Http (Extra, Refactor)
+[13-08-24]
+- Peticiones Http planteado como futuro refactor
+- Callbacks
