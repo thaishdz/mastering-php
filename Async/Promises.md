@@ -10,9 +10,9 @@ Una *promise* representa un valor que puede estar disponible:
 
 ### Estados de una Promesa
 
-   - **Pendiente (`pending`)**: El estado inicial. La promesa aún no se ha resuelto ni rechazado.
-   - **Resuelta (`fulfilled`)**: La promesa se ha completado exitosamente y tiene un valor.
-   - **Rechazada (`rejected`)**: La promesa ha fallado y tiene una razón para el fallo (por ejemplo, un error).
+   - **Pendiente (`pending`)** ⚠️⚠️ : El estado inicial. La promesa __aún no se ha resuelto ni rechazado__.
+   - **Resuelta (`fulfilled`)** ✔️✔️: La promesa __se ha completado exitosamente y tiene un valor__.
+   - **Rechazada (`rejected`)** 🛑🛑: La promesa __ha fallado y tiene una razón para el fallo (por ejemplo, un error)__.
 
 ### Métodos Principales
    - **`then(callable $onFulfilled, callable $onRejected = null)`**: Permite manejar el valor cuando la promesa se resuelve exitosamente (`onFulfilled`) o cuando es rechazada (`onRejected`).
