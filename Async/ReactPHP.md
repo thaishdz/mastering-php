@@ -61,4 +61,34 @@ El `Event Loop` también utiliza una `queue`, por lo que sabe cuál procesar pri
 
 El principal factor decisivo es la rapidez con la que el SO devuelve los datos solicitados. Por lo tanto, las peticiones que llegan primero no necesariamente se completan primero.
 
+```php
+use React\EventLoop\Factory; 
+
+# 1. Created an event loop
+$loop = Factory::create(); 
+
+
+# 2. Registered a callback for a specific event
+
+$loop->addTimer(
+    1, # 1 sg
+    function(){
+        echo "After\n";
+    });
+
+echo "Before\n";
+
+# 3. Run the loop:
+
+$loop->run();
+```
+
+### Output
+
+```
+Before <-- this shows up immediately when you run the script
+After  <-- this shows up a second later
+```
+
+
 Cómo trabaja el Event Loop, consultar el apartado [Event Loop](https://www.honeybadger.io/blog/getting-started-with-reactphp/)
