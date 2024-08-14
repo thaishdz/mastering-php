@@ -2,9 +2,9 @@
 
 [Explicación ReactPHP (Inglés)](https://www.honeybadger.io/blog/getting-started-with-reactphp/)
 
-![image](https://github.com/user-attachments/assets/2326f6d6-c5bd-44c3-9fbe-270704ea4e92)
-
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2326f6d6-c5bd-44c3-9fbe-270704ea4e92" alt="meme" width="500">
+</div>
 
 # Qué es ReactPHP
 
