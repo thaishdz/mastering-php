@@ -46,3 +46,16 @@ parallel([
 
 // Iniciar el loop de eventos
 Loop::get()->run();
+
+
+--------------- OUTPUT ------------------
+    
+Task A ... Total Time Execution : 1 sg 👻
+
+Task B ... Total Time Execution : 2 sg 👻
+
+Task C ... Total Time Execution : 3 sg 👻
+
+Task D ... Total Time Execution : 1 sg 👻
+
+--------------- OUTPUT ------------------
