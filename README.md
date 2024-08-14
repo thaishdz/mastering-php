@@ -47,9 +47,17 @@
 - Peticiones Http (Descubrí lo que era el PSR por eso del PSR-4 y el PSR-7 sobretodo en HTTP y mejoré el string de evoluciones haciendo ahora que aparezca el lv de evolución) ✔️
 
 [13-08-24]
+
 - Peticiones Http planteado como futuro refactor ✔️
 - Callbacks⚠️ Hecho, pero se debe volver una vez se haya hecho la kata de asicronía 
 
-[08-24]
-- Asincronía
-- Callbacks
+[14-08-24]
+
+- Asincronía ✔️
+Aprendí sobre : ReactPHP, Event Loop (yeeep again), Promises
+Revisé documentación de ReactPHP y leí un poco de la librería
+**TODO**: Subir código de kata al repo de Moure #15
+
+[-24]
+
+- Callbacks 
