@@ -54,9 +54,9 @@
 [14-08-24]
 
 - Asincronía ✔️
-Aprendí sobre : ReactPHP, Event Loop (yeeep again), Promises
-Revisé documentación de ReactPHP y leí un poco de la librería
-**TODO**: Subir código de kata al repo de Moure #15
+- Aprendí sobre : ReactPHP, Event Loop (yeeep again), Promises
+- Revisé documentación de ReactPHP y leí un poco de la librería
+- **TODO**: Subir código de kata al repo de Moure #15
 
 [-24]
 
