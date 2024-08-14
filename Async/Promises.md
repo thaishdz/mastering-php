@@ -58,4 +58,6 @@ asyncOperation()
 
 En el contexto de ReactPHP:
 - **Promesas y el Event Loop**: ReactPHP usa promesas para manejar operaciones que ocurren en el loop de eventos, como temporizadores, operaciones de I/O, y más.
-- **Concurrencia no bloqueante**: Las promesas en ReactPHP permiten que múltiples tareas se ejecuten concurrentemente sin bloquear el loop, haciendo el código más eficiente.  Fíjate que no hemos hablado de "pararlelo" ya que, no es "paralelo" en el sentido tradicional (como en la ejecución en múltiples hilos o procesos), sino más bien concurrente, donde se aprovecha el tiempo de inactividad (como la espera de I/O) para realizar otras tareas.
+- **Concurrencia no bloqueante**: Las promesas en ReactPHP permiten que múltiples tareas se ejecuten concurrentemente sin bloquear el loop, haciendo el código más eficiente.
+
+Fíjate que no hemos hablado de "paralelo" ya que, no es "paralelo" en el sentido tradicional (como en la ejecución en múltiples hilos o procesos), sino más bien concurrente, donde se aprovecha el tiempo de inactividad (como la espera de I/O) para realizar otras tareas.
