@@ -58,6 +58,7 @@ Por ejemplo, estos son los pasos generales que se realizan cuando se leen datos 
 Fíjate en que sólo hay ✨un hilo✨, y cada petición es recibida y procesada por ✨ese hilo✨ en nanosegundos, así que es muy rápido. 
 
 El `Event Loop` también utiliza una `queue`, por lo que sabe cuál procesar primero. 
+
 El principal factor decisivo es la rapidez con la que el SO devuelve los datos solicitados. Por lo tanto, las peticiones que llegan primero no necesariamente se completan primero.
 
 Cómo trabaja el Event Loop, consultar el apartado [Event Loop](https://www.honeybadger.io/blog/getting-started-with-reactphp/)
