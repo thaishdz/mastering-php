@@ -9,6 +9,7 @@ Crea el siguiente programa que ejecuta en este orden:
 - Las funciones `C`, `B` y `A` se ejecutan en paralelo. ✔️
 - La función `D` comienza su ejecución cuando las 3 anteriores han finalizado. ✔️
 
+Esta kata fue realizada con funciones independientes
 
 # Solución
 - Para ejecutar en paralelo usaremos `parallel()`
