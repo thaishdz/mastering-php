@@ -1,11 +1,11 @@
 
 
-[Explicación ReactPHP (Inglés)](https://www.honeybadger.io/blog/getting-started-with-reactphp/)
-
 <div align="center">
   <img src="https://github.com/user-attachments/assets/2326f6d6-c5bd-44c3-9fbe-270704ea4e92" alt="meme" width="500">
 </div>
 
+
+[Explicación ReactPHP (Inglés)](https://www.honeybadger.io/blog/getting-started-with-reactphp/)
 # Qué es ReactPHP
 
 > Es una librería que permite convertir PHP en algo como Go o Node.js para que las tareas se puedan realizar de forma asíncrona.
