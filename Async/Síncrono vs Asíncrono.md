@@ -236,7 +236,7 @@ En el ejemplo anterior, estamos manejando operaciones que son asíncronas (no bl
 ## ¿Por qué no simplemente usar el temporizador directamente?
 Podrías usar temporizadores directamente sin promesas, pero `Deferred` y promesas __permiten un código más organizado y fácil de leer__, especialmente __cuando tienes múltiples etapas encadenadas que dependen de la anterior__. Además, es el __enfoque recomendado cuando trabajas con `ReactPHP`__, ya que este estilo es muy común para manejar flujos asíncronos complejos.
 
-### $deferred->resolve($meal); ¿Por qué se le pasa $meal?
+### `$deferred->resolve($meal);` ¿Por qué se le pasa `$meal`?
 __Para transmitir información o un resultado a la siguiente etapa del proceso asíncrono__. 
 
 En este caso específico, `$meal` representa el nombre del pedido (como "Big Mac" o "Happy Meal"), y __se pasa para que las etapas posteriores sepan qué pedido están manejando.__
