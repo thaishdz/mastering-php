@@ -57,6 +57,13 @@
 - Aprendí sobre : ReactPHP, Event Loop (yeeep again), Promises
 - Revisé documentación de ReactPHP y leí un poco de la librería
 
-[-24]
+[15-08-24]
+- Diseñé flowchart de Workout Tracker
+
+[16-08-24]
 - **TODO**: Subir código de kata al repo de Moure #15 ✔️
-- Callbacks 
+- Callbacks (async)✔️
+
+[24]
+- Funciones de Orden Superior
+- Patrones de Diseño : Singleton
