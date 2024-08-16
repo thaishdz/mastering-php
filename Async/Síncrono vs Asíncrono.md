@@ -199,3 +199,20 @@ Order delivered!, Enjoy your Mcflurry 🍦 😋
 Happy Meal 🍟 ready! 
 notebook@emsfu:/var/www$ our Happy Meal 🍟 😋 
 ```
+
+### Explicación
+
+- __EventLoop__: `ReactPHP` utiliza un bucle de eventos que maneja las tareas asíncronas. Para crear el bucle siempremente usamos `Loop`.
+
+- __Timers Asíncronos (addTimer)__: En lugar de usar `sleep()`, utilizamos temporizadores no bloqueantes con `addTimer`. Estos se ejecutan de forma asíncrona sin bloquear el bucle principal.
+
+- __Deferred y Promesas__: Utilizamos promesas para encadenar las etapas de confirmación, preparación y entrega. Cada etapa solo se ejecuta cuando la promesa anterior se resuelve.
+
+- __Paralelismo__: Al usar `addTimer` y manejar cada orden por separado, `ReactPHP` permite procesar todas las órdenes al mismo tiempo sin que ninguna bloquee la ejecución.
+
+### Resultado
+Cuando ejecutas el código, las órdenes se procesan de forma asíncrona, es decir, pueden confirmarse, prepararse y entregarse en cualquier orden, dependiendo de los tiempos aleatorios.
+
+¡Ahora tienes un flujo no bloqueante usando ReactPHP!
+
+
