@@ -1,3 +1,8 @@
+![image](https://github.com/user-attachments/assets/a46dcd81-5a9f-41f0-a169-d6650c978e83)
+
+
+
+
 ### Este código es síncrono y bloqueante
 ```php
 <?php
