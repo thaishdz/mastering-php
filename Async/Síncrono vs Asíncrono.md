@@ -208,8 +208,8 @@ notebook@emsfu:/var/www$ our Happy Meal 🍟 😋
 * Mcflurry 🍦  habrá tardado 2 sg, confirmed y pasa a la siguiente
 * Big Mac 🍔 ahora dice que está ready, pasa a la siguiente etapa
 * Happy Meal 🍟 ha tardo 10 seg y dice que está confirmed
-* Eso es ejecución "paralela o concurrente?", en todo caso, se ejecutan al mismo tiempo sin 
-* bloquear
+* Eso es ejecución "paralela o concurrente?", en todo caso,
+* se ejecutan al mismo tiempo sin bloquear
 ```
 
 ### Explicación
