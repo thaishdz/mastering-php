@@ -199,7 +199,17 @@ Order delivered!, Enjoy your Big Mac 🍔 😋
 Mcflurry 🍦 ready! 
 Order delivered!, Enjoy your Mcflurry 🍦 😋 
 Happy Meal 🍟 ready! 
-notebook@emsfu:/var/www$ our Happy Meal 🍟 😋 
+notebook@emsfu:/var/www$ our Happy Meal 🍟 😋
+
+
+* Si al ejecutar los ves en orden disperso es porque el rand() habrá dado valores diferentes
+* P.e :
+* Big Mac 🍔 habrá tardado 1 sg, entonces aparece primero diciendo "confirmed", pasa a la siguiente etapa
+* Mcflurry 🍦  habrá tardado 2 sg, confirmed y pasa a la siguiente
+* Big Mac 🍔 ahora dice que está ready, pasa a la siguiente etapa
+* Happy Meal 🍟 ha tardo 10 seg y dice que está confirmed
+* Eso es ejecución "paralela o concurrente?", en todo caso, se ejecutan al mismo tiempo sin 
+* bloquear
 ```
 
 ### Explicación
