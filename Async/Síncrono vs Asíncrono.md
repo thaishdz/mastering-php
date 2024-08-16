@@ -140,24 +140,21 @@ function processOrder(
         $deferredConfirm->resolve($meal); // se le pasa el pedido a la siguiente etapa
     });
 
-    // Encadenar la siguiente etapa - Ready
-    $deferredConfirm->promise()->then(function($meal) use($readyCallback, $deliveredCallback) 
+    // Encadenar la siguiente etapa - Ready y se pasan los callback que necesita para las siguientes etapas
+    $deferredConfirm->promise()->then(function($meal) use($readyCallback, $deliveredCallback)  
     {   
         $deferredReady = new Deferred(); // nueva promesa ya que la anterior se resolvió
 
         Loop::addTimer(rand(1,10), function() use ($meal, $readyCallback, $deliveredCallback, $deferredReady)
         {
             echo $readyCallback($meal);
-            $deferredReady->resolve($meal);
-
-                
+            $deferredReady->resolve($meal);    
         });
         // Encadenar la siguiente etapa - Delivered
         $deferredReady->promise()->then(function($meal) use ($deliveredCallback)
         {
             Loop::addTimer(rand(1,10), function() use ($meal, $deliveredCallback)
             {
-                
                 echo $deliveredCallback($meal);
             });
         });
