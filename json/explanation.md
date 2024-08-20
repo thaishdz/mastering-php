@@ -79,3 +79,41 @@ object(stdClass)#1 (3) {
 $data = json_decode($json, true); // Ahora $data es un array asociativo.
 ```
 Esto te permitirá acceder a los elementos como en un array: `$data['nombre']`.
+
+
+## Curiosidad 💡
+
+### Qué significa _#1_ en `object(stdClass)#1 (3)` y el _(3)_?
+
+El _#1_ que aparece en la salida de `var_dump()` indica el __ID interno del objeto__ dentro del contexto de la ejecución de PHP. 
+> 💡 Es un identificador que PHP usa para distinguir entre diferentes objetos en memoria.
+
+```php
+<?php
+$obj1 = new stdClass();
+$obj2 = new stdClass();
+
+var_dump($obj1);
+var_dump($obj2);
+?>
+```
+
+## Output
+```plaintext
+object(stdClass)#1 (0) { }
+object(stdClass)#2 (0) { }
+```
+- __#1__ y __#2__ son los identificadores internos asignados por PHP a cada objeto, simplemente para diferenciarlos.
+- Se incrementan a medida que se crean más objetos en la ejecución.
+- _(0)_ indica que no existen propiedades dentro del objeto
+
+```php
+object(stdClass)#1 (3) {
+  ["nombre"]=> string(10) "Juan Pérez"
+  ["edad"]=> int(30)
+  ["correo"]=> string(22) "juan.perez@example.com"
+}
+```
+
+- El _#1_ indica que es el primer objeto que PHP ha creado en ese contexto.
+- El número _(3)_ después de `stdClass` indica que el objeto tiene __3 propiedades__ (`nombre`, `edad` y `correo`).
