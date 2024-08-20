@@ -117,3 +117,37 @@ object(stdClass)#1 (3) {
 
 - El _#1_ indica que es el primer objeto que PHP ha creado en ese contexto.
 - El número _(3)_ después de `stdClass` indica que el objeto tiene __3 propiedades__ (`nombre`, `edad` y `correo`).
+
+## Otro ejemplo
+
+Esta es la salida que ha dado un `var_dump` de un json:
+
+```php
+object(stdClass)#11 (1) {
+  ["dataset"]=>
+  array(5) {
+    [0]=>
+    object(stdClass)#1 (3) {
+      // Propiedades del objeto
+    }
+    // ... otros elementos del array
+  }
+}
+```
+
+1. **`object(stdClass)#11 (1)`**:
+   - Esto significa que tienes un objeto de tipo `stdClass` con el identificador `#11`.
+   - Este objeto tiene **1 propiedad**, que se llama `"dataset"`.
+
+2. **`["dataset"]=> array(5)`**:
+   - La propiedad `"studentsData"` contiene un array con **5 elementos**.
+
+3. **`[0]=> object(stdClass)#1 (3)`**:
+   - El primer elemento del array (`[0]`) es otro objeto de tipo `stdClass` con el identificador `#1`.
+   - Este objeto tiene **3 propiedades**.
+
+### Conclusión:
+
+En resumen, el objeto `#11` tiene una propiedad `dataset` que contiene un array de 5 elementos. Dentro de ese array, el primer elemento (`[0]`) es otro objeto (`#1`) con 3 propiedades.
+
+El identificador `#11` y `#1` son referencias internas de PHP que indican el orden en el que los objetos fueron creados durante la ejecución del script, no la jerarquía.
