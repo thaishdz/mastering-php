@@ -70,8 +70,20 @@ Este método te permite definir el formato en el que quieres que se muestre la f
    echo $fechaComoCadena; // Salida: Tuesday, 30 July 2024 at 15:45:12 PM
    ?>
    ```
+   
+Si la fecha está en un formato específico que no es el formato estándar, puedes usar `DateTime::createFromFormat` para especificar el formato exacto de la cadena.
 
-   La clase `DateTime` en PHP ofrece una amplia variedad de métodos para trabajar con fechas y horas. Aquí te proporciono una lista de los métodos más comunes y útiles que puedes usar con objetos `DateTime`.
+```php
+<?php
+
+$dateString = "20-08-2024 14:30"; // Fecha en formato "DD-MM-YYYY HH:MM"
+$format = "d-m-Y H:i";
+$date = DateTime::createFromFormat($format, $dateString);
+echo $date->format('Y-m-d H:i:s'); // Muestra la fecha en el formato "YYYY-MM-DD HH:MM:SS"
+
+```
+
+La clase `DateTime` en PHP ofrece una amplia variedad de métodos para trabajar con fechas y horas. Aquí una lista de los métodos más comunes y útiles que puedes usar con objetos `DateTime`.
 
 ### Métodos de la Clase `DateTime`
 
