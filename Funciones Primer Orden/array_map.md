@@ -28,7 +28,7 @@ students.json
     "dataStudents" : [
         {
             "name": "Thais",
-            "dateBirth": "10-04-1992",
+            "birthday": "10-04-1992",
             "grades": {
                 "Math" : 4.5,
                 "Biology" : 6,
@@ -39,7 +39,7 @@ students.json
         },
         {
             "name": "Cristina",
-            "dateBirth": "30-08-1991",
+            "birthday": "30-08-1991",
             "grades": {
                 "Math" : 7,
                 "Biology" : 5,
@@ -50,7 +50,7 @@ students.json
         },
         {
             "name": "Iván",
-            "dateBirth": "01-07-1993",
+            "birthday": "01-07-1993",
             "grades": {
                 "Math" : 10,
                 "Biology" : 10,
@@ -61,7 +61,7 @@ students.json
         },
         {
             "name": "Paula",
-            "dateBirth": "20-01-1995",
+            "birthday": "20-01-1995",
             "grades": {
                 "Math" : 3,
                 "Biology" : 5,
@@ -72,7 +72,7 @@ students.json
         },
         {
             "name": "Betancort",
-            "dateBirth": "18-02-1991",
+            "birthday": "18-02-1991",
             "grades": {
                 "Math" : 3.4,
                 "Biology" : 9.2,
@@ -83,7 +83,7 @@ students.json
         },
         {
             "name": "Jerico",
-            "dateBirth": "07-06-1990",
+            "birthday": "07-06-1990",
             "grades": {
                 "Math" : 10,
                 "Biology" : 9.2,
