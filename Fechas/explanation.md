@@ -70,7 +70,7 @@ Este método te permite definir el formato en el que quieres que se muestre la f
    echo $fechaComoCadena; // Salida: Tuesday, 30 July 2024 at 15:45:12 PM
    ?>
    ```
-   
+## De `string` a `DateTime`
 Si la fecha está en un formato específico que no es el formato estándar, puedes usar `DateTime::createFromFormat` para especificar el formato exacto de la cadena.
 
 ```php
