@@ -91,9 +91,9 @@ $averageStudent = array_map('calculateAverageGrade', $dataset["dataStudents"]);
 var_dump($averageStudent);
 ```
 
-> Ósea me estás diciendo que toda estas vainas de `array_sum`, `array_values`, `array_filter`, ... __ES PROGRAMACIÓN FUNCIONAL__?
+> Ósea me estás diciendo que todas estas vainas de `array_sum`, `array_values`, `array_filter`, ... __ES PROGRAMACIÓN FUNCIONAL__?
 
-Yes
+Yes ...
 
 ![image](https://github.com/user-attachments/assets/72a64a5e-a0c2-4e6a-8495-575b7ec48655)
 
