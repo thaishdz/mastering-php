@@ -71,6 +71,18 @@ Este método te permite definir el formato en el que quieres que se muestre la f
    ?>
    ```
 ## De `string` a `DateTime`
+
+
+```php
+<?php
+
+$dateString = "2024-08-20 14:30:00"; // Fecha en formato "YYYY-MM-DD HH:MM:SS"
+$date = new DateTime($dateString);
+
+echo $date->format('Y-m-d H:i:s'); // Muestra la fecha en el formato "YYYY-MM-DD HH:MM:SS"
+```
+
+
 Si la fecha está en un formato específico que no es el formato estándar, puedes usar `DateTime::createFromFormat` para especificar el formato exacto de la cadena.
 
 ```php
