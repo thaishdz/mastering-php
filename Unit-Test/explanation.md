@@ -1,12 +1,12 @@
 # Unit Testing
 
+> Para crear tests unitarios en PHP, se utiliza `PHPUnit`, una __herramienta que facilita la creación y ejecución de tests__
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d388b4ed-6801-4c41-9dac-56d1bf149ffe" />
+  <img src="https://github.com/user-attachments/assets/b60c3c74-4a5c-43e5-b7d4-ce88ba638eed" />
 </p>
 
 
-Para crear tests unitarios en PHP, se utiliza comúnmente `PHPUnit`, una __herramienta que facilita la creación y ejecución de tests__
 
 
 # Pasos básicos para configurar y escribir un test unitario:
