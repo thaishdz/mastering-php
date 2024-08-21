@@ -1,3 +1,7 @@
+
+# __magicMethods
+
+
 ![image](https://github.com/user-attachments/assets/98e87e43-7ad1-48cc-a095-2d6a6ef2cbce)
 
 En PHP, 
