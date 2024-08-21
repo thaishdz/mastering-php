@@ -230,22 +230,22 @@ Array
 
     [1] => Array
         (
+            [name] => Thais
+            [age] => 30
+            [birthdate] => 10-09-1993
+        )
+
+    [2] => Array
+        (
             [name] => Iván
             [age] => 31
             [birthdate] => 01-07-1993
         )
 
-    [2] => Array
-        (
-            [name] => Thais
-            [age] => 32
-            [birthdate] => 10-11-1992
-        )
-
     [3] => Array
         (
             [name] => Cristina
-            [age] => 33
+            [age] => 32
             [birthdate] => 30-08-1991
         )
 
@@ -262,4 +262,6 @@ Array
             [age] => 34
             [birthdate] => 07-06-1990
         )
+
+)
 ```
