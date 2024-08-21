@@ -102,5 +102,5 @@ Yes ...
 - __No hay variables ni asignaciones… o bueno, mejor dicho: inmutabilidad__. Una vez que un valor ha sido establecido y almacenado este no puede ser cambiado a lo largo de la ejecución del programa del bloque del programa en el que fue definido.
 - __No tienen estados, evita los efectos colaterales.__ : En la programación funcional, el llamar a una función multiples veces con las mismas entrdas siempre devolverá los mismos resultados, estos no se verán influenciados por condiciones externas o estados almacenados previamente. [Fuente ~ thatcsharguy](https://thatcsharpguy.com/tv/funcional/)
 
-### La ayudita 🛎️
+### Ayuditas 🛎️
 [📺 22 - FUNCIONES DE ORDEN SUPERIOR](https://www.youtube.com/watch?v=ABniGtbqAXk)
