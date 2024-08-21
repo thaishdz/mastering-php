@@ -1,6 +1,6 @@
 # Autoload
 
-El autoloading se refiere a la __capacidad de cargar clases automáticamente sin tener que incluir manualmente los archivos que las contienen__
+> El autoloading se refiere a la __capacidad de cargar clases automáticamente sin tener que incluir manualmente los archivos que las contienen__
 
 ![image](https://github.com/user-attachments/assets/83559282-00ac-4eb7-8d86-d3b9badc8503)
 
