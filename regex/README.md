@@ -1,16 +1,25 @@
-Las expresiones regulares (regex) son una herramienta poderosa para buscar y manipular texto. En PHP, 
-puedes usar las funciones `preg_match`, `preg_match_all`, `preg_replace`, y `preg_split` para trabajar con expresiones regulares.
 
-[Esta web te ayuda a visualizar las regex](https://regex-vis.com/samples)
+# Regex
 
+<img src="https://github.com/user-attachments/assets/c9524a95-9ec0-4051-9dcf-abc56c864ac2" width="500" height="500"/>
 
-![image](https://github.com/user-attachments/assets/39c361b5-d0d6-456b-9d37-983ab09d465d)
+# Ayudita 🛎️
+🟠 [Esta web te ayuda a visualizar las regex](https://regex-vis.com/samples)
 
+### Leyenda de caracteres
 
+- `^`: Inicio de la cadena.
+- `$`: Fin de la cadena.
+- `.`: Cualquier carácter excepto nueva línea.
+- `*`: Cero o más repeticiones.
+- `+`: Una o más repeticiones.
+- `?`: Cero o una repetición.
+- `\d`: Cualquier dígito.
+- `\w`: Cualquier carácter de palabra (letras, dígitos, guión bajo).
+- `[]`: Conjunto de caracteres.
+- `()` : Agrupación y captura.
 
-
-
-# Ejemplos 
+# Funciones para trabajar con Regex
 
 ## `preg_match`
 Busca una coincidencia en una cadena.
@@ -162,23 +171,9 @@ $fruits = preg_split($pattern, $string);
 print_r($fruits);
 ?>
 ```
+# Ejemplos
 
-### Caracteres especiales
-
-- `^`: Inicio de la cadena.
-- `$`: Fin de la cadena.
-- `.`: Cualquier carácter excepto nueva línea.
-- `*`: Cero o más repeticiones.
-- `+`: Una o más repeticiones.
-- `?`: Cero o una repetición.
-- `\d`: Cualquier dígito.
-- `\w`: Cualquier carácter de palabra (letras, dígitos, guión bajo).
-- `[]`: Conjunto de caracteres.
-- `()` : Agrupación y captura.
-
-### Ejemplo avanzado
-
-Buscar una dirección de correo electrónico.
+### Buscar una dirección de correo electrónico.
 
 ```php
 <?php
