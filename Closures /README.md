@@ -71,10 +71,9 @@ echo $closure(666);  // 676
 
 
 ### ¿Sabías qué ... ?
+![image](https://github.com/user-attachments/assets/954b6b35-6f8b-4a4d-aa60-5711fb67c0d0)
 >💡 **No todas las funciones de primer orden son closures**, __pero una closure sí es una función de primer orden.__
 
-
-![image](https://github.com/user-attachments/assets/613b8fe1-8c7d-4ddb-a866-b3c1958b2d17)
 
 Y una función anónima no significa que sea un _closure_ aunque podría serlo 👍
 
