@@ -33,7 +33,7 @@ Array
 (
     [0] => Array
         (
-            [nombre] => Mouse
+            [nombre] => Ratón
             [precio] => 20
         )
 
@@ -51,13 +51,13 @@ Array
 
     [3] => Array
         (
-            [nombre] => Laptop
+            [nombre] => Portátil
             [precio] => 1500
         )
 )
 ```
 
-En este caso, los productos están ordenados por precio de menor a mayor.
+💡 Los productos están ordenados por precio de menor a mayor.
 
 
 
