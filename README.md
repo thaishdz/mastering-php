@@ -9,7 +9,7 @@ Aquí están reunidos todos los conceptos que se me atragantaban y otros que nec
 
 
 
-## Ayuditas 
+## Mis Ayuditas 🛎️
 - [Roadmap Retos programacion ~ Mouredev](https://retosdeprogramacion.com/roadmap/#last)
 - [Buenas Prácticas ~ PHPSensei](https://phpsensei.es/category/buenas-practicas/)
 - [Cursos de Gary Fokin Boss Clark](https://garyclarketech.teachable.com/courses/)
