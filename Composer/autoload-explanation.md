@@ -2,8 +2,8 @@
 
 > El autoloading se refiere a la __capacidad de cargar clases automáticamente sin tener que incluir manualmente los archivos que las contienen__
 
-![image](https://github.com/user-attachments/assets/83559282-00ac-4eb7-8d86-d3b9badc8503)
 
+<img src="https://github.com/user-attachments/assets/83559282-00ac-4eb7-8d86-d3b9badc8503" width="550" height="500"/>
 
 Hay 2 formas para cargar clases en los scripts :
 - Autoloading con Composer: Configura Composer para cargar automáticamente tus clases 
