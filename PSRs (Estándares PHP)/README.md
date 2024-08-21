@@ -1,11 +1,6 @@
 
-
-
-[Buen post de Manu Pijierro](https://mpijierro.medium.com/psr-estándares-en-php-ccde7d9014e6#:~:text=PSR-7%3A%20HTTP%20message%20interfaces,la%20base%20del%20desarrollo%20web.)
-
-
 # ¿Qué son los PSRs?
-> PSRs (PHP Standards Recommendations), define un conjunto de estándares que facilitan el desarrollo de aplicaciones y la interoperabilidad entre proyectos.
+> __PSRs__ (PHP Standards Recommendations), son un __conjunto de estándares que facilitan el desarrollo de aplicaciones y la interoperabilidad entre proyectos.__
 
 # ¿Quién define los PSRs?
 Los estándares de PHP están definidos por el PHP -FIG (PHP-Framework Interop Group).
@@ -16,7 +11,7 @@ Los estándares de PHP están definidos por el PHP -FIG (PHP-Framework Interop G
 - Facilitar la colaboración entre programadores y proyectos.
 
 
-# Listado de estándares PSR
+# Listado de estándares PSR - los DEFCON de PHP
 
 ## PSR-0 Autoloading Standard (Status: Deprecated 🛑)
 Fue marcado como deprecated (obsoleto) el 21–10–2014 en favor de __PSR-4__. El estándar PSR-0 describe los requisitos obligatorios (prácticas y restricciones), que deben ser satisfechos para la interoperabilidad del autocargador, es decir, para la carga automática de clases.
@@ -33,3 +28,7 @@ Para saber el resto de estándares revisa los ficheros contenidos dentro de esta
 # PSR-18: HTTP Client (Status: Accepted ✔️)
 > Este estándar trata de describir un interface común para el envío de peticiones HTTP y la recepción de respuestas HTTP.
 Con PSR-7 sabemos que las peticiones y las respuestas se parecen, pero no define nada sobre como una petición debería ser enviada o recibida. Gracias a PSR-18 y a los clientes HTTP que lo implementen, los programadores podrán desarrollar librerías desacopladas de las distintas implementaciones particulares de cada cliente HTTP, lo que hará que dichas librerías sean más reutilizables.
+
+
+## Ayudita
+📜 [Buen post de Manu Pijierro](https://mpijierro.medium.com/psr-estándares-en-php-ccde7d9014e6#:~:text=PSR-7%3A%20HTTP%20message%20interfaces,la%20base%20del%20desarrollo%20web.)
