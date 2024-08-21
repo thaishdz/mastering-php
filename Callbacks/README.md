@@ -3,7 +3,10 @@
 # Callbacks
 
 
-> En PHP, es una función que se pasa como argumento a otra función. 
+> En PHP, es una función que se pasa como argumento a otra función.
+
+![image](https://github.com/user-attachments/assets/03e28086-58b3-4fed-9088-2750a1f05ff1)
+
 
 # Ventajas
 - Crear funciones más genéricas y flexibles__ que puedan ser utilizadas para diferentes propósitos.
@@ -74,6 +77,6 @@ Array
 ```
 
 
-
+### Ayuditas
 [Cómo utilizar Callbacks en PHP](https://asilvabe.dev/blog/callbacks-in-php)
 
