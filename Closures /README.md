@@ -45,7 +45,7 @@ echo createClosure(10); // Fatal error: Uncaught Error: Object of class Closure 
 Claro es que lo que te devuelve `createClosure` es una función 👍 y te está diciendo :
 
 > Closure : vale mi ciela pero los `echo` son para strings y esas mierdas, yo soy una `CLOSURE`, ósea una función
-de toda la vida, pero metida por el culo de otra, así que TAMBIÉN me tienes que invocar como si fuese Satanás`"
+de toda la vida, pero metida por el culo de otra, así que TAMBIÉN me tienes que invocar como si fuese Satanás
 
 <img src="https://github.com/user-attachments/assets/24224174-ac06-4210-86f0-4191644c6086" width="650" height="450" />
 
