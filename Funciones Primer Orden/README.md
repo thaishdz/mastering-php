@@ -98,7 +98,7 @@ Yes ...
 ![image](https://github.com/user-attachments/assets/72a64a5e-a0c2-4e6a-8495-575b7ec48655)
 
 # Entonces ... en la programación funcional 
-- __No hay ciclos__ : La programación funcional hace uso de la ✨__recursividad__✨
+- __No hay ciclos__ : La programación funcional hace uso de la ✨recursividad✨
 - __No hay variables ni asignaciones… o bueno, mejor dicho: inmutabilidad__. Una vez que un valor ha sido establecido y almacenado este no puede ser cambiado a lo largo de la ejecución del programa del bloque del programa en el que fue definido.
 - __No tienen estados, evita los efectos colaterales.__ : En la programación funcional, el llamar a una función multiples veces con las mismas entrdas siempre devolverá los mismos resultados, estos no se verán influenciados por condiciones externas o estados almacenados previamente. [Fuente ~ thatcsharguy](https://thatcsharpguy.com/tv/funcional/)
 
