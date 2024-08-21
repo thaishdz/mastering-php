@@ -6,29 +6,30 @@
 
 <img src="https://github.com/user-attachments/assets/1faaf2a4-126e-4522-b375-801ffca19366" width="300" height="300"/>
 
-### Ejemplo de Closure:
+# Ejemplo de Closure:
 
 ```php
-function crearContador() {
-    $contador = 0;
-    return function() use (&$contador) {
-        $contador++;
-        return $contador;
+function createClosure($x) {
+    return function($y) use ($x) {
+        return $x + $y;
     };
 }
 
-$incrementar = crearContador();
-echo $incrementar(); // Output: 1
-echo $incrementar(); // Output: 2
+$closure = createClosure(10);
+echo $closure(5);  // Salida: 15
 ```
 
-En este caso, `$contador` es una variable externa que la función anónima captura y "recuerda" entre llamadas.
+La función anónima `function($y) use ($x)` es un _closure_ porque captura el valor de `$x` del contexto externo de `createClosure`.
 
 
->💡 **no todas las funciones de primer orden son closures**, __pero una closure sí es una función de primer orden.__
+>💡 **No todas las funciones de primer orden son closures**, __pero una closure sí es una función de primer orden.__
 
 
+![image](https://github.com/user-attachments/assets/613b8fe1-8c7d-4ddb-a866-b3c1958b2d17)
 
+Ah otra cosa, una función anónima no significa que sea un _closure_ aunque podría serlo 👍
+
+![image](https://github.com/user-attachments/assets/2a5cc63a-1764-416b-8356-d0d5f3539c20)
 
 
 
