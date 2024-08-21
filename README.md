@@ -1,6 +1,6 @@
 # ⭐⭐⭐ Road to PHP Master ⭐⭐⭐
 
-<img src="https://github.com/user-attachments/assets/900bd631-d30c-4bd3-ad41-6777e28c8f43" width="950" height="500" />
+<img src="https://github.com/user-attachments/assets/900bd631-d30c-4bd3-ad41-6777e28c8f43" width="950" height="450" />
 
 
 Te doy la bienvenida a mi repo para convertirme en una ✨FOKIN BOSS✨ de PHP
