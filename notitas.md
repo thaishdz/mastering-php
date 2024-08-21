@@ -1,0 +1,1 @@
+- Las `lambdas` permiten crear funciones anónimas pequeñitas
