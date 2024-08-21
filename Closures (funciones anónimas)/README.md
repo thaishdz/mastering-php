@@ -1,6 +1,10 @@
 # Closures
 
-Es un tipo especial de función que **captura el entorno en el que fue definida**. Esto significa que una __closure__ puede acceder a variables externas a su ámbito (`scope`) y "cerrarlas" (por eso se llama *closure*). En PHP, esto se hace usando la palabra clave `use`.
+> Es una __función que captura y recuerda el entorno en el que fue creada, incluso después de que la función externa haya terminado de ejecutarse.__
+
+💡 Un _closure_ tiene acceso a variables locales de su función contenedora después de que esta haya terminado. En PHP, esto se hace usando la palabra clave `use`.
+
+![image](https://github.com/user-attachments/assets/1faaf2a4-126e-4522-b375-801ffca19366)
 
 ### Ejemplo de Closure:
 
