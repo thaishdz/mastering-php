@@ -4,7 +4,7 @@
 
 💡 Un _closure_ tiene acceso a variables locales de su función contenedora después de que esta haya terminado. En PHP, esto se hace usando la palabra clave `use`.
 
-![image](https://github.com/user-attachments/assets/1faaf2a4-126e-4522-b375-801ffca19366)
+<img src="https://github.com/user-attachments/assets/1faaf2a4-126e-4522-b375-801ffca19366" width="300" height="300"/>
 
 ### Ejemplo de Closure:
 
