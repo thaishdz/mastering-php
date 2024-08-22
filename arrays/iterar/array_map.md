@@ -30,3 +30,65 @@ print_r($numbers); // [1, 2, 3, 4] (el array original no se modifica)
 
 - **Usa `array_walk()`** cuando necesites modificar un array existente, sin crear un nuevo array (por ejemplo, si deseas formatear los valores directamente o aplicar una acción a cada uno sin cambiar la estructura del array).
 - **Usa `array_map()`** cuando quieras **transformar y crear un nuevo array** basado en uno o más arrays de entrada.
+
+
+# Ejemplo culerísimo
+
+Tenemos un listado de pokemones que queremos evolucionar
+
+```php
+
+$pokemones = ['bulbasaur','mewtwo', 'pikachu'];
+
+function getEvolutions($pokemon)
+{
+	switch($pokemon)
+	{
+		case 'bulbasaur':
+			return ['ivysaur', 'venasaur'];
+		case 'mewtwo':
+			return $pokemon;
+		case 'pikachu':
+			return 'raichu';
+		default:
+			return "";
+	};
+}
+
+$evolutions = array_map('getEvolutions', $pokemones);
+```
+1. El `array_map` coge cada Pokémon y lo _evoluciona_ (si existe evolución si no 💩) con la función que le mandamos como `callback` => `getEvolutions()`.
+2. En el `switch` se evalúa cada Pokémon del array y se ✨transforma✨
+3. Cada `return` actúa como si estuviéramos haciendo un `push` a un array, es decir, estamos añadiendo un nuevo valor en cada iteración al array que devolverá el `map`
+
+## Output
+
+```php
+Array
+(
+    [0] => Array
+        (
+            [0] => ivysaur
+            [1] => venasaur
+        )
+
+    [1] => mewtwo
+    [2] => raichu
+)
+
+```
+
+La salida del array `$pokemones` indica que todo sigue igual
+
+```php
+
+print_r($pokemones); // esta vaina para visualizar arrays y objetos (a menos que este tenga propiedades privadas) 👍
+
+Array
+(
+    [0] => bulbasaur
+    [1] => mewtwo
+    [2] => pikachu
+)
+
+```
