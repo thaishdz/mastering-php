@@ -6,7 +6,21 @@
 - Los elementos que hacen que la función devuelva `false` __se eliminan.__
 
 
-## Tienes un array de arrays y quieres obtener una lista con los __✨ best students ✨__ :
+| **Característica**                | **Descripción**                                                                                          |
+|----------------------------------|----------------------------------------------------------------------------------------------------------|
+| **Sintaxis**                      | `array_filter(array $array, callable $callback = null, int $mode = 0): array`                           |
+| **Parámetro `$array`**            | El array que se va a filtrar.                                                                           |
+| **Parámetro `$callback`**         | Función de callback que se aplica a cada elemento del array. Debe devolver `true` para mantener el elemento, `false` para eliminarlo. |
+| **Parámetro `$mode`**             | (Opcional) Modifica el comportamiento del filtrado. Puede ser `ARRAY_FILTER_USE_BOTH` (para pasar tanto el valor como la clave a la función de callback) o `ARRAY_FILTER_USE_KEY` (para pasar solo la clave). Por defecto es `0` (solo el valor). |
+| **Retorno**                       | Un nuevo array con los elementos que pasaron la prueba de la función de callback.                      |
+| **Preservar Claves**              | Sí, `array_filter` preserva las claves del array original en el array filtrado.                         |
+| **Valores falsy**                 | Los valores como `0`, `false`, `null`, `''` se consideran como `false` en la función de callback si no se especifica una función de callback. |
+| **Modo `ARRAY_FILTER_USE_BOTH`**  | Pasa tanto el valor como la clave a la función de callback. La función debe manejar dos parámetros.       |
+| **Modo `ARRAY_FILTER_USE_KEY`**   | Pasa solo la clave a la función de callback. La función debe manejar un solo parámetro (la clave).        |
+| **Filtrado sin callback**         | Si no se pasa una función de callback, se eliminarán todos los valores que se consideren falsy (`0`, `false`, `null`, `''`, etc.). |
+
+# Ejemplos
+### Tienes un array de arrays y quieres obtener una lista con los __✨ best students ✨__ :
 
 ### Cómo funciona en la práctica
 
