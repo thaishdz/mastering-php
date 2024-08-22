@@ -92,3 +92,68 @@ Array
 )
 
 ```
+### Vamos con otro ejemplo por si todavía derrapas ...
+
+
+
+# Transformar un valor del array, de string a un objeto
+
+Me vas a ✨transformar✨ esas fechas a un objeto `DateTime`
+
+```php
+
+$mapStudents = [
+    ['name'=> 'pepito', 'birthday'=> '10-11-1990'],
+    ['name'=> 'juanito','birthday'=> '20-07-1995']
+];
+
+$result = array_map(function($student){
+    $student['birthday'] = DateTime::createFromFormat('d-m-Y', $student['birthday']);
+    return $student;
+}, $mapStudents);
+
+```
+## Explicación Paso a Paso
+- `$mapStudents`: Es un array de arrays asociativos (lo que viene siendo una matrioska). Cada sub-array tiene info de un estudiante.
+- `array_map()` : Esta función recorre cada elemento de `$mapStudents` y aplica la función anónima en cada uno de ellos. El resultado de esta transformación se guarda en el array `$result`.
+- El `callback` : Dentro de la función anónima se hace lo siguiente:
+
+1. Se toma el campo `birthday` del array actual (`$student`) y se convierte en un objeto `DateTime` usando `DateTime::createFromFormat('d-m-Y', $student['birthday'])`.
+2. Luego, el valor de `birthday` se reemplaza con el objeto `DateTime` correspondiente.
+3. `return $student`: __Aquí es donde está la clave__. `array_map()` requiere que la función devuelva un valor para cada iteración. Este valor será lo que se guarde en el array de resultados (`$result`).
+4.  Debes retornar `$student` porque el objetivo de `array_map()` es generar un nuevo array con los elementos transformados.
+   
+> 💡 Si no retornas `$student`, __el array resultante no tendría los datos modificados.__
+
+## Ouput
+
+```php
+Array
+(
+    [0] => Array
+        (
+            [name] => pepito
+            [birthday] => DateTime Object
+                (
+                    [date] => 1990-11-10 15:57:16.000000
+                    [timezone_type] => 3
+                    [timezone] => UTC
+                )
+
+        )
+
+    [1] => Array
+        (
+            [name] => juanito
+            [birthday] => DateTime Object
+                (
+                    [date] => 1995-07-20 15:57:16.000000
+                    [timezone_type] => 3
+                    [timezone] => UTC
+                )
+
+        )
+
+)
+```
+Se transformó cada string de `birthday` en un objeto `DateTime` como ves
