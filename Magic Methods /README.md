@@ -88,27 +88,3 @@ Si no defines un constructor en tu clase, PHP utiliza un constructor por defecto
 ![image](https://github.com/user-attachments/assets/77de7f67-5552-4aca-aba5-b5a67fd82abd)
 
 SE ACABA DE DESBLOQUEAR EL MISTERIO DE CÓMO SE LLAMABA ✨MÁGICAMENTE✨ a ese constructor por defecto, sin que tuviésemos uno definido.
-
-## `__invoke()` - Llamar a un objeto como si fuese una función 
-- __Evento que lo dispara__: Este método es llamado cuando se intenta invocar un objeto como si se tratara de una función.
-
-- __Finalidad__: Permite controlar el comportamiento de un objeto cuando este intenta ser llamado como a una función. Es decir, Si no definiéramos `__invoke` y tratáramos de utilizar el objeto como si se tratara de una función obtendremos un error.
-
-```php
-
-class Calculator
-{
-    public function __invoke($a, $b)
-    {
-        return $a + $b;
-    }
-}
-
-
-$suma = new Calculator();
-
-echo $suma(5,3); // 8
-
-```
-
-
