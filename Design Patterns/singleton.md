@@ -23,6 +23,17 @@
 
 
 
+
+
+El problema en el contexto de Singleton es que alguien podría serializar la instancia, guardarla en una cadena y luego deserializarla para crear una nueva instancia, lo que rompería la unicidad.
+
+Para evitarlo, se declara __wakeup() como privado o vacío:
+
+```php
+private function __wakeup() { }
+
+```
+
 # Resumen
-Única instancia: Garantiza que solo exista una instancia de la clase.
-Acceso global: Ofrece un método global para obtener esa única instancia.
+- **Única instancia**: Garantiza que solo exista una instancia de la clase.
+- **Acceso global**: Ofrece un método global para obtener esa única instancia.
