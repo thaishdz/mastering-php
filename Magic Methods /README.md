@@ -17,9 +17,17 @@ En PHP,
 - El doble guión bajo se usa para diferenciar estos métodos mágicos de los métodos normales de la clase.
 - Esto evita conflictos de nombres y hace que sea claro que estos métodos tienen un propósito especial definido por PHP.
 
-## `__toString()`
-- El método `__toString()` se invoca automáticamente cuando se trata de convertir un objeto a una cadena de texto.
-- Es útil cuando deseas definir cómo debería verse una instancia de la clase cuando se usa en un contexto que espera una cadena de texto, como `echo` o `print`.
+## `__construct()`
+
+Si no defines un constructor en tu clase, PHP utiliza un constructor por defecto. Esto significa que puedes crear instancias de la clase sin inicializar propiedades u otros datos ...
+
+... 
+
+### AAH FILHO DA PUTA AGORA SIM ENTENDOOOO  
+![image](https://github.com/user-attachments/assets/77de7f67-5552-4aca-aba5-b5a67fd82abd)
+
+SE ACABA DE DESBLOQUEAR EL MISTERIO DE CÓMO SE LLAMABA ✨MÁGICAMENTE✨ a ese constructor por defecto, sin que tuviésemos uno definido.
+
 
 ### Otros Métodos Mágicos
 Aquí hay algunos otros métodos mágicos comunes en PHP:
@@ -32,59 +40,3 @@ Aquí hay algunos otros métodos mágicos comunes en PHP:
 - `__sleep()`: Se invoca antes de que un objeto sea serializado.
 - `__wakeup()`: Se invoca cuando un objeto serializado es deserializado.
 - `__invoke()`: Se invoca cuando se intenta llamar a un objeto como una función.
-
-### Ejemplo con `__toString()`
-
-- __Evento que lo dispara__: este método es llamado luego de la invocación de las funciones de impresión `echo(), print() y printf()`.
-- __Finalidad__: Permite asociar un string a un objeto, que será mostrado si dicho objeto es invocado como una cadena
-
-
-```php
-<?php
-
-class Pokemon
-{
-    private int $id;
-    private string $name;
-    private int $weight;
-    private int $height;
-    private array $types;
-
-    public function __construct(array $data)
-    {
-        $this->id       = $data['id'];
-        $this->name     = $data['name'];
-        $this->weight   = $data['weight'];
-        $this->height   = $data['height'];
-        $this->types    = $data['types'];
-    }
-
-    public function __toString() : string
-    {
-        $types = implode(', ', $this->types);
-        return "ID: {$this->id}, Name: {$this->name}, Weight: {$this->weight}kg, Height: {$this->height}cm, Types: {$types}";
-    }
-}
-
-// Ejemplo de uso
-$data = [
-    'id' => 1,
-    'name' => 'Bulbasaur',
-    'weight' => 69,
-    'height' => 70,
-    'types' => ['Grass', 'Poison']
-];
-
-$pokemon = new Pokemon($data);
-echo $pokemon; // Output: ID: 1, Name: Bulbasaur, Weight: 69kg, Height: 70cm, Types: Grass, Poison
-```
-## `__construct()`
-
-Si no defines un constructor en tu clase, PHP utiliza un constructor por defecto. Esto significa que puedes crear instancias de la clase sin inicializar propiedades u otros datos ...
-
-... 
-
-### AAH FILHO DA PUTA AGORA SIM ENTENDOOOO  
-![image](https://github.com/user-attachments/assets/77de7f67-5552-4aca-aba5-b5a67fd82abd)
-
-SE ACABA DE DESBLOQUEAR EL MISTERIO DE CÓMO SE LLAMABA ✨MÁGICAMENTE✨ a ese constructor por defecto, sin que tuviésemos uno definido.
