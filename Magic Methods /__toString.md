@@ -68,6 +68,52 @@ Types: Grass, Poison
 ----------------------------------
 ```
 
+## Otros usos
+
+- Lanzar excepciones
+- Registros (logs)
+- Testing
+- Debugging
+
+En general te sirve para todas aquellas ocasiones en las que __quieras representar un objeto como una cadena__.
+
+## Y ... `serialize()` no me serviría también para representar el objeto?
+
+También existe esa opción, pero `__toString` te da más libertad a la hora de «representar» el objeto como una cadena. 
+
+## Ejemplo con `serialize()`
+
+Para que veas la diferencia, con `serialize()` el objeto `$persona` quedaría así:
+
+```php
+
+class Human
+{
+
+    private $name;
+    private $firstName;
+
+    public function __construct(string $name, string $firstName)
+    {
+        $this->name = $name;
+        $this->firstName = $firstName;
+    }
+}
+
+$humana = new Human('Thais', 'Hdz');
+
+echo serialize($humana) . PHP_EOL;
+
+```
+
+```plaintext
+
+O:5:"Human":2:{s:11:"�Human�name";s:5:"Thais";s:16:"�Human�firstName";s:3:"Hdz";}
+
+```
+
+### ¿Qué pasa si no añado este método a mi clase?
+Absolutamente nada. Puedes prescindir de él y tus clases seguirán funcionando a la perfección 👍.
 
 ### Ayuditas 🛎️
 
