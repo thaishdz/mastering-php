@@ -49,7 +49,7 @@ __Significa que las propiedades del objeto original se copian al nuevo objeto__.
 2. Llama automáticamente al método mágico `__clone()`, si está definido, en la nueva instancia creada.
 Después de crear la copia superficial, PHP ejecuta el método `__clone()` si está presente, permitiéndote modificar la copia.
 
-Por lo tanto, no necesitas hacer algo como esto:
+Por lo tanto, ⛔ __NO NECESITAS__ hacer algo como esto:
 
 ```php
 $clon = clone($original); // Incorrecto
