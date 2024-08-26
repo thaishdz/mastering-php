@@ -1,6 +1,6 @@
 ## Qué carajos es Serializar?
 
-Convertir un objeto en una cadena de texto, se utiliza, por ejemplo, para almacenar el estado de un objeto en un archivo o transmitirlo a través de la red
+__Convertir un objeto en una cadena de texto__, se utiliza, por ejemplo, para almacenar el estado de un objeto en un archivo o transmitirlo a través de la red
 
 
 ```php
@@ -69,11 +69,14 @@ echo $deserializado->name; // Salida: Thais
 
 ```
 
-## ¿Cuándo es útil?
+## OLRAIT ... Y pa qué vergas quiero esto?
+
+ Porque necesitas manipular datos que de otra manera no podrías tratar si no los transformas.
+
 - Almacenar un objeto en una base de datos o archivo.
+  - Necesitas manejar el estado del objeto que interactúa con la BBDD, por eso dices, vale necesito traerme esta `row` y manipularla
 - Enviar un objeto a través de una red (como en una API).
-- Guardar el estado de un objeto para restaurarlo más adelante.
 
 
-### Consideraciones de seguridad 👮
+### Consideraciones de seguridad 👮 🚨
 La deserialización puede ser peligrosa si se aplica a datos no confiables. Si deserializas datos que provienen de una fuente externa, como un usuario, pueden ser manipulados para ejecutar código malicioso o alterar el comportamiento de tu aplicación.
