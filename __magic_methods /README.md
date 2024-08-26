@@ -7,7 +7,7 @@
 En PHP, 
 - __Los métodos mágicos son aquellos que comienzan con dos guiones bajos (`__`).__
 - Son llamados ✨sin que nosotros lo hagamos explícitamente✨
-- Funcionan como __interceptores que se autoinvocan cuando se dispara una condición o evento__; es decir, sin necesidad de especificar el nombre del método en concreto.
+- __Se autoinvocan cuando se dispara una condición o evento__; es decir, sin necesidad de especificar el nombre del método en concreto.
 
 > 💡Los métodos mágicos nos permiten saber cuándo un programador está interactuando con un objeto; permitiéndonos realizar acciones antes o después de esto.
 
