@@ -22,7 +22,7 @@
   - Al contrario que las variables globales, el patrón `Singleton` garantiza que haya una única instancia de una clase.
   - A excepción de la propia clase `Singleton`, nada puede sustituir la instancia en caché.
   - Ten en cuenta que siempre podrás ajustar esta limitación y permitir la creación de cierto número de instancias `Singleton`.
-  - La única parte del código que requiere cambios es el cuerpo del método getInstance.
+  - La única parte del código que requiere cambios es el cuerpo del método `getInstance`.
 
 
 
