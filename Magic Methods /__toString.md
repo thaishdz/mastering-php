@@ -83,7 +83,7 @@ También existe esa opción, pero `__toString` te da más libertad a la hora de 
 
 ## Ejemplo con `serialize()`
 
-Para que veas la diferencia, con `serialize()` el objeto `$persona` quedaría así:
+Para que veas la diferencia, con `serialize()` el objeto `$human` quedaría así:
 
 ```php
 
