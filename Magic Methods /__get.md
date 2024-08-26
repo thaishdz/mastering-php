@@ -4,7 +4,7 @@
 
 - Definir `__get` nos __permitirá acceder desde fuera del objeto y "de forma genérica" a cualquier propiedad del mismo__ ...
 
-✨independientemente de que si está declara como `private` o `protected`✨
+✨independientemente de si está declarada como `private` o `protected`✨
 ![image](https://github.com/user-attachments/assets/5cdbbc5f-f4b0-4fb7-82ef-51a187cf185f)
 
 
