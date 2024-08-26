@@ -3,8 +3,11 @@
 # `__clone`
 
 
-- Se llama cuando un objeto es clonado 👍.
+- Se llama cuando quieres clonar un objeto 👍
 
+<p align=center>
+    <img src="https://github.com/user-attachments/assets/d890efb8-8fb3-4d96-8493-24b5d891ddae" width="500" height="500" />
+</p>
 
 Por defecto, PHP permite clonar objetos usando la palabra clave `clone`
 
@@ -30,7 +33,7 @@ echo $clon->monkey;
 
 ```
 
-# ¿Cómo funciona clone?
+# ¿Cómo funciona `clone`?
 
 Cuando ejecutas
 
