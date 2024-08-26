@@ -89,28 +89,6 @@ Si no defines un constructor en tu clase, PHP utiliza un constructor por defecto
 
 SE ACABA DE DESBLOQUEAR EL MISTERIO DE CÓMO SE LLAMABA ✨MÁGICAMENTE✨ a ese constructor por defecto, sin que tuviésemos uno definido.
 
-## `__get()` - No es lo mismo que un getter 
-
-- `__get()` recibe un único parámetro que es la propiedad a la que se quiere acceder.
-  
-- Entonces, definir `__get` nos permitirá acceder desde fuera del objeto y “de forma genérica” a cualquier propiedad del mismo, independientemente de que esta esté declara como private o protected.
-  
-- Por esto mismo debemos ser muy cuidadosos en su implementación ya que, para el caso, es como si hubiéramos declarado todos los atributos como públicos, perdiendo así las ventajas de la ocultación o encapsulamiento.
-  
-- Por lo general este método es reemplazado por los llamados métodos `getters`, que nos permiten “individualizar” los accesos a un atributo. Es decir, la buena práctica seria definir mediante `getters` los accesos a los atributos del objeto evitando declarar el método `__get` que definiría el acceso general a todos los atributos privadas o no declaradas.
-
-## `__isset()`
-
-- __Evento que lo dispara__: la función `isset()` de PHP determina la existencia o no de una variable, pero si quisiéramos utilizar la función isset para saber si existe un atributo no definido o inexistente de un objeto debemos definir primero el método mágico `__isset`. 
-
-- Este método es llamado automáticamente cuando se invoca la función `isset()` sobre un atributo inaccesible o no definido de un objeto.
-
-- __Finalidad__: Permite programar acciones con posterioridad a la invocación de la función isset().
-
-- Este método mágico __recibe un único argumento que es el nombre del atributo que se quiere analizar__.
-  
-- Es importante aclarar que la utilización de la función `empty()` también disparara la ejecución del método mágico `__isset()` ya que según el manual de PHP, `empty()` es equivalente a negar un __isset__ `(!isset($variable))`.
-
 ## `__invoke()` - Llamar a un objeto como si fuese una función 
 - __Evento que lo dispara__: Este método es llamado cuando se intenta invocar un objeto como si se tratara de una función.
 
