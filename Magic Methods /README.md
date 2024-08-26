@@ -19,7 +19,8 @@ En PHP,
 
 ## `__construct()`
 
-> Si no defines un constructor en tu clase, __PHP utiliza un constructor por defecto__. Esto significa que puedes crear instancias de la clase sin inicializar propiedades u otros datos ...
+> - *Si no defines un constructor en tu clase*, __PHP utiliza un constructor por defecto__.
+> - Ósea que puedes crear instancias de la clase sin inicializar propiedades u otros datitos. P.e : `new Pokemon()`
 
 WAIT A MOMENT ... entonces ... todo este tiempo ... se ha estado invocando ...
 
