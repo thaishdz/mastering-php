@@ -35,8 +35,12 @@ class Pokemon
                 Types: {$types}";
     }
 }
+```
 
-// Example usage
+## Usage
+
+```php
+
 $data = [
     'id' => 1,
     'name' => 'Bulbasaur',
@@ -49,9 +53,11 @@ $pokemon = new Pokemon($data);
 echo $pokemon; 
 ```
 
-## Output
+## Output 
 
 ```plaintext
+
+--------- echo $pokemon; ---------
 
 ID: 1,
 Name: Bulbasaur,
@@ -59,4 +65,5 @@ Weight: 69kg,
 Height: 70cm,
 Types: Grass, Poison
 
+----------------------------------
 ```
