@@ -67,3 +67,8 @@ Types: Grass, Poison
 
 ----------------------------------
 ```
+
+
+### Ayuditas 🛎️
+
+- [__toString - PHPSensei](https://phpsensei.es/el-metodo-__tostring-en-php/)
