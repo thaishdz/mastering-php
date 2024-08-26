@@ -10,7 +10,7 @@ En PHP,
 - __Se autoinvocan cuando se dispara una condición o evento__; es decir, sin necesidad de especificar el nombre del método en concreto.
 - El método `__toString()` es uno de estos *magic methods*.
 
-> 💡Los métodos mágicos nos permiten saber cuándo un programador está interactuando con un objeto; permitiéndonos realizar acciones antes o después de esto.
+> 💡 Los métodos mágicos nos permiten saber cuándo un programador está interactuando con un objeto; permitiéndonos realizar acciones antes o después de esto.
 
 
 ### ¿Por Qué Doble Guión Bajo (`__`)?
