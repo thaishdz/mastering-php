@@ -21,13 +21,17 @@ En PHP,
 
 > Si no defines un constructor en tu clase, __PHP utiliza un constructor por defecto__. Esto significa que puedes crear instancias de la clase sin inicializar propiedades u otros datos ...
 
-... 
+WAIT A MOMENT ... entonces ... todo este tiempo ... se ha estado invocando ...
+
+<img src="https://github.com/user-attachments/assets/f422ddf7-073a-4ec3-b724-56f6b01019cd" width="300" />
+
 
 ### AAH FILHO DA PUTA AGORA SIM ENTENDOOOO  
 ![image](https://github.com/user-attachments/assets/77de7f67-5552-4aca-aba5-b5a67fd82abd)
 
 SE ACABA DE DESBLOQUEAR EL MISTERIO DE CÓMO SE LLAMABA ✨MÁGICAMENTE✨ a ese constructor por defecto, sin que tuviésemos uno definido.
 
+---
 
 ### Otros Métodos Mágicos
 Aquí hay algunos otros métodos mágicos comunes en PHP:
