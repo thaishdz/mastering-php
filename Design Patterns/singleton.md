@@ -33,7 +33,7 @@ El motivo más habitual es controlar el acceso a algún recurso compartido, por 
 
 Esta wea funciona ASÍ : 
 
-Imagina que has creado un objeto y al cabo de un tiempo decides crear otro nuevo. En lugar de recibir un objeto nuevo, obtendrás el que ya habías creado 👍.
+Imagina que has __creado un objeto__ y al cabo de un tiempo __decides crear otro nuevo__. En lugar de recibir un objeto nuevo, obtendrás el que ya habías creado 👍.
 
 Este comportamiento es IMPOSIBLE de implementar con un constructor normal, ya que una llamada al constructor de toda la vida SIEMPRE debe devolver un nuevo objeto por diseño.
 
@@ -145,6 +145,8 @@ Government of Españita:
 - Minister of Finance: Montero
 - Minister of Health: Mónica García
 
+La instancia
+
 ------------- $anotherGovernment->showGovernment() -------------
 
 Government of Españita:
@@ -152,10 +154,13 @@ Government of Españita:
 - Minister of Finance: Montero
 - Minister of Health: Mónica García
 
+
+La misma puta instancia
+
 ```
 
 
-### ¿Por qué __wakeup es público si intentamos proteger la serialización de la instancia?
+### ¿Por qué `__wakeup` es público si intentamos proteger la serialización de la instancia?
 Bien ahí, alguien podría serializar la instancia, guardarla en una cadena y luego deserializarla para crear una nueva instancia y te haría un CRISTO TODO.
 El tema es que como buen *magic method*, PHP necesita que sea público, si no te dará un pedazo de warning ⚠️ diciéndotelo.
 Por eso lo dejamos así, con excepción incluida para avisar (vamos que te lo dejo público pero controlado 👁️)
