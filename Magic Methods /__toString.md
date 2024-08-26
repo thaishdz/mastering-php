@@ -46,5 +46,17 @@ $data = [
 ];
 
 $pokemon = new Pokemon($data);
-echo $pokemon; // Output: ID: 1, Name: Bulbasaur, Weight: 69kg, Height: 70cm, Types: Grass, Poison
+echo $pokemon; 
+```
+
+## Output
+
+```plaintext
+
+ID: 1,
+Name: Bulbasaur,
+Weight: 69kg,
+Height: 70cm,
+Types: Grass, Poison
+
 ```
