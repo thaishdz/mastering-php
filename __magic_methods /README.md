@@ -8,16 +8,16 @@ En PHP,
 - __Los métodos mágicos son aquellos que comienzan con dos guiones bajos (`__`).__
 - Son llamados ✨sin que nosotros lo hagamos explícitamente✨
 - __Se autoinvocan cuando se dispara una condición o evento__; es decir, sin necesidad de especificar el nombre del método en concreto.
+- El método `__toString()` es uno de estos *magic methods*.
 
 > 💡Los métodos mágicos nos permiten saber cuándo un programador está interactuando con un objeto; permitiéndonos realizar acciones antes o después de esto.
 
-El método `__toString()` es uno de estos métodos mágicos.
 
 ### ¿Por Qué Doble Guión Bajo (`__`)?
 - El doble guión bajo se usa para diferenciar estos métodos mágicos de los métodos normales de la clase.
 - Esto evita conflictos de nombres y hace que sea claro que estos métodos tienen un propósito especial definido por PHP.
 
-### Método `__toString()`
+### `__toString()`
 - El método `__toString()` se invoca automáticamente cuando se trata de convertir un objeto a una cadena de texto.
 - Es útil cuando deseas definir cómo debería verse una instancia de la clase cuando se usa en un contexto que espera una cadena de texto, como `echo` o `print`.
 
