@@ -178,7 +178,7 @@ $results = $restoredAccess->queryAll(); // Ahora puedes hacer consultas
 
 ### ¿Por qué usar `unserialize()` en lugar de llamar a `__wakeup()` directamente?
 
-1. Propósito de `__wakeup()`: `__wakeup()` no está diseñado para ser llamado directamente por el usuario. Su propósito principal es preparar un objeto después de que ha sido deserializado con `unserialize()`. Es decir, es una especie de "gancho" (hook) que PHP llama automáticamente cuando ocurre una deserialización.
+1. Propósito de `__wakeup()`: No está diseñado para ser llamado directamente por el usuario. Su propósito principal es preparar un objeto después de que ha sido deserializado con `unserialize()`. Es decir, es una especie de "gancho" (hook) que PHP llama automáticamente cuando ocurre una deserialización.
 
 2. Contexto de `__wakeup()`: Al llamar a `__wakeup()` directamente, solo estarías ejecutando el código dentro de ese método, pero no estarías restaurando el estado original del objeto a partir de una cadena serializada.
 
