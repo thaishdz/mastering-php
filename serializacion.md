@@ -6,17 +6,17 @@ Convertir un objeto en una cadena de texto, se utiliza, por ejemplo, para almace
 ```php
 
 class Usuario {
-    public $nombre;
+    public $name;
     
-    public function __construct($nombre) {
-        $this->nombre = $nombre;
+    public function __construct($name) {
+        $this->name = $name;
     }
 }
 
 $usuario = new Usuario("Thais");
 $serializado = serialize($usuario);
 
-echo $serializado; // Salida: O:7:"Usuario":1:{s:6:"nombre";s:4:"Thais";}
+echo $serializado; // Salida: O:7:"Usuario":1:{s:4:"name";s:5:"Thais";}
 
 ```
 
