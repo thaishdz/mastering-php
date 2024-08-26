@@ -2,7 +2,11 @@
 
 - `__get()` __recibe un único parámetro__, que es la propiedad a la que se quiere acceder.
 
-- Definir `__get` nos permitirá acceder desde fuera del objeto y "de forma genérica" a cualquier propiedad del mismo, independientemente de que esta esté declara como `private` o `protected`.
+- Definir `__get` nos __permitirá acceder desde fuera del objeto y "de forma genérica" a cualquier propiedad del mismo__ ...
+
+✨independientemente de que si está declara como `private` o `protected`✨
+![image](https://github.com/user-attachments/assets/5cdbbc5f-f4b0-4fb7-82ef-51a187cf185f)
+
 
 - Hay que ser cuidadosos en su implementación ya que, es como si __hubiéramos declarado todos los atributos como públicos__, perdiendo así las ventajas de la ocultación o encapsulamiento.
   
