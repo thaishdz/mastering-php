@@ -62,11 +62,11 @@ Si tu código tiene acceso a la clase Singleton, podrá invocar su método está
 
 
 
-# Analogía en el mundo real
+# Analogía con el mundo real
 
-El Gobierno, es un ejemplo excelente del patrón `Singleton`. 
+El Gobierno, es un ejemplo de patrón `Singleton`. 
 
-- Un país sólo puede tener un gobierno oficial.
+- Un país *sólo* puede tener un gobierno oficial.
 - Independientemente de las identidades personales de los individuos que forman el gobierno
 - El título “Gobierno de X” es un punto de acceso global que identifica al grupo de personas a cargo.
 
