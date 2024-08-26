@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-    Aquí se reúnen como concilio Vaticano II todos los conceptos que se me atragantaban ... y siguen atragantándose.
+    Aquí se reúnen como <i>concilio Vaticano II</i>, todos los conceptos que se me atragantaban ... y siguen atragantándose.
 </p>
 
 <p align="center">
