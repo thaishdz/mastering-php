@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    Te doy la bienvenida a mi repo para convertirme en una ✨FOKIN BOSS✨ de PHP
+    Te doy la bienvenida al repo que me convertirá en una ✨FOKIN BOSS✨de PHP
 </p>
 
 <p align="center">
