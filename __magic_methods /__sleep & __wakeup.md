@@ -1,16 +1,60 @@
 # `__sleep()`
 
 
+Se __llama__ justo __antes de que el objeto se serialice__. Le dice a PHP qué propiedades deben guardarse.
 
 
+Cuando intentas serializar el objeto, este método se llama para decidir qué propiedades se deben guardar. Aquí, solo se guardan `table` y `rowsLimit`, no la conexión a la base de datos (`connection`). Esto es importante porque las conexiones no se pueden serializar.
 
+```php
+
+public function __sleep()
+{
+    return ['table', 'rowsLimit'];
+}
+
+```
 
 # `__wakeup()`
 
+Se __llama__ justo __después de que el objeto se deserializa__. Sirve para reconfigurar cosas que no se pudieron guardar, como la conexión a la base de datos.
 
- Se invoca al __deserializar un objeto__. La deserialización en PHP se realiza con `unserialize()`, que __convierte una cadena de texto en un objeto.__
+La deserialización en PHP se realiza con `unserialize()`, que __convierte una cadena de texto en un objeto.__
 
 
+```php
+
+public function __wakeup()
+{
+    $this->connection = DB::connectionInstance();
+}
+```
+
+## ¿Por qué no se serializa la conexión?
+Las __conexiones a bases de datos son recursos externos__ que no se pueden convertir en texto de forma directa. Por eso:
+
+- `__sleep()` no incluye la conexión.
+- `__wakeup()` la vuelve a crear al deserializar, para que el objeto siga funcionando.
+
+
+## Ejemplo IRL
+Imagina que tienes un objeto `TableAccess` que has configurado para acceder a la tabla "usuarios". Lo serializas (quizás para guardar su estado) y luego lo deserializas más tarde. Durante este proceso:
+
+1. Al __serializar__, solo se guardan el nombre de la tabla y el límite de filas. La conexión se excluye porque no puede ser serializada.
+2. Al __deserializar__, se recuperan el nombre de la tabla y el límite de filas, y luego se restablece la conexión con `__wakeup()`.
+
+#### Visualización más simple:
+1. Antes de serializar:
+
+ - Tienes una conexión activa a la base de datos.
+
+2. Al serializar:
+
+ - La conexión no se guarda. Solo se guarda la información sobre la tabla y el límite.
+
+3. Al deserializar:
+
+ - PHP recrea el objeto y luego llama a __wakeup(), que restablece la conexión a la base de datos.
 
 ## Ejemplo Completo
 
