@@ -185,4 +185,4 @@ $results = $restoredAccess->queryAll(); // Ahora puedes hacer consultas
 3. `unserialize()` restaura el estado: La función `unserialize()` toma una cadena serializada (como la generada por `serialize()`) y recrea el objeto original, con su estructura y datos. Luego, si `__wakeup()` está definido, PHP lo llama automáticamente para realizar tareas adicionales después de la deserialización.
 
 ### Ayuditas 🛎️
-[__sleep And __wakeup Magic Methods: How And When To Use Them?](https://medium.com/@lukaspereyra8/php-sleep-and-wakeup-magic-methods-how-and-when-to-use-them-938591584bdc)
+- [__sleep And __wakeup Magic Methods: How And When To Use Them?](https://medium.com/@lukaspereyra8/php-sleep-and-wakeup-magic-methods-how-and-when-to-use-them-938591584bdc)
