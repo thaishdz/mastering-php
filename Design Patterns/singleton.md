@@ -15,8 +15,12 @@
 
 
 # Cuándo usarlo
-- Cuando se necesita un único punto de control o coordinación (por ejemplo, un gestor de configuración o de conexiones a la base de datos).
-- Cuando se quiere __evitar la creación de múltiples instancias de una clase para ahorrar recursos.__
+- __Cuando una clase tan solo deba tener una instancia disponible para todos los clientes__;
+  - p.e : un único objeto de base de datos compartido por distintas partes del programa. (evitando la creación de múltiples instancias de una clase, ahorras recursos).
+
+- Cuando necesites un __control más estricto de las variables globales__.
+  - Al contrario que las variables globales, el patrón `Singleton` garantiza que haya una única instancia de una clase. A excepción de la propia clase Singleton, nada puede sustituir la instancia en caché.
+Ten en cuenta que siempre podrás ajustar esta limitación y permitir la creación de cierto número de instancias Singleton. La única parte del código que requiere cambios es el cuerpo del método getInstance.
 
 
 
