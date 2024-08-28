@@ -3,7 +3,7 @@
 
 > También llamado: Instancia única
 
-- Patrón de diseño __creacional__, que nos permite asegurarnos de que __una clase tenga una única instancia__.
+- Patrón de diseño __CREACIONAL__, que nos permite asegurarnos de que __una clase tenga una única instancia__.
 - Proporciona un __punto de acceso global a la instancia__ en todo el programa.
 - *Útil para* :
   - __Sesiones de usuario__
