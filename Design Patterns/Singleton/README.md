@@ -41,7 +41,6 @@ class Singleton
        // Lógica de inicialización, si fuese necesaria
     }
 
-    
     public static function getInstance(): self
     {
         if (!self::$instance) 
@@ -78,7 +77,7 @@ object(Singleton)#1 (0) {}
 - {}: Dentro de las llaves se muestran las propiedades del objeto. En este caso, las llaves están vacías, lo que significa que no hay propiedades públicas visibles en la representación del objeto.
 ```
 
-Esto para PHP, pero si usas otro lenguaje, debes buscar cómo se usa el `Singleton` pero en verdad todos siguen las mismas directrices :
+Esto para PHP, pero si usas otro lenguaje, la forma de implementar el `Singleton` sigue las mismas directrices :
 
 
 1. __Privatizar el constructor__: Para evitar que se creen nuevas instancias, constructor como privado debes poner.
