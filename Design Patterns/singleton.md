@@ -6,7 +6,7 @@
 - Patrón de diseño __CREACIONAL__, que nos permite asegurarnos de que __una clase tenga una única instancia__.
 - Proporciona un __punto de acceso global a la instancia__ en todo el programa.
 - *Útil para* :
-  - __Sesiones de usuario__
+  - __Sesiones de usuario__ => Evitamos tener que loguear al user constantemente (?), la sesión de usuario debe compartirse en toda la aplicación.
   - __Conexión a base de datos__  => 1 conexión activa en todo momento, lo que mejora la gestión de recursos 👍.
   - __Registro de configuración__ => Cuando tienes configuraciones globales que necesitas cargar una sola vez y luego utilizar en varios lugares de tu aplicación.
   - __Gestión de registros o seguimiento__ => Para llevar un registro de eventos o actividad en tu aplicación y asegurarte de que se mantenga una sola instancia de registro.
