@@ -164,13 +164,13 @@ array(4) {
 
 ## Traza hipótetica
 
-1. El user hace login
+1. 👨‍🦲 hace login
 2. Se crea la instancia 
 3. Arranca una sesión
 4. Se comparte esa instancia entre todas las partes de la aplicación
-5. El user hace logout
+5. 👨‍🦲 hace logout
 6. Se va al carajo la instancia porque se resetean todas las propiedades
-7. El user hace login
+7. 👨‍🦲 vuelve a loguearse
 8. Se crea una nueva instancia
 9. Arranca una nueva sesión
 
