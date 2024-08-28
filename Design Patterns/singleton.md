@@ -3,64 +3,94 @@
 
 > También llamado: Instancia única
 
-- Patrón de diseño __creacional__, que nos permite asegurarnos de que __una clase tenga una única instancia__. A la vez que proporciona un punto de acceso global a dicha instancia.
-- Útil cuando necesitas un único objeto que gestione un recurso compartido (conexión a base de datos o un registro de configuración).
+- Patrón de diseño __creacional__, que nos permite asegurarnos de que __una clase tenga una única instancia__.
+- Proporciona un __punto de acceso global a la instancia__ en todo el programa.
+- *Útil para* :
+  - __Sesiones de usuario__
+  - __Conexión a base de datos__  => 1 conexión activa en todo momento, lo que mejora la gestión de recursos 👍.
+  - __Registro de configuración__ => Cuando tienes configuraciones globales que necesitas cargar una sola vez y luego utilizar en varios lugares de tu aplicación.
+  - __Gestión de registros o seguimiento__ => Para llevar un registro de eventos o actividad en tu aplicación y asegurarte de que se mantenga una sola instancia de registro.
+
+## THE POINT 💡
+Queremos restringuir ⛔ __la creación de objetos de una clase a una ÚNICA instancia__, independientemente de cuántas veces se intente instanciarla❗. 
+
+SIEMPRE, obtendrás ❇️ LA MISMA FOKIN INSTANCIA ❇️
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/d1c0bad6-016b-4b57-9d0e-f225c43b436c"/>
 </p>
 
-> ⚠️ Este patrón debe usarse con cuidado, ya que puede introducir un alto acoplamiento y dificultar los unit tests debido a su naturaleza global
 
-
-
-# Cuándo usarlo
-- __Cuando una clase tan solo deba tener una instancia disponible para todos los clientes__;
-  - p.e : un único objeto de base de datos compartido por distintas partes del programa. (evitando la creación de múltiples instancias de una clase, ahorras recursos).
-
-- Cuando necesites un __control más estricto de las variables globales__.
-  - Al contrario que las variables globales, el patrón `Singleton` garantiza que haya una única instancia de una clase.
-  - A excepción de la propia clase `Singleton`, nada puede sustituir la instancia en caché.
-  - Ten en cuenta que siempre podrás ajustar esta limitación y permitir la creación de cierto número de instancias `Singleton`.
-  - La única parte del código que requiere cambios es el cuerpo del método `getInstance`.
-
-
-
-## Por qué se inventó esta 💩
-
-### 1. ¿Por qué querría alguien controlar cuántas instancias tiene una clase? 
-
-El motivo más habitual es controlar el acceso a algún recurso compartido, por ejemplo, una base de datos o un archivo.
+## Esqueleto por defecto 💀
 
 <p align=center>
-  <img src="https://github.com/user-attachments/assets/22c1d81c-a5ac-4a9f-ad4a-c903e77bed4c" width=500/>
+  <img src="https://github.com/user-attachments/assets/56daf58b-f2bf-4b6b-9b2f-0f30e2c64eb9"/>
 </p>
 
+```php
 
-Esta wea funciona ASÍ : 
+class Singleton
+{
+    // Para almacenar la ÚNICA instancia que tendremos SIEMPRE
+    private static $instance = null;
 
-Imagina que has __creado un objeto__ y al cabo de un tiempo __decides crear otro nuevo__. En lugar de recibir un objeto nuevo, obtendrás el que ya habías creado 👍.
+    // Moar properties ... 
 
-Este comportamiento es IMPOSIBLE de implementar con un constructor normal, ya que una llamada al constructor de toda la vida SIEMPRE debe devolver un nuevo objeto por diseño.
+    private function __construct()
+    {
+       // Lógica de inicialización, si fuese necesaria
+    }
 
-## 2. Proporcionar un punto de acceso global a dicha instancia
-
-¿Sabes esas variables globales que utilizaste para almacenar objetos esenciales?. Aunque son muy útiles, también son poco seguras, ya que cualquier código podría sobrescribir el contenido de esas variables y descomponer la aplicación.
-Al igual que una variable global, el patrón `Singleton` nos permite acceder a un objeto desde cualquier parte del programa. No obstante, también evita que otro código sobreescriba esa instancia.
-
-Este problema tiene otra cara: no queremos que el código que resuelve el primer problema se encuentre disperso por todo el programa. Es mucho más conveniente tenerlo dentro de una clase, sobre todo si el resto del código ya depende de ella.
-
-
-## Implementación ⚒️
-
-Todas las implementaciones del patrón `Singleton` tienen DOS pasos en común:
-
-1. __Hacer privado el constructor por defecto__,para evitar que otros objetos utilicen el operador new con la clase Singleton.
-2. __Crear un método de creación estático que actúe como constructor__. Tras bambalinas, este método invoca al constructor privado para crear un objeto y lo guarda en un campo estático. Las siguientes llamadas a este método devuelven el objeto almacenado en caché.
-
-Si tu código tiene acceso a la clase Singleton, podrá invocar su método estático. De esta manera, cada vez que se invoque este método, siempre se devolverá el mismo objeto.
+    
+    public static function getInstance(): self
+    {
+        if (!self::$instance) 
+        {
+            self::$instance = new self(); 
+        }   
+        return self::$instance; 
+    }
 
 
+    // Moar methods ...
+}
+
+$singletitoMal = new Singleton(); // JAJAJAN'T Uncaught Error: Call to private Singleton::__construct() from global scope
+
+$singletitoBien = Singleton::getInstance();
+```
+
+## Output
+
+```plaintext
+------------------------------------------------ var_dump($singletitoBien); ----------------------------------------
+
+object(Singleton)#1 (0) {}
+
+--------------------------------------------------------------------------------------------------------------------
+
+- object(Singleton): Indica que el objeto es una instancia de la clase Singleton.
+
+- #1: Identificador único asignado a la instancia del objeto. En este caso, #1 significa que es la primera instancia de la clase Singleton creada en este contexto.
+
+- (0): Indica el número de propiedades públicas del objeto. En este caso, (0) significa que el objeto no tiene propiedades públicas.
+
+- {}: Dentro de las llaves se muestran las propiedades del objeto. En este caso, las llaves están vacías, lo que significa que no hay propiedades públicas visibles en la representación del objeto.
+```
+
+Esto para PHP, pero si usas un `Singleton` en CUALQUIER LENGUAJE DEBE SEGUIR las MISMAS directrices :
+
+
+1. __Privatizar el constructor__: Para evitar que se creen nuevas instancias, constructor como privado debes poner.
+
+2. __Crear una propiedad estática para la instancia__: Esta propiedad almacenará la única instancia de la clase.
+  
+4. __Proporcionar un método estático para obtener la instancia__: A través de este método, se accederá a la única instancia de la clase, creándola si aún no existe.
+  
+5. __Evitar la clonación y la serialización__ (🐘 *PHP*): Si es necesario, puedes implementar los métodos `__clone()` y `__wakeup()` para evitar la creación de copias de la instancia y problemas de serialización.
+
+
+> ⚠️ [ADVERTENCIA]: Puede introducir un __Alto Acoplamiento__ y __dificultar los Unit Tests__ debido a su naturaleza global 
 
 # Analogía con el mundo real
 
@@ -69,8 +99,6 @@ El Gobierno, es un ejemplo de patrón `Singleton`.
 - Un país *sólo* puede tener un gobierno oficial.
 - Independientemente de las identidades personales de los individuos que forman el gobierno
 - El título “Gobierno de X” es un punto de acceso global que identifica al grupo de personas a cargo.
-
-![image](https://github.com/user-attachments/assets/56daf58b-f2bf-4b6b-9b2f-0f30e2c64eb9)
 
 
 ```php
@@ -166,9 +194,11 @@ La misma puta instancia
 ```
 
 
+
+# Preguntitas ❔
 ### ¿Por qué `__wakeup` es público si intentamos proteger la serialización de la instancia?
-Bien ahí, alguien podría serializar la instancia, guardarla en una cadena y luego deserializarla para crear una nueva instancia y te haría un CRISTO TODO.
-El tema es que como buen *magic method*, PHP necesita que sea público, si no te dará un pedazo de warning ⚠️ diciéndotelo.
+Bien ahí!, es verdad que alguien podría serializar la instancia, guardarla en una cadena y luego deserializarla para crear una nueva instancia y te haría TODO UN CRISTO.
+El tema es que como buen *magic method*, PHP necesita que sea público, si no te ladrará un pedazo warning ⚠️ diciéndotelo.
 Por eso lo dejamos así, con excepción incluida para avisar (vamos que te lo dejo público pero controlado 👁️)
 
 ```php
@@ -196,3 +226,4 @@ O ... tú has visto por algún lado una llamada al `wakeup`?, porque yo no.
 ### Ayuditas 🛎️
 
 - [Singleton - Refactoring Guru](https://refactoring.guru/es/design-patterns/singleton)
+- [Singleton - GuiaPHP](https://guiaphp.com/desarrollo/patron-singleton-en-php-garantizando-una-unica-instancia/)
