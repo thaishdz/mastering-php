@@ -14,7 +14,7 @@
 ## THE POINT 💡
 Queremos restringuir ⛔ __la creación de objetos de una clase a una ÚNICA instancia__, independientemente de cuántas veces se intente instanciarla❗. 
 
-SIEMPRE, obtendrás ❇️ LA MISMA FOKIN INSTANCIA ❇️
+SIEMPRE, obtendrás ❇️ __LA MISMA FOKIN INSTANCIA__ ❇️
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/d1c0bad6-016b-4b57-9d0e-f225c43b436c"/>
