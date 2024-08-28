@@ -33,7 +33,7 @@ class User
         private string $email,
     )
     {
-        $this->id = bin2hex(random_bytes(16)); // convertir bytes a hexadecimal
+        $this->id = bin2hex(random_bytes(16)); // "random_bytes" genera una cadena de 16 bytes y "bin2hex" la convierte a hexadecimal
     }
 
     public static function getInstance(string $username,string $name,string $email)
