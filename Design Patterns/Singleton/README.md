@@ -225,5 +225,6 @@ O ... tú has visto por algún lado una llamada al `wakeup`?, porque yo no.
 
 ### Ayuditas 🛎️
 
-- [Singleton - Refactoring Guru](https://refactoring.guru/es/design-patterns/singleton)
-- [Singleton - GuiaPHP](https://guiaphp.com/desarrollo/patron-singleton-en-php-garantizando-una-unica-instancia/)
+- [Singleton - Refactoring Guru 📰](https://refactoring.guru/es/design-patterns/singleton)
+- [Singleton - GuiaPHP 📰](https://guiaphp.com/desarrollo/patron-singleton-en-php-garantizando-una-unica-instancia/)
+- [Singleton by Mouredev 📺](https://www.youtube.com/watch?v=cOIcFo_w9hA)
