@@ -162,3 +162,48 @@ El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas
 
 ✨heredan esta propiedad ✨. Por eso, cuando usas `$this->trip` en cualquier subclase, estás __accediendo a la propiedad heredada de `TripDecorator`.__
 
+
+## `index.php` - Ejemplo de Uso
+
+```php
+
+
+<?php
+
+require_once ("./VanillaTrip.php");
+require_once ("./FlightDecorator.php");
+
+
+// Uso del patrón Decorador para crear un viaje con vuelo, hotel y taxi.
+
+# Paquete básico + vuelo
+
+$basicTrip = new VanillaTrip();
+$basicTrip = new FlightDecorator($basicTrip);
+
+
+echo $basicTrip->description();
+
+
+//TODO: Implementar los packs que quedan para completar el ejemplo de Github
+// Crear otro ejemplo que tenga que ver con notificaciones
+// Hacer el ejercicio extra
+
+# Paquete básico + vuelo + hotel
+
+(...)
+
+```
+
+## Output
+
+```plaintext
+
+
+----------- echo $basicTrip->description(); w/ Paquete básico + vuelo -----------
+
+Paquete Básico + Vuelo = 350€
+
+---------------------------------------------------------------------------------
+
+```
