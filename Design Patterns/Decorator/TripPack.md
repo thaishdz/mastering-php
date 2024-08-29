@@ -137,7 +137,7 @@ La razón por la que se utiliza `protected $trip`; es para permitir que las subc
 require_once("./TripDecorator.php");
 
 
-class FlightDecorator extends TripDecorator
+class FlightPackDecorator extends TripDecorator
 {
     private const FLIGHT_COST = 200;
 
@@ -154,12 +154,12 @@ class FlightDecorator extends TripDecorator
 
 ```
 
-### ¿Cómo llamas a `$trip` si no está definida en `Flightdecorator`?
+### ¿Cómo llamas a `$trip` si no está definida en `FlightPackDecorator`?
 
 El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas las subclases de esta vaina, como :
-- `FlightDecorator`
-- `HotelDecorator`
-- `TaxiDecorator`
+- `FlightPackDecorator`
+- `HotelPackDecorator`
+- `TaxiPackDecorator`
 
 ✨heredan esta propiedad ✨. Por eso, cuando usas `$this->trip` en cualquier subclase, estás __accediendo a la propiedad heredada de `TripDecorator`.__
 
