@@ -1,5 +1,5 @@
 
-# Packs de Viajes
+# Packs de Viajes ✈️
 
 Tienes un Booking culero, donde solo puedes reservar el vuelo y YA ESTÁ.
 
@@ -126,7 +126,7 @@ La razón por la que se utiliza `protected $trip`; es para permitir que las subc
 > 💡 Recuerda : `protected` da acceso a la __clase donde se declara__ y en todas sus __subclases__, pero NO desde fuera de estas clases.
 
 
-## 4. `FlightDecorator` | `HotelDecorator` | `CarRentaDecorator` ....
+## 4. `FlightPackDecorator` | `HotelPackDecorator` ...
 
 
 ```php
@@ -159,7 +159,6 @@ class FlightPackDecorator extends TripDecorator
 El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas las subclases de esta vaina, como :
 - `FlightPackDecorator`
 - `HotelPackDecorator`
-- `TaxiPackDecorator`
 
 ✨heredan esta propiedad ✨. Por eso, cuando usas `$this->trip` en cualquier subclase, estás __accediendo a la propiedad heredada de `TripDecorator`.__
 
