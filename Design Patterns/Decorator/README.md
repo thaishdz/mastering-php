@@ -50,10 +50,10 @@ Cuando tenemos que __alterar la funcionalidad de un objeto__, lo suyo es _extend
 
 # Ejemplos
 
-- [Pack : Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
-- [Notificacion 🔔]()
+- [TripPack: Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
+- [Biblioteca de Notificaciones 🔔]()
 
-### Ayuditas 🛎️
+## Ayuditas 🛎️
 
 - [Decorator - RefactoringGuru](https://refactoring.guru/es/design-patterns/decorator)
 - [Decorator en PHP - Codenip](https://www.youtube.com/watch?v=XOvXMZ0DWCU)
