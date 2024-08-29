@@ -39,12 +39,6 @@ Tienes *TRES* cosas a tener en cuenta :
 - __Decorator__: Clase que implementa __la misma interfaz o hereda de la clase base__ y contiene una referencia a un objeto de la misma interfaz o clase base. Este objeto es al que se le "decora" o añade la nueva funcionalidad.
 
 
-# Ejemplos
-
-- [Pack : Hotel 🏨 + Taxi 🚗 ]()
-- [Notificacion 🔔]()
-
-
 # La movida con la herencia
 
 Cuando tenemos que __alterar la funcionalidad de un objeto__, lo suyo es _extender una clase_. El tema es que la herencia tiene varias limitaciones importantes :
@@ -54,13 +48,10 @@ Cuando tenemos que __alterar la funcionalidad de un objeto__, lo suyo es _extend
 2. _Las subclases sólo pueden tener una clase padre_. En la mayoría de lenguajes, __la herencia no permite a una clase heredar comportamientos de varias clases al mismo tiempo.__ ❗
 
 
-```php
+# Ejemplos
 
-
-
-```
-
-
+- [Pack : Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
+- [Notificacion 🔔]()
 
 ### Ayuditas 🛎️
 
