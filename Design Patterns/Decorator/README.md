@@ -36,22 +36,73 @@ Sigues queriendo la misma burguer pero te toca pagar __DECORATORS__.
 
 
 
-# ¿Cómo funka esta vaina?
+# Los 4 jinetes del Apocalipsis 🏇
 
-Primero, *TRES* cosas a tener en cuenta :
+Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
 
-- __Componente base__: ✨ *Interfaz* ✨ o ✨ *clase abstracta* ✨ que define la funcionalidad básica.
-- __Clase concreta__: Implementa el componente base.
-- __Decorator__: Clase que implementa __la misma interfaz o hereda de la clase base__ y contiene una referencia a un objeto de la misma interfaz o clase base. Este objeto es al que se le "decora" o añade la nueva funcionalidad.
 
+
+- __Interfaz__: TODOS los componentes DEBEN implementar esta interfaz ⚠️
+    ```php
+      interface CoffeeInt
+      {
+        public function getCost(): int;
+        public function getDescription(): string;
+      }
+    ```
+- __Clase Base__: Implementa la interfaz
+    ```php
+    class SimpleCoffee implements Coffee
+    {
+      public function getCost(): int
+      {
+          return 10;
+      }
+  
+      public function getDescription(): string
+      {
+          return 'Simple Coffee';
+      }
+    }
+    ```
+- __Decorator Abstracto__: Implementa __la misma interfaz o hereda de la clase base__ y contiene una referencia a un objeto de la misma interfaz o clase base.
+  ```php
+      abstract class CoffeeDecorator implements Coffee
+      {
+        protected $decoratedCoffee;
+    
+        public function __construct(CoffeeInt $decoratedCoffee) // ojito aquí mai diar 👁️
+        {
+            $this->decoratedCoffee = $decoratedCoffee;
+        }
+      }
+  ```
+
+- __Los sabores del helado 🍦__:  Los _addons_ que quieras tener, en este caso queremos añadirle lechita al coffee.
+  ```php
+    class MilkCoffee extends CoffeeDecorator
+    {
+        private const PRICE = 2; // esto es caro mai friend
+        
+        public function getCost(): int
+        {
+            return $this->decoratedCoffee->getCost() + self::PRICE;
+        }
+    
+        public function getDescription(): string
+        {
+            return $this->decoratedCoffee->getDescription() . ', milk';
+        }
+    }
+  ```
 
 # La movida con la herencia
 
 Cuando tenemos que __alterar la funcionalidad de un objeto__, lo suyo es _extender una clase_. El tema es que la herencia tiene varias limitaciones importantes :
 
-1. _La herencia es estática_. ❗ No se puede alterar la funcionalidad de un objeto existente durante el tiempo de ejecución. Sólo se puede sustituir el objeto completo por otro creado a partir de una subclase diferente.
+1. _La herencia es estática_. ⚠️No se puede alterar la funcionalidad de un objeto existente durante el tiempo de ejecución. Sólo se puede sustituir el objeto completo por otro creado a partir de una subclase diferente.
 
-2. _Las subclases sólo pueden tener una clase padre_. En la mayoría de lenguajes, __la herencia no permite a una clase heredar comportamientos de varias clases al mismo tiempo.__ ❗
+2. _Las subclases sólo pueden tener una clase padre_. En la mayoría de lenguajes, ⚠️ __la herencia __NO__ permite a una clase heredar comportamientos de varias clases al mismo tiempo.__ 
 
 
 # Ejemplos
