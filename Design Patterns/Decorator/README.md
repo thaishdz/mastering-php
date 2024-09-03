@@ -2,21 +2,23 @@
 
 # Decorator
 
-> Ponerle capas extra a algo que ya tienes, sin cambiar lo que hay debajo (te suena de principio SOLID, Open/Closed ... abierta pa extensión ... cerrada paaaaraaaa ... modificación)
+Te vas al Mcdonald's y decides pillarte una hamburguesa de 1€, pero resulta que esa mierda se te queda corta.
+
+Le dices al empleado que quieres la 🍔, con extra de ✨ PEPINILLO ✨ y quesito 🧀.
+
+El empleado te dice, que esos _decoradores_ serán de +1€ a pagar, entonces el total ascenderá a 2 euracos.
+
+Sigues queriendo la misma burguer pero te toca pagar __DECORATORS__.
 
 <p align=center>
-  <img src="https://github.com/user-attachments/assets/d721b003-e5cc-4f09-a2de-ca061bb31ce8" height="400" />
+  <img src="https://github.com/user-attachments/assets/0c27ab6b-c8af-422f-9bd0-9f4b13e46276" height="650" />
 </p>
+
 
 <p align=center>
-  <em>Obtienes un efecto combinado vistiendo varias prendas de ropa</em>
+  <em>¿Y si ... me pido un Happy Meal?</em>
 </p>
 
-Vestir ropa es un ejemplo de `Decorator`. 
-- Cuando tienes frío, te pones un suéter.
-- Si sigues teniendo frío, te pones una chaqueta encima.
-- Si está lloviendo, puedes ponerte un chubasquero. 
-- Todas estas prendas *extienden* tu comportamiento básico pero no son parte de ti, puedes quitarte cualquier prenda cuando quieras.
 
 # PA QUÉ ES ESTO ❔
 
@@ -26,8 +28,12 @@ Vestir ropa es un ejemplo de `Decorator`.
   - `Decorator` te permite __estructurar tu lógica de negocio en capas__, crear un decorador para cada capa y componer objetos con varias combinaciones de esta lógica, durante el tiempo de ejecución. El código cliente puede tratar a todos estos objetos de la misma forma, ya que todos siguen una interfaz común.
 
 <p align=center>
-  <img src="https://github.com/user-attachments/assets/127fb5ab-54c1-44e8-a978-fca226fba6cf" />
+  <img src="https://github.com/user-attachments/assets/d721b003-e5cc-4f09-a2de-ca061bb31ce8" height="400" />
 </p>
+<p align=center>
+  <em>Aquí los decoradores serían ponerte un suéter y un chubasquero, eres la misma persona pero abrigadita</em>
+</p>
+
 
 
 # Cómo funka la vaina❔
