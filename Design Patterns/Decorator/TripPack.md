@@ -197,13 +197,15 @@ require_once ("./HotelDecorator.php");
 
 // Uso del patrón Decorador para crear un viaje con vuelo, hotel y taxi.
 
-$basicTrip = new VanillaTrip(); 
-$basicPlusFlightTrip = new FlightDecorator($basicTrip);
-$basicPlusFlightPlusHotelTrip  = new HotelDecorator($basicPlusFlightTrip);
+# Paquete básico + vuelo
+
+$trip = new VanillaTrip();
+$trip = new FlightDecorator($trip);
+$trip  = new HotelDecorator($trip);
 
 
-echo $basicPlusFlightTrip->description(); # Paquete básico + vuelo
-echo $basicPlusFlightPlusHotelTrip->description(); # Paquete básico + vuelo + hotel
+echo $trip->description(); # Paquete básico + vuelo
+echo $trip->description(); # Paquete básico + vuelo + hotel
 ```
 
 ## Output
@@ -211,14 +213,14 @@ echo $basicPlusFlightPlusHotelTrip->description(); # Paquete básico + vuelo + h
 ```plaintext
 
 
------------------- echo $basicPlusFlightTrip->description(); --------------------
+------------------ echo $trip->description(); --------------------
 
 Paquete Básico + Vuelo = 350€
 
 ---------------------------------------------------------------------------------
 
 
-------------- echo $basicPlusFlightPlusHotelTrip->description(); ----------------
+------------- echo $trip->description(); ----------------
 
 Paquete Básico + Vuelo = 350€ 
  + Hotel = 700€ 
