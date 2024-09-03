@@ -124,7 +124,7 @@ Se utiliza `protected $trip`; para permitir que las subclases como `FlightDecora
 > 💡 Recuerda : `protected` da acceso a la __clase donde se declara__ y en todas sus __subclases__, pero NO desde fuera de estas clases.
 
 
-## 4. `FlightPackDecorator` | `HotelPackDecorator` ...
+## 4. `FlightDecorator` | `HotelDecorator` ...
 
 
 ```php
@@ -135,7 +135,7 @@ Se utiliza `protected $trip`; para permitir que las subclases como `FlightDecora
 require_once("./TripDecorator.php");
 
 
-class FlightPackDecorator extends TripDecorator
+class FlightDecorator extends TripDecorator
 {
     private const FLIGHT_COST = 200;
 
@@ -156,8 +156,8 @@ class FlightPackDecorator extends TripDecorator
 
 El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas las subclases de esta vaina, como :
 
-- `FlightPackDecorator`
-- `HotelPackDecorator`
+- `FlightDecorator`
+- `HotelDecorator`
 
 ✨heredan esta propiedad ✨. Por eso, cuando usas `$this->trip` en cualquier subclase, estás __accediendo a la propiedad heredada de `TripDecorator`.__
 
@@ -175,23 +175,13 @@ require_once ("./FlightDecorator.php");
 
 // Uso del patrón Decorador para crear un viaje con vuelo, hotel y taxi.
 
-# Paquete básico + vuelo
-
-$basicTrip = new VanillaTrip();
-$basicTrip = new FlightDecorator($basicTrip);
-
-
-echo $basicTrip->description();
+$basicTrip = new VanillaTrip(); 
+$basicPlusFlightTrip = new FlightDecorator($basicTrip);
+$basicPlusFlightPlusHotelTrip  = new HotelDecorator($basicPlusFlightTrip);
 
 
-//TODO: Implementar los packs que quedan para completar el ejemplo de Github
-// Crear otro ejemplo que tenga que ver con notificaciones
-// Hacer el ejercicio extra
-
-# Paquete básico + vuelo + hotel
-
-(...)
-
+echo $basicPlusFlightTrip->description(); # Paquete básico + vuelo
+echo $basicPlusFlightPlusHotelTrip->description(); # Paquete básico + vuelo + hotel
 ```
 
 ## Output
@@ -199,9 +189,17 @@ echo $basicTrip->description();
 ```plaintext
 
 
------------ echo $basicTrip->description(); w/ Paquete básico + vuelo -----------
+------------------ echo $basicPlusFlightTrip->description(); --------------------
 
 Paquete Básico + Vuelo = 350€
+
+---------------------------------------------------------------------------------
+
+
+------------------ echo $basicPlusFlightPlusHotelTrip->description(); --------------------
+
+Paquete Básico + Vuelo = 350€ 
+ + Hotel = 700€ 
 
 ---------------------------------------------------------------------------------
 
