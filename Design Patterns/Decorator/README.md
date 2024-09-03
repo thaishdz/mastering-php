@@ -20,12 +20,12 @@ Sigues queriendo la misma burguer pero te toca pagar __DECORATORS__.
 </p>
 
 
-# PA QUÉ ES ESTO ❔
+# ¿Qué me resuelve esto?
 
-- Cuando quieres añadir comportamiento o alguna funcionalidad específica a los objetos de una clase de clases pero la herencia no te vale una 💩.
+- Quieres añadir comportamiento o alguna funcionalidad específica a los objetos de una clase de clases pero la herencia no te vale de una 💩.
 - Tienes clases con `final` (se usa para evitar que una clase siga extendiéndose). Entonces para añadir funcionalidad, la única forma de reutilizar el comportamiento existente será envolver la clase con tu propio `wrapper`.
-- Necesites asignar funcionalidades adicionales a objetos durante el tiempo de ejecución sin descomponer el código que utiliza esos objetos.
-  - `Decorator` te permite __estructurar tu lógica de negocio en capas__, crear un decorador para cada capa y componer objetos con varias combinaciones de esta lógica, durante el tiempo de ejecución. El código cliente puede tratar a todos estos objetos de la misma forma, ya que todos siguen una interfaz común.
+- Necesites asignar funcionalidades adicionales a objetos durante el tiempo de ejecución sin joder el código que utilizan esos objetos.
+
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/d721b003-e5cc-4f09-a2de-ca061bb31ce8" height="400" />
@@ -36,9 +36,9 @@ Sigues queriendo la misma burguer pero te toca pagar __DECORATORS__.
 
 
 
-# Cómo funka la vaina❔
+# ¿Cómo funka esta vaina?
 
-Tienes *TRES* cosas a tener en cuenta :
+Primero, *TRES* cosas a tener en cuenta :
 
 - __Componente base__: ✨ *Interfaz* ✨ o ✨ *clase abstracta* ✨ que define la funcionalidad básica.
 - __Clase concreta__: Implementa el componente base.
