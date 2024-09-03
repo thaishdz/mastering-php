@@ -3,11 +3,11 @@
 
 Tienes un Booking culero, donde solo puedes reservar el vuelo y YA ESTÁ.
 
-Pero tú quieres añadirle chichita 👻
+Pero culero no es nuestro apellido, así que vamos a añadirle MANDANGA 👻
 
 <img src="https://github.com/user-attachments/assets/225d4999-f09b-4052-a26c-0556b787fac5" height="400" />
 
-Que tenga *packs adicionales* to' guapos donde puedas escoger :
+Para empezar, va a tener *packs adicionales* to' guapos donde puedas escoger :
 
 - Vuelo ✈️ + Hotel 🏨
 - Vuelo ✈️ + Hotel 🏨 + Alquiler de Coche 🚗
