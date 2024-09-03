@@ -107,8 +107,9 @@ Cuando tenemos que __alterar la funcionalidad de un objeto__, lo suyo es _extend
 
 # Ejemplos
 
-- [Packs de viajes: Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
 - [Enviar UNA notificación a MÚLTIPLES cananles 🔔](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/Notifier.md)
+- [Packs de viajes: Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
+
 
 ## Ayuditas 🛎️
 
