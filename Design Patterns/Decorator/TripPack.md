@@ -7,25 +7,25 @@ Pero culero no es nuestro apellido, así que vamos a añadirle MANDANGA 👻
 
 <img src="https://github.com/user-attachments/assets/225d4999-f09b-4052-a26c-0556b787fac5" height="400" />
 
-Para empezar, va a tener *packs adicionales* to' guapos donde puedas escoger :
+Para empezar, va a tener *packs adicionales* donde la gente pueda escoger :
 
 - Vuelo ✈️ + Hotel 🏨
 - Vuelo ✈️ + Hotel 🏨 + Alquiler de Coche 🚗
 - Vuelo ✈️ + Hotel 🏨 + Servicio de Taxi al aeropuerto 🚖
 
-... Y todos los combos que se te ocurran
+... Y todos los combos locos que se nos ocurran.
 
 <img src="https://github.com/user-attachments/assets/e3568e79-b9f7-4b36-b2cc-32d7a83639fd" width="600" height="400" />
 
 
 # ¿Por qué necesitamos el Decorator en este caso?
 
-Porque te permite agregar dinámicamente responsabilidades (en este caso, servicios adicionales como *vuelo*, *hotel*, *taxi*, etc.) __a un objeto sin modificar su estructura original__. Esto es útil cuando tienes un objeto base, como `VanillaTrip`, y necesitas extender su funcionalidad (agregar más servicios) sin tocar su código original.
+Porque nos permite agregar dinámicamente responsabilidades (en este caso, servicios adicionales como *vuelo*, *hotel*, *taxi*, etc.) __a un objeto sin modificar su estructura original__. Esto es útil cuando tienes un objeto base, como `VanillaTrip`, y necesitas extender su funcionalidad (agregar más servicios) sin tocar su código original.
 
 
 # Implementación ⚒️
 
-Vamos a implementar el patrón Decorador para que puedas añadir dinámicamente servicios adicionales a tu VanillaTrip.
+Vamos a implementar el patrón Decorador para que podamos añadir dinámicamente servicios adicionales al `VanillaTrip`.
 
 1. Interfaz `TripInterface`: Define los métodos que TODAS las clases de viaje deben implementar.
 2. Clase `VanillaTrip`: Implementa `TripInterface` y representa el viaje básico.
