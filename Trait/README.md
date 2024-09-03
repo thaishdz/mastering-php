@@ -2,9 +2,13 @@
 
 # ¿Qué es un trait en PHP?
 
-Es como un _hack_ que usamos para cargarnos el no poder hacer herencia múltiple.
+Es un _hack_ que usamos para cargarnos el no poder hacer herencia múltiple
+<p align=center>
+  <img src="https://github.com/user-attachments/assets/059fcf39-325b-4316-b925-eabebc4c6cc4" alt="memarro-perro-con-gorra"/>
+</p>
 
 > En PHP, una clase solo puede heredar de otra clase, no existe la herencia múltiple
+
 
 Es decir, 
 
