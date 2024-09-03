@@ -56,10 +56,11 @@ Cuando tenemos que __alterar la funcionalidad de un objeto__, lo suyo es _extend
 
 # Ejemplos
 
-- [TripPack: Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
-- [Biblioteca de Notificaciones 🔔]()
+- [Packs de viajes: Hotel 🏨 + Taxi 🚗 ](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/TripPack.md)
+- [Enviar UNA notificación a MÚLTIPLES cananles 🔔](https://github.com/thaishdz/mastering-php/blob/main/Design%20Patterns/Decorator/Notifier.md)
 
 ## Ayuditas 🛎️
 
 - [Decorator - RefactoringGuru](https://refactoring.guru/es/design-patterns/decorator)
 - [Decorator en PHP - Codenip](https://www.youtube.com/watch?v=XOvXMZ0DWCU)
+- [Enhance Your PHP Code with Decorator Design Pattern](https://kongulov.dev/blog/enhance-your-php-code-with-decorator-design-pattern)
