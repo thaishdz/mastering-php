@@ -218,7 +218,7 @@ Paquete Básico + Vuelo = 350€
 ---------------------------------------------------------------------------------
 
 
------------------- echo $basicPlusFlightPlusHotelTrip->description(); --------------------
+------------- echo $basicPlusFlightPlusHotelTrip->description(); ----------------
 
 Paquete Básico + Vuelo = 350€ 
  + Hotel = 700€ 
