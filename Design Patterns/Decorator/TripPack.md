@@ -3,7 +3,7 @@
 
 Tienes un Booking culero, donde solo puedes reservar el vuelo y YA ESTÁ.
 
-Pero culero no es nuestro apellido, así que vamos a añadirle MANDANGA 👻
+Pero _culero_ no es nuestro apellido, así que vamos a añadirle MANDANGA 👻
 
 <img src="https://github.com/user-attachments/assets/225d4999-f09b-4052-a26c-0556b787fac5" height="400" />
 
@@ -44,7 +44,6 @@ Será la plantilla con lo mínimo que tendrá que tener cada viaje :
 
 <?php
 
-
 // Todos los viajes tendrán un coste y una descripción
 
 interface TripInterface
@@ -73,7 +72,6 @@ class VanillaTrip implements TripInterface
 {
     private const BASIC_PRICE = 150; // no necesitamos un tipo explícito ya que con las constantes en PHP no es necesario 
 
-
     public function cost(): int
     {
         return self::BASIC_PRICE; // este precio no puede ser modificado
@@ -90,9 +88,9 @@ class VanillaTrip implements TripInterface
 
 ## 3.  `TripDecorator`
 
-Una de las claves del decorator, la✨ clase abstracta ✨ que tiene que implementar la interfaz del objeto que queremos manipular, en este caso el "viajecito".
+Esta✨ clase abstracta ✨ es una de las claves del `Decorator`, que tiene que implementar la interfaz del objeto que queremos manipular, en este caso el "viajecito".
 
-Delegará las llamadas a su componente interno, que es otro objeto `TripInterface`. Esto permite extender el comportamiento sin cambiar el código del objeto original.
+Delegará las llamadas a su componente interno, que es otro objeto `TripInterface`. __Esto permite extender el comportamiento sin cambiar el código del objeto original.__
 
 ```php
 
@@ -121,7 +119,7 @@ abstract class TripDecorator implements TripInterface
 
 ```
 
-La razón por la que se utiliza `protected $trip`; es para permitir que las subclases concretas (como `FlightDecorator`, `HotelDecorator`, etc.) accedan a esta propiedad directamente.
+Se utiliza `protected $trip`; para permitir que las subclases como `FlightDecorator`, `HotelDecorator`, etc. Accedan a esta propiedad directamente.
 
 > 💡 Recuerda : `protected` da acceso a la __clase donde se declara__ y en todas sus __subclases__, pero NO desde fuera de estas clases.
 
@@ -157,6 +155,7 @@ class FlightPackDecorator extends TripDecorator
 ### ¿Cómo llamas a `$trip` si no está definida en `FlightPackDecorator`?
 
 El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas las subclases de esta vaina, como :
+
 - `FlightPackDecorator`
 - `HotelPackDecorator`
 
