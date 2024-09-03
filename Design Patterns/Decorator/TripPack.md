@@ -55,9 +55,6 @@ interface TripInterface
 
 ```
 
-![image](https://github.com/user-attachments/assets/4fcc38b8-7459-4eb9-8863-8b5d59c329fd)
-
-
 ## 2. `VanillaTrip`
 
 ```php
@@ -124,7 +121,7 @@ Se utiliza `protected $trip`; para permitir que las subclases como `FlightDecora
 > 💡 Recuerda : `protected` da acceso a la __clase donde se declara__ y en todas sus __subclases__, pero NO desde fuera de estas clases.
 
 
-## 4. `FlightDecorator` | `HotelDecorator` ...
+## 4. `FlightDecorator`
 
 
 ```php
@@ -152,6 +149,31 @@ class FlightDecorator extends TripDecorator
 
 ```
 
+
+## 4.a `HoteltDecorator`
+
+
+```php
+
+<?php
+
+class HotelDecorator extends TripDecorator
+{
+    private const HOTEL_COST = 350;
+
+    public function cost(): int
+    {
+        return $this->trip->cost() + self::HOTEL_COST; // Coste Base + Hotel
+    }
+
+    public function description() : string 
+    {
+        return "{$this->trip->description()} + Hotel = {$this->cost()}€ \n";
+    }
+}
+
+```
+
 ### ¿Cómo llamas a `$trip` si no está definida en `FlightPackDecorator`?
 
 El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas las subclases de esta vaina, como :
@@ -171,7 +193,7 @@ El objeto `$trip`, está definido en la clase abstracta `TripDecorator`, y todas
 
 require_once ("./VanillaTrip.php");
 require_once ("./FlightDecorator.php");
-
+require_once ("./HotelDecorator.php");
 
 // Uso del patrón Decorador para crear un viaje con vuelo, hotel y taxi.
 
@@ -204,3 +226,5 @@ Paquete Básico + Vuelo = 350€
 ---------------------------------------------------------------------------------
 
 ```
+
+[Código en sandbox](https://phpsandbox.io/n/decorator-ugra5#index.php)
