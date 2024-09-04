@@ -60,7 +60,7 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
   
       public function getDescription(): string
       {
-          return 'Simple Coffee';
+          return '☕\n';
       }
     }
     ```
@@ -90,9 +90,35 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
     
         public function getDescription(): string
         {
-            return $this->decoratedCoffee->getDescription() . ', milk';
+            return "{$this->decoratedCoffee->getDescription()} + 🥛\n";
         }
     }
+  ```
+- __Uso de los decoradores__:
+  ```php
+  <?php
+  
+  require_once('./SimpleCoffee.php');
+  require_once('./MilkCoffee.php');
+  require_once('./CreamCoffee.php');
+  
+  
+  $simpleCoffee = new SimpleCoffee();
+  $milkCoffee = new MilkCoffee($simpleCoffee);
+  $creamCoffee = new CreamCoffee($milkCoffee);
+  
+  
+  # Café solo, jefe
+  echo $simpleCoffee->getDescription(); // ☕
+  
+  
+  # Café + leche, que me indigesto
+  echo $milkCoffee->getDescription(); // ☕ + 🥛
+  
+  
+  # Café + leche + cremita, me gusta que se marque el bigotito con cada sorbo 
+  echo $creamCoffee->getDescription(); // ☕ + 🥛 + cream
+  
   ```
 
 # La movida con la herencia
