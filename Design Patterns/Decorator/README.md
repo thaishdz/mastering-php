@@ -116,7 +116,7 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
   echo $milkCoffee->getDescription(); // ☕ + 🥛
   
   
-  # Café + leche + cremita, me gusta que se marque el bigotito con cada sorbo 
+  # Café + leche + cremita, me gusta que se me marque el bigotito con cada sorbo 
   echo $creamCoffee->getDescription(); // ☕ + 🥛 + cream
   
   ```
