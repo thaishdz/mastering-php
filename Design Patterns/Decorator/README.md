@@ -78,7 +78,7 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
       }
   ```
 
-- __Los sabores del helado 🍦__:  Los _addons_ que quieras tener, en este caso queremos añadirle lechita al coffee.
+- __Los sabores del helado 🍦__:  Los _addons_ que quieras tener, en este caso queremos añadirle lechita 🥛 al coffee ☕.
   ```php
     class MilkCoffee extends CoffeeDecorator
     {
