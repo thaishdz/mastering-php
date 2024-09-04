@@ -52,7 +52,7 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
     ```
 - __Clase Base__: Implementa la interfaz
     ```php
-    class SimpleCoffee implements Coffee
+    class SimpleCoffee implements CoffeeInt
     {
       public function getCost(): int
       {
