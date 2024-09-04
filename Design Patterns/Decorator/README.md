@@ -64,7 +64,7 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
       }
     }
     ```
-- __Decorator Abstracto__: Implementa __la misma interfaz o hereda de la clase base__ y contiene una referencia a un objeto de la misma interfaz o clase base.
+- __La Abstracta Decoradora Base__: Implementa __la misma interfaz o hereda de la clase base__ y contiene una referencia a un objeto de la misma interfaz o clase base.
   ```php
       abstract class CoffeeDecorator implements CoffeeInt
       {
