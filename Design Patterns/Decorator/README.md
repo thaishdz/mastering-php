@@ -22,10 +22,9 @@ Sigues queriendo la misma burguer pero te toca pagar __DECORATORS__.
 
 # ¿Qué me resuelve esto?
 
-- Quieres añadir comportamiento o alguna funcionalidad específica a los objetos de una clase de clases pero la herencia no te vale de una 💩.
-- Tienes clases con `final` (se usa para evitar que una clase siga extendiéndose). Entonces para añadir funcionalidad, la única forma de reutilizar el comportamiento existente será envolver la clase con tu propio `wrapper`.
-- Necesites asignar funcionalidades adicionales a objetos durante el tiempo de ejecución sin joder el código que utilizan esos objetos.
-
+- Añadir alguna funcionalidad o comportamiento nuevo a los objetos de una clase SIN ALTERAR NADA DEL CÓDIGO.
+- Te topas con que la solución va por herencia múltiple, pero PHP no tiene 👍.
+- Tienes clases con `final` (se usa para evitar que una clase siga extendiéndose).
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/d721b003-e5cc-4f09-a2de-ca061bb31ce8" height="400" />
