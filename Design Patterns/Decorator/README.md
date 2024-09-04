@@ -76,6 +76,7 @@ Sí, porque serán *CUATRO*, las cosas a tener en cuenta :
         }
       }
   ```
+  > ⚠️Una clase abstracta que implementa una interfaz _no está obligada a implementar sus métodos_. SIN EMBARGO, una clase que herede de la abstracta __DEBE__ implementar esos métodos, a menos que la subclase también sea abstracta.
 
 - __Los sabores del helado 🍦__:  Los _addons_ que quieras tener, en este caso queremos añadirle lechita 🥛 al coffee ☕.
   ```php
