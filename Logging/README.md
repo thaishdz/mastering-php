@@ -42,13 +42,16 @@ Instalarlo con Composer
 composer require monolog/monolog
 ```
 
+### `index.php`
 
 ```php
 
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
+require __DIR__."/vendor/autoload.php"; // This tells PHP where to find the autoload file so that PHP can load the installed packages
 
-// Crear un logger
+use Monolog\Logger; // The Logger instance
+use Monolog\Handler\StreamHandler; // StreamHandler sends log messages to a file on your disk
+
+// Crear un logger con nombre 'mi_logger'
 $log = new Logger('mi_logger');
 
 // Añadir un manejador (archivo de salida)
@@ -58,21 +61,29 @@ $log->pushHandler(new StreamHandler('ruta/a/mi_log.log', Logger::WARNING));
 $log->warning('Esto es una advertencia');
 $log->error('Esto es un error');
 
+```
+
+2 cositas:
+
+```php
+
+require __DIR__."/vendor/autoload.php";
+
+use Monolog\Logger; 
+use Monolog\Handler\StreamHandler; 
 
 ```
 
-### ¿Qué cojones es ese `StreamHandler`?
+- `Logger`: Define los canales de registro, así como los niveles de severidad
+- `StreamHandler`: Responsable de mandar los mensajes de `logs` a la consola, o de almacenarlos en un archivo, o en cualquier otro PHP Stream (sip, se llaman así). Con él, puedes :
 
-Es el encargado de determinar dónde se enviarán o almacenarán los mensajes de `log`. Define el "canal" de salida del `log`, como puede ser un archivo 📜.
+  - __Tener múltiples `handlers` para diferentes destinos__: P.e, uno para errores críticos que se envíe por correo y otro para mensajes informativos que se guarden en un archivo.
+  - __Configurar distintos niveles de severidad para cada destino__.
 
-⚠️ `StreamHandler` es esencial porque `Monolog`, por sí solo, no sabe (es mogolo) en dónde debe escribir los mensajes. El `StreamHandler` le indica que los mensajes de `log` deben ser enviados a un `stream` específico, como un archivo de texto.
-
-
-## ¿Por qué usarlo?
-- __Flexibilidad__: Puedes tener múltiples `handlers` para diferentes destinos. Por ejemplo, uno para errores críticos que se envíe por correo y otro para mensajes informativos que se guarden en un archivo.
-- __Control del flujo__: Te permite _configurar distintos niveles de severidad_ para cada destino, haciendo el `logging` más eficiente y organizado.
+> ⚠️ `StreamHandler` es esencial porque `Monolog`, por sí solo, no sabe (es mogolo) en dónde debe escribir los mensajes. El `StreamHandler` le indica que los mensajes de `log` deben ser enviados a un `stream` específico, como un archivo de texto.
 
 
+---
 ## Niveles de severidad en Monolog (y en muchos sistemas de logging)
 
 ### [Concepto clave 💡] : Severidad
@@ -174,4 +185,9 @@ En aplicaciones de línea de comandos (CLI), `php://stdout` mostrará la info di
 #### 3. Docker o Kubernetes
 - En contenedores como Docker, los `logs` enviados a `stdout` se capturan fácilmente con las herramientas de `logging` del sistema, como __Docker logs__ o Kubernetes.
 - Es una buena práctica enviar `logs` a `php://stdout` en vez de escribir en archivos locales dentro del contenedor.
+
+---
+## Ayuditas 🛎️
+
+- [How to start logging with Monolog](https://betterstack.com/community/guides/logging/how-to-start-logging-with-monolog/) ⭐
 
