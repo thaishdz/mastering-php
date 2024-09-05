@@ -170,7 +170,7 @@ Es una interfaz de flujo (stream) nativa de PHP que permite enviar datos a la sa
 #### 2. CLI
 En aplicaciones de línea de comandos (CLI), `php://stdout` mostrará la info directamente en la consola, sin necesidad de escribir en archivos.
 
-#### 3.Docker o Kubernetes
+#### 3. Docker o Kubernetes
 - En contenedores como Docker, los `logs` enviados a `stdout` se capturan fácilmente con las herramientas de `logging` del sistema, como __Docker logs__ o Kubernetes.
 - Es una buena práctica enviar `logs` a `php://stdout` en vez de escribir en archivos locales dentro del contenedor.
 
