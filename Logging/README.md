@@ -61,7 +61,7 @@ $log->error('Esto es un error');
 
 ```
 
-# ¿Qué cojones es ese `StreamHandler`?
+### ¿Qué cojones es ese `StreamHandler`?
 
 Es el encargado de determinar dónde se enviarán o almacenarán los mensajes de `log`. Define el "canal" de salida del `log`, como puede ser un archivo 📜.
 
@@ -75,7 +75,7 @@ Es el encargado de determinar dónde se enviarán o almacenarán los mensajes de
 
 ## Niveles de severidad en Monolog (y en muchos sistemas de logging)
 
-### [Concepto clave] : Severidad
+### [Concepto clave 💡] : Severidad
 
 Se refiere al nivel de importancia o gravedad de un evento o mensaje registrado en el sistema de `logs`.
 
@@ -143,7 +143,7 @@ Porque nos ayuda a **filtrar y priorizar** los mensajes de `log`. En lugar de te
 
 Además, permite configurar diferentes **handlers** en `Monolog` para que manejen distintos niveles de severidad, de modo que los mensajes de error vayan a un archivo y las emergencias envíen una alerta por correo, por ejemplo.
 
-## Escoger dónde se guardan los logs 
+## Escoger dónde se guardan los logs📍
 
 Puedes configurar dónde se guardan los logs en el archivo, p.e en el `php.ini`:
 
