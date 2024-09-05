@@ -81,56 +81,56 @@ Se refiere al nivel de importancia o gravedad de un evento o mensaje registrado 
 
 ### Niveles de severidad en `Monolog` (y en muchos sistemas de logging):
 
-1. **DEBUG**: Información detallada sobre la aplicación, vamos la depuración de toda la laif. Es el __nivel más bajo__.
+1. **DEBUG** 🐞: Información detallada sobre la aplicación, vamos la depuración de toda la laif. Es el __nivel más bajo__.
    - Ejemplo: Información sobre variables, rutas, etc.
    
    ```php
    $log->debug('pene');
    ```
 
-2. **INFO**: Información general sobre el estado de la aplicación. No indica un problema, pero puede ser útil para el seguimiento de eventos normales.
+2. **INFO** ℹ️: Información general sobre el estado de la aplicación. No indica un problema, pero puede ser útil para el seguimiento de eventos normales.
    - Ejemplo: Confirmación de que se ha realizado una operación correctamente.
    
    ```php
    $log->info('Usuario inició sesión correctamente');
    ```
 
-3. **NOTICE**: Indica algo que podría necesitar atención, pero que no representa un error.
+3. **NOTICE** 🛃: Indica algo que podría necesitar atención, pero que no representa un error.
    - Ejemplo: Una operación que se completó, pero con advertencias menores.
    
    ```php
    $log->notice('La cuota de disco está cerca de llenarse');
    ```
 
-4. **WARNING**: Señala situaciones que no son críticas, pero que podrían causar problemas si no se corrigen.
+4. **WARNING** ⚠️: Señala situaciones que no son críticas, pero que podrían causar problemas si no se corrigen.
    - Ejemplo: Uso elevado de memoria o recursos.
    
    ```php
    $log->warning('El archivo de configuración no se encuentra');
    ```
 
-5. **ERROR**: Indica un fallo que impide que una parte de la aplicación funcione correctamente.
+5. **ERROR** ❌: Indica un fallo que impide que una parte de la aplicación funcione correctamente.
    - Ejemplo: Una consulta a la base de datos falló.
    
    ```php
    $log->error('Error al conectar con la base de datos');
    ```
 
-6. **CRITICAL**: Un error severo que podría hacer que el sistema no funcione correctamente.
+6. **CRITICAL** 🔴: Un error severo que podría hacer que el sistema no funcione correctamente.
    - Ejemplo: Caída de un servicio esencial de la aplicación.
    
    ```php
    $log->critical('El sistema de pagos ha fallado');
    ```
 
-7. **ALERT**: Un problema urgente que requiere una intervención inmediata.
+7. **ALERT** ☢️: Un problema urgente que requiere una intervención inmediata.
    - Ejemplo: Pérdida de datos importante o vulnerabilidad crítica.
    
    ```php
    $log->alert('Falla crítica de seguridad detectada');
    ```
 
-8. **EMERGENCY**: El nivel __MÁS ALTO__ de severidad. Indica que el sistema ha dejado de funcionar o está completamente inoperable.
+8. **EMERGENCY** 🚨: El nivel __MÁS ALTO__ de severidad. Indica que el sistema ha dejado de funcionar o está completamente inoperable.
    - Ejemplo: El servidor ha caído y todos los servicios están offline.
    
    ```php
