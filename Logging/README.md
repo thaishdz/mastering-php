@@ -67,6 +67,13 @@ $logger->debug("Buenas tardes");  // Se ha mandado tanto a la consola y al archi
 
 ```
 
+💡También puedes definir directamente la severidad en el constructor de `StreamHandler`
+
+```php
+$logger->pushHandler(new StreamHandler('ruta/a/mi_log.log', Logger::WARNING));
+```
+
+
 ### Output
 
 `stdout`
