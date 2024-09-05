@@ -143,6 +143,7 @@ Porque nos ayuda a **filtrar y priorizar** los mensajes de `log`. En lugar de te
 
 Además, permite configurar diferentes **handlers** en `Monolog` para que manejen distintos niveles de severidad, de modo que los mensajes de error vayan a un archivo y las emergencias envíen una alerta por correo, por ejemplo.
 
+---
 ## Escoger dónde se guardan los logs📍
 
 Puedes configurar dónde se guardan los logs en el archivo, p.e en el `php.ini`:
@@ -156,7 +157,7 @@ error_log = /ruta/a/archivo_de_log.log
 
 Es común mandar los `logs` a la salida estándar, ósea `php://stdout` o `php://stderr` para que los `logs` se integren fácilmente con las herramientas de monitoreo y `logging` de contenedores.
 
-### Pero QUÉ ES `php://stdout`
+### Explícame eso de `php://stdout`
 
 Es una interfaz de flujo (stream) nativa de PHP que permite enviar datos a la salida estándar (_standard output, `stdout`_). 
 
