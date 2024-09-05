@@ -123,14 +123,14 @@ Se refiere al nivel de importancia o gravedad de un evento o mensaje registrado 
    $log->critical('El sistema de pagos ha fallado');
    ```
 
-7. **ALERT** ☢️: Un problema urgente que requiere una intervención inmediata.
+7. **ALERT** 🚨: Un problema urgente que requiere una intervención inmediata.
    - Ejemplo: Pérdida de datos importante o vulnerabilidad crítica.
    
    ```php
    $log->alert('Falla crítica de seguridad detectada');
    ```
 
-8. **EMERGENCY** 🚨: El nivel __MÁS ALTO__ de severidad. Indica que el sistema ha dejado de funcionar o está completamente inoperable.
+8. **EMERGENCY** ☢️: El nivel __MÁS ALTO__ de severidad. Indica que el sistema ha dejado de funcionar o está completamente inoperable.
    - Ejemplo: El servidor ha caído y todos los servicios están offline.
    
    ```php
