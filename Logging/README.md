@@ -152,4 +152,24 @@ log_errors = On
 error_log = /ruta/a/archivo_de_log.log
 ```
 
+## Si usas Docker 🐳 o Kubernetes tengo una cosa que decirte ...
+
+Es común mandar los `logs` a la salida estándar, ósea `php://stdout` o `php://stderr` para que los `logs` se integren fácilmente con las herramientas de monitoreo y `logging` de contenedores.
+
+### Pero QUÉ ES `php://stdout`
+
+Es una interfaz de flujo (stream) nativa de PHP que permite enviar datos a la salida estándar (_standard output, `stdout`_). 
+
+- __La salida estándar es el lugar donde los programas normalmente escriben su salida__.
+- En PHP, puede ser una terminal o consola en la que se ejecuta el script.
+
+#### 1. Salida estándar
+- Cuando un script PHP utiliza `php://stdout`, está escribiendo directamente en la consola (si se ejecuta en CLI), o en el flujo de salida del servidor web (en aplicaciones web).
+- En entornos web, se relaciona con el contenido de la respuesta `HTTP` (aunque el uso de `stdout` directamente en una página web no es habitual).
+
+#### 2. Útil en CLI
+En aplicaciones de línea de comandos (CLI), `php://stdout` mostrará la info directamente en la consola, sin necesidad de escribir en archivos.
+
+#### 3.En entornos Docker o contenedores
+En contenedores como Docker, los `logs` enviados a `stdout` se capturan fácilmente con las herramientas de `logging` del sistema, como __Docker logs__ o Kubernetes. Es una buena práctica enviar `logs` a `php://stdout` en vez de escribir en archivos locales dentro del contenedor.
 
