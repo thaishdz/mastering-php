@@ -51,19 +51,46 @@ require __DIR__."/vendor/autoload.php"; // This tells PHP where to find the auto
 use Monolog\Logger; // The Logger instance
 use Monolog\Handler\StreamHandler; // StreamHandler sends log messages to a file on your disk
 
-// Crear un logger con nombre 'mi_logger'
-$log = new Logger('mi_logger');
+// Crear un logger con nombre 'daily'
+$log = new Logger('daily');
 
-// Añadir un manejador (archivo de salida)
-$log->pushHandler(new StreamHandler('ruta/a/mi_log.log', Logger::WARNING));
+// La salida será la estándar (en este caso la consola)
+$streamHandler = new StreamHandler("php://stdout");
+$logger->pushHandler($streamHandler);
 
-// Registrar mensajes
-$log->warning('Esto es una advertencia');
-$log->error('Esto es un error');
+// La salida se guardará en un archivo
+$streamHandlerFile = new StreamHandler("./my_log.txt");
+$logger->pushHandler($streamHandlerFile);
+
+
+$logger->debug("Buenas tardes");  // Se ha mandado tanto a la consola y al archivo
 
 ```
 
-2 cositas:
+### Output
+
+`stdout`
+
+```plaintext
+notebook@xp0ua:/var/www$ php index.php
+[2024-09-05T17:43:18.151852+00:00] daily.DEBUG: Buenas tardes [] []
+```
+
+`Archivo`
+
+<img width="1079" alt="image" src="https://github.com/user-attachments/assets/3d71fdb1-a53c-46f8-9dfd-932f3c1ef718">
+
+```plaintext
+
+Notice that this output has a few sections:
+
+- The date and time [2024-09-05T17:43:18.151852+00:00],
+- The log channel followed by the log level (daily.DEBUG),
+- The actual log message (Buenas tardes),
+- Some extra information ([] []). They are empty now, but we'll demonstrate how to fill them later.
+
+```
+Vale ahora, 2 cositas:
 
 ```php
 
@@ -74,7 +101,7 @@ use Monolog\Handler\StreamHandler;
 
 ```
 
-- `Logger`: Define los canales de registro, así como los niveles de severidad
+- `Logger`: Define los canales de log, así como los niveles de severidad
 - `StreamHandler`: Responsable de mandar los mensajes de `logs` a la consola, o de almacenarlos en un archivo, o en cualquier otro PHP Stream (sip, se llaman así). Con él, puedes :
 
   - __Tener múltiples `handlers` para diferentes destinos__: P.e, uno para errores críticos que se envíe por correo y otro para mensajes informativos que se guarden en un archivo.
