@@ -14,7 +14,7 @@ Utiliza el `log` para visualizar el tiempo de ejecución de cada tarea.
 
 <?php
 
-require __DIR__."/vendor/autoload.php";
+require __DIR__."/vendor/autoload.php"; // This tells PHP where to find the autoload file so that PHP can load the installed packages
 
 
 use Monolog\Logger; // The Logger instance
@@ -86,7 +86,7 @@ Ambas formas son válidas. Además de que `$list` tiene relación con la `Task`,
 
 <?php
 
-require __DIR__."/vendor/autoload.php"; // This tells PHP where to find the autoload file so that PHP can load the installed packages
+require __DIR__."/vendor/autoload.php"; 
 
 use Monolog\Logger;
 
