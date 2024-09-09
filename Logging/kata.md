@@ -92,9 +92,9 @@ use Monolog\Logger;
 
 require_once('./Task.php');
 
-$log = new Logger("task tracker");
+$log = new Logger("task tracker"); // Le encasquetamos al index la responsabilidad de instanciar el Logger
 
-$task = new Task($log);
+$task = new Task($log); // Se lo mandamos al Task
 
 $task->add();
 $task->all();
