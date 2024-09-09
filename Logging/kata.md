@@ -26,7 +26,7 @@ class Task
 
     private array $list = [];
 
-    public function __construct(private Logger $logger) 
+    public function __construct(Logger $logger) 
     {
         $logger->pushHandler(new StreamHandler('Logs/log.txt')); // Si no existe el archivo, lo crea
     }
