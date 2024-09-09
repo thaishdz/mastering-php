@@ -100,7 +100,7 @@ Notice that this output has a few sections:
 
 - The date and time [2024-09-05T17:43:18.151852+00:00],
 - The log channel followed by the log level (daily.DEBUG),
-- The actual log message (Buenas tardes),
+- The actual log message (Buenas tardes)
 - Some extra information ([] []). They are empty now, but we'll demonstrate how to fill them later.
 
 ```
@@ -125,7 +125,7 @@ use Monolog\Handler\StreamHandler;
 
 
 ---
-## Niveles de severidad en Monolog (y en muchos sistemas de logging)
+## Niveles de severidad en `Monolog` (y en muchos sistemas de logging)
 
 ### [Concepto clave 💡] : Severidad
 
@@ -196,7 +196,7 @@ Porque nos ayuda a **filtrar y priorizar** los mensajes de `log`. En lugar de te
 Además, permite configurar diferentes **handlers** en `Monolog` para que manejen distintos niveles de severidad, de modo que los mensajes de error vayan a un archivo y las emergencias envíen una alerta por correo, por ejemplo.
 
 ---
-## Escoger dónde se guardan los logs📍
+## Escoger dónde se guardan los logs 📍
 
 Puedes configurar dónde se guardan los logs en el archivo, p.e en el `php.ini`:
 
