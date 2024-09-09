@@ -2,10 +2,8 @@
 Crea un programa ficticio de gestión de tareas que permita añadir, eliminar  y listar dichas tareas.
 - _Añadir_: recibe nombre y descripción.✔️
 - _Eliminar_: por nombre de la tarea. ✔️
-
-Implementa diferentes mensajes de `log` que muestren información según la tarea ejecutada (a tu elección).
-
-Utiliza el `log` para visualizar el tiempo de ejecución de cada tarea.
+- Implementa diferentes mensajes de `log` que muestren información según la tarea ejecutada (a tu elección). ✔️
+- Utiliza el `log` para visualizar el tiempo de ejecución de cada tarea. ✔️
 
 
 ## `TaskManager.php`
@@ -25,7 +23,10 @@ class TaskManager
 {
     private array $list = [];
 
-    public function __construct(private Logger $logger) 
+
+    public function __construct(
+        private Logger $logger // Propiedad promocionada
+    ) 
     {
         $this->logger->pushHandler(new StreamHandler('Logs/log.txt'));
     }
@@ -33,42 +34,60 @@ class TaskManager
     public function add(
         string $name = 'untitled', 
         string $description = ''
-    ): string
+    ): void
     {
+      $start = microtime(true); // true indica que lo queremos como float
+
       if (!$this->exists($name)) 
       {
         $this->list[$name] = $description;
         $this->logger->info("$name was added");
-        return "$name was added";
       }
       $this->logger->warning("$name already exits");
-      return "$name already exists";
+
+      $end = microtime(true); 
+      $this->timeExecution($start, $end);
     }
     
-    public function all(): string
+    public function all(): void
     {
+        $start = microtime(true);
+
         $this->logger->info("All tasks were listed");
         foreach ($this->list as $task => $description) 
         {
-            return "[$task - $description]\n";
+            echo "[$task - $description]\n";
         }
-        return "No hay tareas\n";
+
+        $end = microtime(true); 
+        $this->timeExecution($start, $end);
     }
 
-    function delete(string $name): string
+    function delete(string $name): void
     {
+       $start = microtime(true);
+
        if($this->exists($name))
        {
         $this->logger->info("$name was deleted");
         unset($this->list[$name]); 
        }
-       $this->logger->warning("$name could not be deleted");
-       return "$name could not be deleted because it doesn't exist";
+       $this->logger->warning("$name could not be deleted because it doesn't exist");
+
+       $end = microtime(true); 
+       $this->timeExecution($start, $end);
     }
 
     function exists(string $name): bool
     {
-        return in_array($name, $this->list);
+        return array_key_exists($name, $this->list);
+    }
+
+    function timeExecution($start, $end)
+    {
+        $total = ($end - $start) / 1000000; // convertimos de microsegundo a segundo
+        $total_formateado = number_format($total,15); //  formatea el número en notación científica a 15 decimales.
+        return $this->logger->debug("Execution Time: $total_formateado s");
     }
 }
 ```
@@ -122,7 +141,9 @@ $task->delete('untitled');
 $task->all();
 ```
 
-![image](https://github.com/user-attachments/assets/ab9f9c87-71e0-4739-b913-540504ae381b)
+![image](https://github.com/user-attachments/assets/5c07a6c3-391c-4093-925f-255807116ed7)
+
+
 
 
 
