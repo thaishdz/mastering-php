@@ -144,4 +144,5 @@ $task->all();
 
 
 # Ayuditas 🛎️
+- [Task Manager](https://phpsandbox.io/n/monolog-logs-r8oad#TaskManager.php)
 - [Ruta de estudio programación | 25 - LOGS](https://www.youtube.com/watch?v=y2O6L1r_skc)
