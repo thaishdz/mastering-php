@@ -123,3 +123,8 @@ $task->all();
 ```
 
 ![image](https://github.com/user-attachments/assets/ab9f9c87-71e0-4739-b913-540504ae381b)
+
+
+
+# Ayuditas 🛎️
+- [Ruta de estudio programación | 25 - LOGS](https://www.youtube.com/watch?v=y2O6L1r_skc)
