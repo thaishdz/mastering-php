@@ -21,6 +21,7 @@
     <img src="https://github.com/user-attachments/assets/fb375b1f-9fa6-4fce-8ab4-420cbb490fc9" width="300" style="display: inline-block;" />
 </p>
 
+> Tip 💡 : Situado en este repo, presiona la tecla 't' y pon lo que quieres buscar, p.e : `'t' + logging y pulsa ENTER` 
 
 # Topics
 
