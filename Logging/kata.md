@@ -12,8 +12,7 @@ Crea un programa ficticio de gestión de tareas que permita añadir, eliminar  y
 
 <?php
 
-require __DIR__."/vendor/autoload.php";
-
+require __DIR__."/vendor/autoload.php"; // This tells PHP where to find the autoload file so that PHP can load the installed packages
 
 use Monolog\Logger; // The Logger instance
 use Monolog\Handler\StreamHandler; // sends log messages to a file on your disk
