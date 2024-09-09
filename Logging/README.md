@@ -118,7 +118,9 @@ use Monolog\Handler\StreamHandler;
 - `Logger`: Define los canales de log, así como los niveles de severidad
 - `StreamHandler`: Responsable de mandar los mensajes de `logs` a la consola, o de almacenarlos en un archivo, o en cualquier otro PHP Stream (sip, se llaman así). Con él, puedes :
 
-  - __Tener múltiples `handlers` para diferentes destinos__: P.e, uno para errores críticos que se envíe por correo y otro para mensajes informativos que se guarden en un archivo.
+  - __Tener múltiples `handlers` para diferentes destinos__:
+    - Uno para errores críticos que se envíe por correo
+    - Otro para mensajes informativos que se guarden en un archivo.
   - __Configurar distintos niveles de severidad para cada destino__.
 
 > ⚠️ `StreamHandler` es esencial porque `Monolog`, por sí solo, no sabe (es mogolo) en dónde debe escribir los mensajes. El `StreamHandler` le indica que los mensajes de `log` deben ser enviados a un `stream` específico, como un archivo de texto.
