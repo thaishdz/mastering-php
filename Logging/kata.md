@@ -77,6 +77,10 @@ Ambas formas son válidas. Además de que `$list` tiene relación con la `Task`,
     - Propósito del `StreamHandler`:
       Generalmente, no es necesario mantener una propiedad separada para él, ya que __su tarea es configurar el `Logger`__ y luego se puede eliminar de la referencia directa. El `Logger` sigue manejando el `StreamHandler` internamente.
 
+### 5. ¿Pero no habría que separar responsabilidades?
+- Es verdad que el `Logger` no tiene mucho sentido con la clase `Task`, pero sigue siendo importante para registrar eventos o errores. Pasar el `Logger` al constructor asegura que su configuración esté claramente definida y separada de la lógica principal de la `Task`.
+
+
 ## `index.php`
 ```php
 
@@ -98,5 +102,6 @@ $task->delete('untitled');
 $task->all();
 ```
 
-![image](https://github.com/user-attachments/assets/c43bb0f0-0004-4314-9a5b-7c6d3874c57c)
+![image](https://github.com/user-attachments/assets/8c6bf2bb-d761-43c0-b406-b2f5907c0493)
+
 
