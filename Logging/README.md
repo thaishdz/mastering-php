@@ -2,8 +2,15 @@
 
 # Logging
 
-Consiste en registrar la actividad de un sistema, por si en un futuro hay malandros o alguien hizo algo que no debió hacer, ver capasao.
+Consiste en registrar la actividad de un sistema, por si en un futuro hay malandros o alguien la cagó, ver capasao.
 
+
+<p align=center>
+ <img src="https://github.com/user-attachments/assets/9f4acb43-e57b-4fc3-94a8-ac2f73c83e10" height=400/>
+</p>
+<p align=center>
+  <em>In Log, We Trust</em>
+</p>
 
 ## ¿Por qué es importante?
 
