@@ -45,10 +45,14 @@ class TaskManager
       return "$name already exists";
     }
     
-    public function all() : array
+    public function all(): string
     {
         $this->logger->info("All tasks were listed");
-        return $this->list;
+        foreach ($this->list as $task => $description) 
+        {
+            return "[$task - $description]\n";
+        }
+        return "No hay tareas\n";
     }
 
     function delete(string $name): string
