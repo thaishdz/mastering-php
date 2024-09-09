@@ -22,10 +22,7 @@ class TaskManager
 {
     private array $list = [];
 
-
-    public function __construct(
-        private Logger $logger // Propiedad promocionada
-    ) 
+    public function __construct(private Logger $logger) 
     {
         $this->logger->pushHandler(new StreamHandler('Logs/log.txt'));
     }
