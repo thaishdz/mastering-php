@@ -8,37 +8,41 @@ Implementa diferentes mensajes de `log` que muestren información según la tare
 Utiliza el `log` para visualizar el tiempo de ejecución de cada tarea.
 
 
-## `Task.php`
+## `TaskManager.php`
 
 ```php
 
 <?php
 
-require __DIR__."/vendor/autoload.php"; // This tells PHP where to find the autoload file so that PHP can load the installed packages
+require __DIR__."/vendor/autoload.php";
 
 
 use Monolog\Logger; // The Logger instance
 use Monolog\Handler\StreamHandler; // sends log messages to a file on your disk
 
 
-class Task
+class TaskManager
 {
-
     private array $list = [];
 
-    public function __construct(Logger $logger) 
+    public function __construct(private Logger $logger) 
     {
-        $logger->pushHandler(new StreamHandler('Logs/log.txt')); // Si no existe el archivo, lo crea
+        $this->logger->pushHandler(new StreamHandler('Logs/log.txt'));
     }
     
     public function add(
         string $name = 'untitled', 
         string $description = ''
-    ): array
+    ): string
     {
-      $this->list[$name] = $description;
-      $this->logger->info("$name was added");
-      return $this->list;
+      if (!$this->exists($name)) 
+      {
+        $this->list[$name] = $description;
+        $this->logger->info("$name was added");
+        return "$name was added";
+      }
+      $this->logger->warning("$name already exits");
+      return "$name already exists";
     }
     
     public function all() : array
@@ -47,13 +51,25 @@ class Task
         return $this->list;
     }
 
-    function delete(string $name): void
+    function delete(string $name): string
     {
-       $this->logger->info("$name was deleted");
-       unset($this->list[$name]); 
+       if($this->exists($name))
+       {
+        $this->logger->info("$name was deleted");
+        unset($this->list[$name]); 
+       }
+       $this->logger->warning("$name could not be deleted");
+       return "$name could not be deleted because it doesn't exist";
+    }
+
+    function exists(string $name): bool
+    {
+        return in_array($name, $this->list);
     }
 }
 ```
+
+> [Dato de Interés 💡] : `private Logger $logger` es una promoted property, lo que significa que PHP la está considerando una propiedad privada de la clase pero a su vez un argumento del constructor, por lo que puede recibir mierda desde fuera, pero al mismo tiempo actuar como propiedad de la clase, sin ser accesible desde fuera.
 
 ## FAQ
 
@@ -90,18 +106,16 @@ require __DIR__."/vendor/autoload.php";
 
 use Monolog\Logger;
 
-require_once('./Task.php');
+require_once('./TaskManager.php');
 
 $log = new Logger("task tracker"); // Le encasquetamos al index la responsabilidad de instanciar el Logger
 
-$task = new Task($log); // Se lo mandamos al Task
+$task = new TaskManager($log); // Se lo mandamos al Task
 
-$task->add();
+$task->add("Hacer la compra", "Manzana, pan, huevos");
 $task->all();
 $task->delete('untitled');
 $task->all();
 ```
 
-![image](https://github.com/user-attachments/assets/8c6bf2bb-d761-43c0-b406-b2f5907c0493)
-
-
+![image](https://github.com/user-attachments/assets/ab9f9c87-71e0-4739-b913-540504ae381b)
