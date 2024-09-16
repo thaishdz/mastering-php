@@ -145,4 +145,9 @@ Aparte que la misma idea la tuvo también un señor que hizo managers y me ayud�
 
 - [UserManager]()
 - [BookManager]()
-- [LoanManager]()
+- [LoanManager](https://github.com/thaishdz/mastering-php/blob/main/SOLID/Single%20Responsability/Kata/LoanManager.md)
+
+
+### Demo completa
+
+- [Source Code - PHPSandbox](https://phpsandbox.io/n/solid-single-responsability-54psx)
