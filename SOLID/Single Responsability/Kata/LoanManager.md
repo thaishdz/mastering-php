@@ -1,0 +1,83 @@
+
+# `LoanManager.php`
+
+
+```php
+<?php
+
+
+require_once('./Book.php');
+require_once('./Loan.php');
+
+class LoanManager
+{
+
+    private array $loans = [];
+  
+    public function __construct() 
+    {
+        $userManager = new UserManager();
+    }
+    
+    /**
+     * @param User  $user
+     * @param Book[] $books
+     */
+    public function loanProcess(User $user, array $books)
+    {
+        $userID = $user->id();
+        
+        if ($this->userManager->exists($userID)) 
+        {
+            foreach ($books as &$book) 
+            {
+            	//REFACTOR: Prestar > 1 copia x préstamo
+                $this->updateCopies($book, -1);
+                $this->loans[$userID][] = 
+                [
+                	'TITLE' 			=> $book->title(),
+                	'AUTHOR'			=> $book->author(),
+                	'REMAINING_COPIES'	=> $book->copies()
+                ];
+            }
+        }
+    }
+
+    public function returnProcess()
+    {
+        
+    }
+
+    function updateCopies(Book $book, int $amount)
+    {
+        $book->setCopies($book->copies() + $amount);
+    }
+
+    function loans() : array 
+    {
+        return $this->loans;
+    }
+}
+```
+
+## What is `&` in `foreach ($books as &$book)`?
+
+Los `foreach` por defecto, trabajan con una copia de cada elemento del array, __no con la referencia al elemento original.__
+Por eso lo ponemos, porque es necesario cuando deseas modificar los elementos del array directamente.
+
+```php
+foreach ($books as &$book) 
+{
+    $this->updateCopies($book, -1);
+    $this->loans[$userID] = [
+        'TITLE'  => $book->title(),
+        'AUTHOR' => $book->author(),
+        'COPIES' => $book->copies()
+    ];
+}
+```
+
+### Resumen
+- El operador `&` hace que `$book` sea una referencia al elemento actual del array `$books`. 
+- Esto significa que cualquier modificación a `$book` dentro del bucle `foreach` se reflejará en el array original `$books`. 
+- Sin `&`, sólo estarías modificando una copia del elemento dentro del bucle, y NO el elemento en el array.
