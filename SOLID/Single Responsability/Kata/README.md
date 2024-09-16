@@ -134,9 +134,9 @@ print_r($library->loans());
 Separa las responsabilidades en diferentes clases siguiendo el Principio de Responsabilidad Única.
 
 Modelé 3 entidades : 
-- [User]()
-- [Book]()
-- [Loan]()
+- [User](https://github.com/thaishdz/mastering-php/blob/main/SOLID/Single%20Responsability/Kata/User.php)
+- [Book](https://github.com/thaishdz/mastering-php/blob/main/SOLID/Single%20Responsability/Kata/Book.php)
+- [Loan](https://github.com/thaishdz/mastering-php/blob/main/SOLID/Single%20Responsability/Kata/Loan.php)
 
 
 El tema es que cada una de ellas tenía operaciones como añadir algo, entonces creé los managers (el ejemplo con la clase `Library` que hace Mouredev no me terminó de convencer ya que vuelve a aglutinar todos los conextos en uno) :
