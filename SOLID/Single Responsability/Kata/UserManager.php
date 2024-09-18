@@ -21,4 +21,6 @@ class UserManager
     public function users(): array
     {
         return $this->users;
+    }
+}
     
