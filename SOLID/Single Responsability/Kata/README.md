@@ -152,9 +152,109 @@ Aparte que la misma idea la tuvo también un señor que hizo managers y me ayud�
 
 ```php
 
+<?php
+
+require_once('./User.php');
+require_once('./Book.php');
+require_once('./UserManager.php');
+require_once('./BookManager.php');
+require_once('./LoanManager.php');
+
+class GoodLibrary
+{
+    private UserManager $userManager;
+    private BookManager $bookManager;
+    private LoanManager $loanManager;
+
+    public function __construct() 
+    {
+        $this->userManager = new UserManager();
+        $this->bookManager = new BookManager();
+        $this->loanManager = new LoanManager();
+    }
+    ///////////////////// USERS ///////////////////////////////////
+    
+    function addUser($name, $email) 
+    {
+        // La creación del ID ya pa otro día, estoy cansá
+        $user = new User('6282178', $name, $email);
+        $this->userManager->add($user);
+    }
+    
+    ////////////////////// BOOKS ///////////////////////////////////
+
+    function addBook($title, $author, $copies) 
+    {
+        $book = new Book($title, $author, $copies); 
+        $this->bookManager->add($book);
+    }
+
+    ///////////////////// GESTIÓN LIBROS ///////////////////////////
+
+    function handleBook(string $userID, array $books, string $handle) 
+    {
+        $bookTitles = [];
+        if ($this->userManager->exists($userID)) 
+        {
+            foreach ($books as $title) 
+            {
+                $bookTitles[] = $this->bookManager->exists($title);
+            }
+
+            if ($bookTitles)
+            {
+                switch ($handle) {
+                    case 'loan':
+                        $this->loanBook($userID, $bookTitles);
+                        break;
+                    
+                    case 'return':
+                        $this->returnBook($userID, $bookTitles);
+                        break;
+                    
+                    default:
+                        echo 'Invalid option';
+                        break;
+                }
+               
+            }else 
+            {
+                echo 'Books Not Found';
+            }
+            
+        }else 
+        {
+            echo 'User Not Found';
+        }
+    }
 
 
+    ///////////////////// PRÉSTAMO /////////////////////
+    /**
+     * @param string $userID
+     * @param Book[] $books
+     */
+    function loanBook(string $userID, array $books)
+    {
+       $this->loanManager->loanProcess($userID, $books);
+       print_r($this->loanManager->loans());
+       print_r($this->bookManager->books()); // las copies de los objetos se han actualizado
+    }
 
+
+    ///////////////////// DEVOLUCIÓN /////////////////////
+    /**
+     * @param string $userID
+     * @param Book[] $books
+     */
+    function returnBook(string $userID, array $books)
+    {
+        $this->loanManager->returnProcess($userID, $books);
+        print_r($this->loanManager->loans());
+        print_r($this->bookManager->books()); // las copies de los objetos se han actualizado
+    }
+    
+}
 ```
 
 
