@@ -13,37 +13,46 @@ class LoanManager
 {
     private array $loans = [];
     /**
-     * @param User  $user
+     * @param string $userID
      * @param Book[] $books
      */
-    public function loanProcess(User $user, array $books)
+    public function loanProcess(string $userID, array $bookList)
     {
-        $userID = $user->id();
-        
-        foreach ($books as &$book) 
+        foreach ($bookList as $list) 
         {
-            //REFACTOR: Prestar > 1 copia x préstamo
-            $this->updateCopies($book, -1);
-            $this->loans[$userID][$book->title()] = 
-            [
-                'AUTHOR' => $book->author(),
-                'REMAINING_COPIES' => $book->copies()
-            ];
+            foreach ($list as &$book) 
+            {
+                //REFACTOR: Prestar > 1 copia x préstamo
+                $this->updateCopies($book, -1);
+                $this->loans[$userID][$book->title()] = 
+                [
+                    'AUTHOR'	=> $book->author(),
+                    'COPIES'	=> 1
+                ];
+            }
+            
         }
     }
 
-    public function returnProcess(User $user, array $books)
+    /**
+     * @param string $userID
+     * @param Book[] $books
+     */
+    public function returnProcess(string $userID, array $bookList)
     {
-        $userID = $user->id();
         $titles = array_keys($this->loans[$userID]);
 
-        foreach ($books as &$book) 
+        foreach ($bookList as $list) 
         {
-            if (in_array($book->title(), $titles))
+            foreach ($list as &$book) 
+            {
+                if (in_array($book->title(), $titles))
             {
                 $this->updateCopies($book, 1);
             }
-            unset($this->loans[$userID]);
+                unset($this->loans[$userID]);
+            }
+            
         }
     }
 
@@ -57,6 +66,7 @@ class LoanManager
         return $this->loans;
     }
 }
+
 ```
 
 ## What is `&` in `foreach ($books as &$book)`?
