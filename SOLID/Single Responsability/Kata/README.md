@@ -257,6 +257,34 @@ class GoodLibrary
 }
 ```
 
+# `index.php`
+
+
+
+```php
+
+<?php
+
+require_once('./GoodLibrary.php');
+
+
+$goodLibrary = new GoodLibrary();
+
+
+$goodLibrary->addUser('Thais', 'thais@correito.com');
+
+$goodLibrary->addBook('Los Viajes de Gulliver', 'Jonathan Swift', 2);
+$goodLibrary->addBook('1984', 'George Orwel', 16);
+$goodLibrary->addBook('Juego de Tronos (Canción de Hielo y Fuego)', 'George R.R. Martin', 20);
+
+
+
+$goodLibrary->handleBook('6282178', ['Los Viajes de Gulliver', '1984'], 'loan');
+
+
+$goodLibrary->handleBook('6282178', ['Los Viajes de Gulliver', '1984'], 'return');
+
+```
 
 
 ### Demo completa
