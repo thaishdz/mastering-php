@@ -13,11 +13,6 @@ class UserManager
        $this->users[] = $user;
     }
 
-    function exists(string $id): bool
-    {
-        return isset($this->users[$id]);
-    }
-
     public function users(): array
     {
         return $this->users;
