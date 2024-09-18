@@ -26,8 +26,8 @@ class LoanManager
             $this->updateCopies($book, -1);
             $this->loans[$userID][$book->title()] = 
             [
-                'AUTHOR'			=> $book->author(),
-                'REMAINING_COPIES'	=> $book->copies()
+                'AUTHOR' => $book->author(),
+                'REMAINING_COPIES' => $book->copies()
             ];
         }
     }
