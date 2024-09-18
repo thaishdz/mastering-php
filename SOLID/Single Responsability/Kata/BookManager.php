@@ -13,6 +13,14 @@ class BookManager
        $this->books[] = $book;
     }
 
+    function exists(string $title): array
+    {
+        return array_filter($this->books(), function ($book) use ($title)
+        {
+            return $book->title() === $title; // si coincide, guarda ESE OBJETO en el array resultante
+        });
+    }
+
     public function books(): array
     {
         return $this->books;
