@@ -7,18 +7,11 @@
 
 
 require_once('./Book.php');
-require_once('./Loan.php');
+require_once('./UserManager.php');
 
 class LoanManager
 {
-
     private array $loans = [];
-  
-    public function __construct() 
-    {
-        $userManager = new UserManager();
-    }
-    
     /**
      * @param User  $user
      * @param Book[] $books
@@ -27,25 +20,31 @@ class LoanManager
     {
         $userID = $user->id();
         
-        if ($this->userManager->exists($userID)) 
+        foreach ($books as &$book) 
         {
-            foreach ($books as &$book) 
-            {
-            	//REFACTOR: Prestar > 1 copia x préstamo
-                $this->updateCopies($book, -1);
-                $this->loans[$userID][] = 
-                [
-                	'TITLE' 			=> $book->title(),
-                	'AUTHOR'			=> $book->author(),
-                	'REMAINING_COPIES'	=> $book->copies()
-                ];
-            }
+            //REFACTOR: Prestar > 1 copia x préstamo
+            $this->updateCopies($book, -1);
+            $this->loans[$userID][$book->title()] = 
+            [
+                'AUTHOR'			=> $book->author(),
+                'REMAINING_COPIES'	=> $book->copies()
+            ];
         }
     }
 
-    public function returnProcess()
+    public function returnProcess(User $user, array $books)
     {
-        
+        $userID = $user->id();
+        $titles = array_keys($this->loans[$userID]);
+
+        foreach ($books as &$book) 
+        {
+            if (in_array($book->title(), $titles))
+            {
+                $this->updateCopies($book, 1);
+            }
+            unset($this->loans[$userID]);
+        }
     }
 
     function updateCopies(Book $book, int $amount)
@@ -69,10 +68,10 @@ Por eso lo ponemos, porque es necesario cuando deseas modificar los elementos de
 foreach ($books as &$book) 
 {
     $this->updateCopies($book, -1);
-    $this->loans[$userID] = [
-        'TITLE'  => $book->title(),
-        'AUTHOR' => $book->author(),
-        'COPIES' => $book->copies()
+    $this->loans[$userID][$book->title()] = 
+    [
+       'AUTHOR'	=> $book->author(),
+       'REMAINING_COPIES' => $book->copies()
     ];
 }
 ```
