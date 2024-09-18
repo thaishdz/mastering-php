@@ -238,7 +238,7 @@ class GoodLibrary
     {
        $this->loanManager->loanProcess($userID, $books);
        print_r($this->loanManager->loans());
-       print_r($this->bookManager->books()); // las copies de los objetos se han vuelto a actualizar tras la devolución
+       print_r($this->bookManager->books()); // las copies de los objetos se han actualizado
     }
 
 
@@ -251,7 +251,7 @@ class GoodLibrary
     {
         $this->loanManager->returnProcess($userID, $books);
         print_r($this->loanManager->loans());
-        print_r($this->bookManager->books()); // las copies de los objetos se han actualizado
+        print_r($this->bookManager->books()); // las copies de los objetos se han vuelto a actualizar tras la devolución 
     }
     
 }
