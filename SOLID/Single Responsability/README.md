@@ -115,7 +115,7 @@ Esto nos permite que si el día de mañana, un usuario 👦, tiene "30 funcional
 - `UserRepository` tendrá la responsabilidad de tocar la base de datos para operaciones que tengan que ver con el usuario y yatáh.
 - `EmailService` tendrá la responsabilidad de mandar mails o a las tareas relacionadas con mailing y yatáh.
 
-
+---
 
 ## Ayuditas 🛎️
 
