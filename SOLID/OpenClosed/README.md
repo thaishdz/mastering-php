@@ -13,6 +13,7 @@
 # Los Points 📍
 
 - __Abierto para extensión__: Podemos extender el comportamiento de una clase sin alterar su código fuente.
+  
 - __Cerrado para modificación__: No deberíamos modificar el código existente directamente para agregar nuevas funcionalidades, porque esto podría introducir errores o afectar el comportamiento ya probado.
 
 
