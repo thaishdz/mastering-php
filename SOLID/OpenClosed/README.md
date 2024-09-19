@@ -43,7 +43,7 @@ class CalculadoraPrecioReducido extends CalculadoraPrecio {
 La clase original no ha sido modificada (está cerrada) pero podemos extender su funcionalidad para manejar otros tipos de impuestos (está abierta).
 
 
-# ¿Cómo sé si me estoy cargando el Open/Closed?
+# ¿Cómo sé si me estoy cargando el `Open/Closed`?
 
 > 🫱 Cuando añades funcionalidad, acabas modificando siempre los mismos archivos.
 
@@ -59,4 +59,4 @@ Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos
 
 ### Ayuditas 🛎️
 
-- [Open/Closed Principle - by Secture](https://secture.com/blog/principios-solid-open-close-principle/)
+- [Open/Closed Principle - by Secture📰](https://secture.com/blog/principios-solid-open-close-principle/)
