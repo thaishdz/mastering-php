@@ -11,6 +11,9 @@
   <img src="https://github.com/user-attachments/assets/3f3f0373-3c1d-4d2a-a242-d91abe291063" height="400" />
 </p>
 
+<p align=center>
+  <em>Créditos de la imagen a IngenieroBinario</em>
+</p>
 
 
 
