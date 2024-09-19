@@ -83,7 +83,7 @@ __Comportamientos diferentes__: Aunque Beast Boy se transforme en diferentes ani
 
 Esta función __no necesita saber en qué animal se transformará Beast Boy__, solo llama al método `transform()`. 
 
-Aquí está la magia del polimorfismo: puedes pasar cualquier clase (tigre, águila, tiburón), y la función llamará al método adecuado.
+> 👉 Aquí está la magia 🪄 del polimorfismo, puedes pasar cualquier clase (`Gorilla`, `Dino`, `Shark` ...), y la función llamará al método adecuado.
 
 
 ```php
