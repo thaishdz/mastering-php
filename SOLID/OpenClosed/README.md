@@ -1,5 +1,5 @@
 
-# Open/Closed
+# Open/Closed Principle
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/5c7be335-722b-4511-b0e7-f4207cda023b" height="400" />
