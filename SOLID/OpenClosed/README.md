@@ -57,6 +57,8 @@ Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos
 
 - Cada objeto, implementará una forma específica de resolución de la operación y según el tipo de operación se llamará al objeto encargado para solucionarlo.
 
+---
+
 ### Ayuditas 🛎️
 
 - [Open/Closed Principle - by Secture📰](https://secture.com/blog/principios-solid-open-close-principle/)
