@@ -167,9 +167,11 @@ echo behavior($dino); // Dino IS DESTRYOING THE CITY 🔥🌇🦖
 
 Todos esos objetos comparten el mismo "contrato" o interfaz (_BeastBoy_), que define que deben tener el método `behavior()`. Pero cada uno lo implementa a su manera.
 
-# Resumen
+### Resumen
 
 Con el polimorfismo, puedes tratar a diferentes objetos de manera uniforme (llamando al mismo método), sin preocuparte de los detalles específicos de cada uno.
+
+---
 
 ### Ayuditas 🛎️
 
