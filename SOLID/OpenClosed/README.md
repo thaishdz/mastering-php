@@ -9,12 +9,8 @@
   <em>Créditos de la imagen a IngenieroBinario</em>
 </p>
 
-
-# Los Points 📍
-
-- __Abierto para extensión__: Podemos extender el comportamiento de una clase sin alterar su código fuente.
-  
-- __Cerrado para modificación__: No deberíamos modificar el código existente directamente para agregar nuevas funcionalidades, porque esto podría introducir errores o afectar el comportamiento ya probado.
+# El Point 📍
+Las clases tienen que ser capaces de estar abiertas a extender el comportamiento sin necesidad de modificar su código. 
 
 
 # Ejemplo
@@ -46,6 +42,21 @@ class CalculadoraPrecioReducido extends CalculadoraPrecio {
 ```
 La clase original no ha sido modificada (está cerrada) pero podemos extender su funcionalidad para manejar otros tipos de impuestos (está abierta).
 
-## Beneficios
 
-Promueve la __estabilidad y mantenibilidad del código__, ya que las clases probadas y en producción no necesitan ser cambiadas directamente cuando hay nuevas funcionalidades.
+# ¿Cómo sé si me estoy cargando el Open/Closed?
+
+> 🫱 Cuando añades funcionalidad, acabas modificando siempre los mismos archivos.
+
+Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos ocurre y realizar una refactorización para cumplir con el principio.
+
+# ¿Cómo lo arreglo? 
+
+✨ [Polimorfismo]()✨
+
+- Con polimorfismo, en lugar de tener una clase principal que es capaz de saber cómo realizar una operación, __delega la lógica a los objetos que conocen como solucionar esta lógica__.
+
+- Cada objeto, implementará una forma específica de resolución de la operación y según el tipo de operación se llamará al objeto encargado para solucionarlo.
+
+### Ayuditas 🛎️
+
+- [Open/Closed Principle - by Secture](https://secture.com/blog/principios-solid-open-close-principle/)
