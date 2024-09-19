@@ -51,7 +51,7 @@ Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos
 
 # ¿Cómo lo arreglo? 
 
-✨ [Polimorfismo]()✨
+✨ [Polimorfismo](https://github.com/thaishdz/mastering-php/blob/main/Polimorfismo/README.md)✨
 
 - Con polimorfismo, en lugar de tener una clase principal que es capaz de saber cómo realizar una operación, __delega la lógica a los objetos que conocen como solucionar esta lógica__.
 
