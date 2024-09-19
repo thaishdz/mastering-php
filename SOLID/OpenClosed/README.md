@@ -44,7 +44,7 @@ class CalculadoraPrecioReducido extends CalculadoraPrecio {
 }
 
 ```
-La clase original no ha sido modificada (está cerrada), pero podemos extender su funcionalidad para manejar otros tipos de impuestos (está abierta).
+La clase original no ha sido modificada (está cerrada) pero podemos extender su funcionalidad para manejar otros tipos de impuestos (está abierta).
 
 ## Beneficios
 
