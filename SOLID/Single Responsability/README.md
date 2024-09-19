@@ -75,7 +75,9 @@ Entonces ...
 
 ---
 
-# SRP aplicado
+# ¿Cómo lo arreglamos? 
+
+SEPARANDO responsabilidades 
 
 ## User.php
 ```php
