@@ -88,7 +88,7 @@ Esta función __no necesita saber en qué animal se transformará Beast Boy__, s
 
 ```php
 
-function seeTransform(BeastBoy $form)
+function seeTransform(BeastBoy $form) // puede trabajar con múltiples tipos de objetos (Gorilla, Dino, Shark ...).
 {
     $form->transform();
 }
@@ -98,7 +98,7 @@ function seeTransform(BeastBoy $form)
 
 ## 4. Usando las clases
 
-Aquí es donde ves el polimorfismo en acción. Llamas a showTransform() y, dependiendo del tipo de objeto que le pases, hará algo diferente.
+Aquí es donde ves el polimorfismo en acción. Llamas a `seeTransform()` y, dependiendo del tipo de objeto que le pases, hará algo diferente.
 
 ```php
 
@@ -166,6 +166,10 @@ echo behavior($dino); // Dino IS DESTRYOING THE CITY 🔥🌇🦖
 ```
 
 Todos esos objetos comparten el mismo "contrato" o interfaz (_BeastBoy_), que define que deben tener el método `behavior()`. Pero cada uno lo implementa a su manera.
+
+# Resumen
+
+Con el polimorfismo, puedes tratar a diferentes objetos de manera uniforme (llamando al mismo método), sin preocuparte de los detalles específicos de cada uno.
 
 ### Ayuditas 🛎️
 
