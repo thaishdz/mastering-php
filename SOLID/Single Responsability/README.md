@@ -3,7 +3,7 @@
 # Single Responsability Principle
 
 - Principio orientado a objetos.
-- La clase se tiene que encargar de UNA SOLA RESPONSABILIDAD.
+- La clase se tiene que encargar de __UNA SOLA RESPONSABILIDAD__.
 - NO PUEDEN EXISTIR funcionalidades casi iguales (rollo que se solapen) dentro una misma clase.
 - Debe tener una única razón para cambiar (significa que si la clase tiene más de una responsabilidad y cambia, se rompe la clase).
 
