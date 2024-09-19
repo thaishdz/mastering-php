@@ -7,6 +7,12 @@
 - NO PUEDEN EXISTIR funcionalidades casi iguales (rollo que se solapen) dentro una misma clase.
 - Debe tener una única razón para cambiar (significa que si la clase tiene más de una responsabilidad y cambia, se rompe la clase).
 
+<p align=center>
+  <img src="https://github.com/user-attachments/assets/3f3f0373-3c1d-4d2a-a242-d91abe291063" height="400" />
+</p>
+
+
+
 
 ## User.php
 
