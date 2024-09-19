@@ -232,5 +232,5 @@ En aplicaciones de línea de comandos (CLI), `php://stdout` mostrará la info di
 ---
 ## Ayuditas 🛎️
 
-- [How to start logging with Monolog](https://betterstack.com/community/guides/logging/how-to-start-logging-with-monolog/) ⭐
+- [How to start logging with Monolog 📰](https://betterstack.com/community/guides/logging/how-to-start-logging-with-monolog/) ⭐
 
