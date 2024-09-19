@@ -165,7 +165,7 @@ echo behavior($dino); // Dino IS DESTRYOING THE CITY 🔥🌇🦖
 
 ```
 
-Todos esos objetos comparten el mismo “contrato” o interfaz (BeastBoy), que define que deben tener el método transform(). Pero cada uno lo implementa a su manera.
+Todos esos objetos comparten el mismo "contrato" o interfaz (_BeastBoy_), que define que deben tener el método `behavior()`. Pero cada uno lo implementa a su manera.
 
 ### Ayuditas 🛎️
 
