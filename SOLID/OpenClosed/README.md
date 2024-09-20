@@ -45,7 +45,7 @@ La clase original no ha sido modificada (está cerrada) pero podemos extender su
 
 # ¿Cómo sé si me estoy cargando el `Open/Closed`?
 
-> 🫱 Cuando añades funcionalidad, acabas modificando siempre los mismos archivos.
+> 👉 Cuando añades funcionalidad, acabas modificando siempre los mismos archivos.
 
 Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos ocurre y realizar una refactorización para cumplir con el principio.
 
