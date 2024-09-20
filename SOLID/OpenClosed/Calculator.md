@@ -114,6 +114,21 @@ Si aprobaste primaria conocerás la célebre cita «`Cualquier número x 0` dar�
 Por eso es `1`, porque es el valor neutral, como en la suma el `0`.
 
 
+### Flujo ⚙️
+
+Con este array el flujo sería :
+
+```php
+$numbers = [2, 3, 4];
+```
+
+- Valor inicial: `1`
+1. paso: `1 * 2` = 2
+2. paso: `2 * 3` = 6
+3. paso: `6 * 4` = 24
+
+---
+
 # `Divide.php`
 
 ```php
@@ -151,6 +166,7 @@ class Divide implements OperationInt
 
 - `if ($numbers[1] == 0)`: Funkará tanto para `0` como para `0.0`, ya que la comparación no estricta `==` compara solo el valor y no el tipo.
 
+---
 
 # `index.php`
 
