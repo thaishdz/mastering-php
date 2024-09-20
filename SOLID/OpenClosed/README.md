@@ -156,7 +156,7 @@ Pay successfully against xxxx-4321, Your remaining balance is 700
 - La clase usa los últimos 4 dígitos de la cuenta y proporciona un mensaje de éxito tras el pago.
 
 
-# ¿Cómo sé si me estoy cargando el `Open/Closed`?
+# ¿Cómo sé si me estoy cargando el `OCP`?
 
 > 👉 Cuando añades funcionalidad, acabas modificando siempre los mismos archivos.
 
