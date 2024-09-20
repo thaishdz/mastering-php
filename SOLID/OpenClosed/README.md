@@ -86,6 +86,68 @@ Esta clase extiende de `Payment` e implementa el método `pay()`.
      - `%s` es un marcador para cadenas.
      - `%d` es un marcador para números enteros.
      - Muestra un mensaje que incluye el nombre del titular (`$title`), los últimos 4 dígitos de la cuenta (`$last4Digits`), y el saldo restante (`$balance`).
+
+## Uso 
+```php
+
+$creditCard = new CreditCard("Muhammad Raza Bangi", "123456789");
+$creditCard->pay(200);
+
+```
+
+```plaintext
+
+(creditcard instance output)
+Hello Muhammad Raza Bangi,
+Pay successfully against xxxx-6789, Your remaining balance is 750
+
+```
+
+---
+
+![image](https://github.com/user-attachments/assets/3065b367-415d-44c7-a0a6-8db95106e7af)
+
+
+```plaintext
+👨‍🦲 "Hey maquinarias, necesito que añadas Paypal como forma de pago" 
+👨‍💻 No hay problemo
+```
+
+### 3. ✨ NEW IMPLEMENTATION ✨:  `Paypal`
+
+```php
+
+class Paypal extends Payment {
+    private $charges = 100;
+    
+    public function pay(int $number) {
+        $this->balance = ($this->balance - $number) - $this->charges;
+        
+        printf(
+            "Hello %s,\nPay successfully against xxxx-%s, Your remaining balance is %d\n", 
+            $this->title, 
+            $last4Digits, 
+            $this->balance
+        );
+    }
+}
+
+```
+
+```php
+
+$paypal = new Paypal("Muhammad Raza Bangi", "987654321");
+$paypal->pay(200);
+
+```
+
+```plaintext
+
+(paypal instance output)
+Hello Muhammad Raza Bangi,
+Pay successfully against xxxx-4321, Your remaining balance is 700
+
+```
 ---
 
 ### Resumen:
