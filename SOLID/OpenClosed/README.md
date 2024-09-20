@@ -12,6 +12,23 @@
 # El Point 📍
 Las clases tienen que ser capaces de estar abiertas a extender el comportamiento sin necesidad de modificar su código. 
 
+# ¿Cómo sé si NO estoy cumpliendo con el `OCP`?
+
+Fácil 👇
+
+> _¿Tienes que modificar siempre los mismos archivos cada vez que tienes que hacer una nueva implementación?_
+
+Entonces amiga (date cuenta), hazte un frapuccino, cuenta hasta 3 y di en voz alta _"PUTA MADRE, no cumple con el `OCP`, hay que refactorizar esta 💩"_
+
+# Y ... ¿Cómo lo arreglo? 
+
+✨ [Polimorfismo](https://github.com/thaishdz/mastering-php/blob/main/Polimorfismo/README.md)✨
+
+- Con polimorfismo, en lugar de tener una clase principal que es capaz de saber cómo realizar una operación, __delega la lógica a los objetos que conocen como solucionar esta lógica__.
+
+- Cada objeto, implementará una forma específica de resolución de la operación y según el tipo de operación se llamará al objeto encargado para solucionarlo.
+
+---
 
 # Ejemplo de Implementación de OCP con `abstract class`
 
@@ -154,23 +171,6 @@ Pay successfully against xxxx-4321, Your remaining balance is 700
 - **`Payment`** es una clase abstracta con un método abstracto `pay()`, que debe ser implementado por cualquier subclase.
 - **`CreditCard`** extiende de `Payment` e implementa el método `pay()` con lógica para restar un monto del saldo, aplicando un cargo adicional.
 - La clase usa los últimos 4 dígitos de la cuenta y proporciona un mensaje de éxito tras el pago.
-
-
-# ¿Cómo sé si no estoy cumpliendo con el `OCP`?
-
-Fácil 👇
-
-> _¿Tienes que modificar siempre los mismos archivos cada vez que tienes que hacer una nueva implementación?_
-
-Entonces amiga (date cuenta), hazte un frapuccino, cuenta hasta 3 y di en voz alta _"PUTA MADRE, no cumple con el `OCP`, hay que refactorizar esta 💩"_
-
-# Y ... ¿Cómo lo arreglo? 
-
-✨ [Polimorfismo](https://github.com/thaishdz/mastering-php/blob/main/Polimorfismo/README.md)✨
-
-- Con polimorfismo, en lugar de tener una clase principal que es capaz de saber cómo realizar una operación, __delega la lógica a los objetos que conocen como solucionar esta lógica__.
-
-- Cada objeto, implementará una forma específica de resolución de la operación y según el tipo de operación se llamará al objeto encargado para solucionarlo.
 
 ---
 
