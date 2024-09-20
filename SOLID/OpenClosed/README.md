@@ -130,7 +130,7 @@ Pay successfully against xxxx-6789, Your remaining balance is 750
 👨‍💻 No hay problemo
 ```
 
-### 3. ✨ NEW FEATURE:  `Paypal` ✨
+### 3. 🎉 NEW FEATURE:  `Paypal` 🎺
 
 ```php
 
