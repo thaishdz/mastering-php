@@ -176,6 +176,6 @@ Pay successfully against xxxx-4321, Your remaining balance is 700
 
 ### Ayuditas 🛎️
 
-- [Kata - Implementa el OCP en una Calculadora]()
+- [Kata - Implementa el OCP en una Calculadora](https://github.com/thaishdz/mastering-php/blob/main/SOLID/OpenClosed/Calculator.md)
 - [OCP - by Secture 📰](https://secture.com/blog/principios-solid-open-close-principle/)
 - [OCP (abstract class and interface examples) - by Muhammad Raza Bangi 📰](https://blog.devgenius.io/open-closed-principle-ocp-by-using-php-solid-principle-f0ceae519bcf)
