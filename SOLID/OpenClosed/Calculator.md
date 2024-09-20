@@ -170,14 +170,14 @@ class Divide implements OperationInt
 🧔 Agrega una 5º operación para calcular potencias y comprueba que se cumpla el `OCP`.
 ```
 
-# 🎊 NEW FEATURE: `Pow` 🎺
+# 🎊 NEW FEATURE: `Power` 🎺
 
 ```php
 <?php
 
 require_once('./OperationInt.php');
 
-class Pow implements OperationInt
+class Power implements OperationInt
 {
     public function calculate(array $numbers): float 
     {
