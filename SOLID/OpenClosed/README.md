@@ -156,11 +156,11 @@ Pay successfully against xxxx-4321, Your remaining balance is 700
 - La clase usa los últimos 4 dígitos de la cuenta y proporciona un mensaje de éxito tras el pago.
 
 
-# ¿Cómo sé si me estoy cargando el `OCP`?
+# ¿Cómo sé si no estoy cumpliendo con el `OCP`?
 
-> 👉 Cuando añades funcionalidad, acabas modificando siempre los mismos archivos.
+Fácil, _¿Tienes que modificar siempre los mismos archivos cada vez que tienes que hacer una nueva implementación?_
 
-Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos ocurre y realizar una refactorización para cumplir con el principio.
+Entonces amiga (date cuenta), hazte un frapuccino, cuenta hasta 3 y di en voz alta _"PUTA MADRE, no cumple con el OCP, hay que refactorizar esta 💩"_
 
 # ¿Cómo lo arreglo? 
 
