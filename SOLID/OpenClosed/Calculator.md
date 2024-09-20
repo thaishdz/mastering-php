@@ -166,9 +166,9 @@ class Divide implements OperationInt
 
 ---
 
-```plaintext
-🧔 Agrega una 5º operación para calcular potencias y comprueba que se cumpla el `OCP`.
-```
+
+> 🧔 Agrega una 5º operación para calcular potencias y comprueba que se cumpla el `OCP`
+
 
 # 🎊 NEW FEATURE: `Power` 🎺
 
