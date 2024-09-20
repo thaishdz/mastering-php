@@ -30,7 +30,7 @@ Entonces amiga (date cuenta), hazte un frapuccino, cuenta hasta 3 y di en voz al
 
 ---
 
-# Ejemplo de Implementación de OCP con `abstract class`
+# Ejemplo de Implementación de `OCP` con `abstract class`
 
 ### 1. **Clase abstracta `Payment`**:
   > 👉 Una `abstract class` __no puede ser instanciada directamente__, solo puede ser extendida por otras clases.
