@@ -158,11 +158,13 @@ Pay successfully against xxxx-4321, Your remaining balance is 700
 
 # ¿Cómo sé si no estoy cumpliendo con el `OCP`?
 
-Fácil, _¿Tienes que modificar siempre los mismos archivos cada vez que tienes que hacer una nueva implementación?_
+Fácil 👇
 
-Entonces amiga (date cuenta), hazte un frapuccino, cuenta hasta 3 y di en voz alta _"PUTA MADRE, no cumple con el OCP, hay que refactorizar esta 💩"_
+> _¿Tienes que modificar siempre los mismos archivos cada vez que tienes que hacer una nueva implementación?_
 
-# ¿Cómo lo arreglo? 
+Entonces amiga (date cuenta), hazte un frapuccino, cuenta hasta 3 y di en voz alta _"PUTA MADRE, no cumple con el `OCP`, hay que refactorizar esta 💩"_
+
+# Y ... ¿Cómo lo arreglo? 
 
 ✨ [Polimorfismo](https://github.com/thaishdz/mastering-php/blob/main/Polimorfismo/README.md)✨
 
