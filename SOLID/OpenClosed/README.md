@@ -51,7 +51,8 @@ La clase declara un método abstracto `pay()`, que debe ser implementado por las
 ---
 
 ### 2. **Clase `CreditCard`**:
-   Esta clase extiende de `Payment` e implementa el método `pay()`.
+
+Esta clase extiende de `Payment` e implementa el método `pay()`.
 
 ```php
   class CreditCard extends Payment
@@ -60,14 +61,12 @@ La clase declara un método abstracto `pay()`, que debe ser implementado por las
   }
 ```
 
-   - La clase tiene una propiedad privada **`$charges`**, que almacena una comisión de 50 unidades por cada transacción.
-
-   ```php
+```php
    public function pay(int $number)
    {
        $this->balance = ($this->balance - $number) - $this->charges;
    }
-   ```
+```
 
    - **`pay(int $number)`**: Este método recibe un número (cantidad a pagar) y calcula el nuevo balance.
      - Resta el monto a pagar (`$number`) y también aplica los cargos (`$charges`).
