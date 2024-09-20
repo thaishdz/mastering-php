@@ -28,10 +28,10 @@ Beast Boy se transforma en animales, tú le dices que se transforme en algo pero
 ```php
 class BeastBoy 
 {
-	public function transform()
-	{
-		# do something stupida
-	}
+   public function transform()
+   {
+	# do something stupida
+   }	
 }
 ```
 
@@ -48,10 +48,10 @@ __Cambio de forma (`transform`)__: Beast Boy puede adoptar diferentes formas de 
 ```php
 class Gorilla extends BeastBoy
 {
-	public function transform()
-	{
-		echo "BeastBoy transforms into a Gorilla!\n";
-	}
+   public function transform()
+   {
+	echo "BeastBoy transforms into a Gorilla!\n";
+   }
 
 }
 ```
@@ -64,10 +64,10 @@ class Gorilla extends BeastBoy
 
 class Dino extends BeastBoy
 {
-	public function transform()
-	{
-		echo "BeastBoy transforms into a DINOSAUR!\n";
-	}
+   public function transform()
+   {
+	echo "BeastBoy transforms into a DINOSAUR!\n";
+   }
 
 }
 
@@ -118,7 +118,7 @@ echo seeTransform($dino); // BeastBoy transforms into a DINOSAUR!
 ```php
 interface BeastBoy 
 {
-	public function behavior();
+    public function behavior();
 }
 
 ```
@@ -127,21 +127,19 @@ interface BeastBoy
 
 class Gorilla implements BeastBoy
 {
-	public function behavior()
-	{
-		echo "Gorilla is eating bananas 🍌🦍\n";
-	}
-
+    public function behavior()
+    {
+	echo "Gorilla is eating bananas 🍌🦍\n";
+    }
 }
 
 
 class Dino implements BeastBoy
 {
-	public function behavior()
-	{
-		echo "Dino IS DESTRYOING THE CITY 🔥🌇🦖\n";
-	}
-
+    public function behavior()
+    {
+	echo "Dino IS DESTRYOING THE CITY 🔥🌇🦖\n";
+    }
 }
 
 ```
