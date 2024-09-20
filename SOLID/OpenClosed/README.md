@@ -61,4 +61,5 @@ Si detectamos este patrón, tendremos que hacer una pausa, entender por qué nos
 
 ### Ayuditas 🛎️
 
-- [Open/Closed Principle - by Secture📰](https://secture.com/blog/principios-solid-open-close-principle/)
+- [Open/Closed Principle - by Secture 📰](https://secture.com/blog/principios-solid-open-close-principle/)
+- [Open/Close Principle (abstract class and interface examples) - by Muhammad Raza Bangi 📰](https://blog.devgenius.io/open-closed-principle-ocp-by-using-php-solid-principle-f0ceae519bcf)
