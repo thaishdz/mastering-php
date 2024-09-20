@@ -126,7 +126,7 @@ Pay successfully against xxxx-6789, Your remaining balance is 750
 
 
 ```plaintext
-👨‍🦲 "Hey maquinarias, necesito que añadas Paypal como forma de pago" 
+👨‍🦲 Hey maquinarias, necesito que añadas Paypal como forma de pago
 👨‍💻 No hay problemo
 ```
 
