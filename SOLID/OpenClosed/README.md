@@ -13,7 +13,7 @@
 Las clases tienen que ser capaces de estar abiertas a extender el comportamiento sin necesidad de modificar su código. 
 
 
-# Ejemplo de Implementación de OCP con Clase Abstracta
+# Ejemplo de Implementación de OCP con `abstract class`
 
 ### 1. **Clase abstracta `Payment`**:
   > 👉 Una `abstract class` __no puede ser instanciada directamente__, solo puede ser extendida por otras clases.
