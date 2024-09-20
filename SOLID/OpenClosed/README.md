@@ -123,12 +123,12 @@ class Paypal extends Payment {
     public function pay(int $number) {
         $this->balance = ($this->balance - $number) - $this->charges;
         
-        printf(
-            "Hello %s,\nPay successfully against xxxx-%s, Your remaining balance is %d\n", 
-            $this->title, 
-            $last4Digits, 
-            $this->balance
-        );
+    printf(
+        "Hello %s,\nPay successfully against xxxx-%s, Your remaining balance is %d\n", 
+        $this->title, 
+        $this->last4Digits, 
+        $this->balance
+    );
     }
 }
 
