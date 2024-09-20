@@ -9,8 +9,6 @@ Debes diseñar un sistema que permita agregar nuevas operaciones utilizando el O
 
 1. Implementa las operaciones de `suma`, `resta`, `multiplicación` y `división`.
 2. Comprueba que el sistema funciona.
-3. Agrega una quinta operación para calcular `potencias`.
-4. Comprueba que se cumple el OCP.
 
 # `Add.php`
 
@@ -165,6 +163,36 @@ class Divide implements OperationInt
 - `* @param float[] $numbers`: Aunque declares en PHPDoc que es un array de `float[]`, PHP no impone estrictamente el tipo, por lo que podríamos recibir `0` como entero 👍.
 
 - `if ($numbers[1] == 0)`: Funkará tanto para `0` como para `0.0`, ya que la comparación no estricta `==` compara solo el valor y no el tipo.
+
+---
+
+```plaintext
+🧔 Agrega una 5º operación para calcular potencias y comprueba que se cumpla el `OCP`.
+```
+
+# 🎊 NEW FEATURE: `Pow` 🎺
+
+```php
+<?php
+
+require_once('./OperationInt.php');
+
+class Pow implements OperationInt
+{
+    public function calculate(array $numbers): float 
+    {
+        if (count($numbers) != 2) 
+        {
+            return "I need a base and an exponent\n";
+            return 0;
+        }
+
+        return pow($numbers[0], $numbers[1]); 
+    }
+}
+
+```
+
 
 ---
 
