@@ -61,7 +61,7 @@ class Penguin
 {
   public function fly(): string
   {
-      throw new Exception("Penguin cannot fly"); // No pendejo, debes devolver una string NO UNA EXCEPCIÓN
+      throw new Exception("Penguins cannot fly"); // No pendejo, debes devolver una string NO UNA EXCEPCIÓN
   }
 }
 
@@ -83,3 +83,6 @@ Vamos, __cumplir CON EL FOKIN CONTRATO__
 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ211ZnQ2a25yMWprOXE1czFlZzR3cnFoamFqZHVtbG1iZGk3NGMwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dv4GB500NIyzKll8gE/giphy.webp" height="300" />
 
 
+### Ayuditas 🛎️
+
+- [Liskov Substitution Principle - by Secture 📰](https://secture.com/blog/principios-solid-3-liskov-substitution-principle/)
