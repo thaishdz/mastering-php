@@ -12,7 +12,7 @@
 </p>
 
 
-# Implementación LSP - malarda ❌
+# Implementación Malarda ❌
 
 ## `Bird.php` 🐦
 
@@ -53,7 +53,7 @@ class Penguin
 }
 
 ```
-# Implementación LSP - la buena ✔️
+# Implementación de Pro ✔️
 
 ## `Bird.php` 🐦
 
