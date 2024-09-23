@@ -11,8 +11,6 @@
   <em>Créditos de la imagen a IngenieroBinario</em>
 </p>
 
-> Las subclases que hereden de una clase madre deben utilizar los comportamientos y propiedades de su madre PERO, sin cambiar el funcionamiento del programa.
-
 ## `Bird.php` 🐦
 
 ```php
