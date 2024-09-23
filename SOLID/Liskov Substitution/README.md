@@ -48,10 +48,11 @@ _La subclase_:
 
 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2d1ZmFoamV5cWZoNXQzMmJtdGl2emFrYTZkbjdrM3hydmxhMTk0NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q7YYbx08JdJ0U7WdgJ/giphy.webp" height="300" />
 
+Entonces la hija rebelde viola el contrato cuando:
 
-⚠️ Cuando una subclase tenga métodos de la clase madre __SIN USAR o que NO aplican a la subclase__ que estemos creando. __VIOLA EL CONTRATO__ 
+⚠️ Tenga métodos de la madre __SIN USAR o que NO aplican a la subclase__ que estemos creando. 
 
-⚠️ Cuando una subclase __sobreescriba el método de manera que el tipo de retorno de ese método cambie.__ __VIOLA EL CONTRATO__ 
+⚠️ __Sobreescriba el método de la madre de manera que el tipo de retorno cambie.__  p.e :
 
 ## `Penguin.php` 🐧
 
@@ -66,6 +67,7 @@ class Penguin
 }
 
 ```
+<img src="https://github.com/user-attachments/assets/09cbbdb5-7305-4a95-9f9f-9f14e6efa9bf" height="250" />
 
 > 💡 Tip: Para saber de forma rápida si lo hemos violado, basta con mirar si los tests de la clase base funkan para la subclase. Si no funkan, te lo has cargado
 
