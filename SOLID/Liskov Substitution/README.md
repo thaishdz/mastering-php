@@ -11,6 +11,9 @@
   <em>Créditos de la imagen a IngenieroBinario</em>
 </p>
 
+
+# Implementación LSP - malarda ❌
+
 ## `Bird.php` 🐦
 
 ```php
@@ -37,6 +40,58 @@ class Duck
 }
 ```
 
+## `Penguin.php` 🐧
+
+```php
+
+class Penguin 
+{
+  public function fly(): string
+  {
+      throw new Exception("Penguins cannot fly"); ❌❌❌
+  }
+}
+
+```
+# Implementación LSP - la buena ✔️
+
+## `Bird.php` 🐦
+
+```php
+
+class Bird 
+{
+  public function move(): string
+  {
+    echo "I can moving!";
+  }
+}
+```
+
+## `Duck.php` 🦆
+
+```php
+
+class Duck 
+{
+  public function move(): string
+  {
+    echo "Duckie is flying";
+  }
+}
+```
+
+## `Penguin.php` 🐧
+
+```php
+
+class Penguin 
+{
+  public function fly(): string
+  {
+      echo "Penguin is swimming 🏊‍♂️";
+  }
+}
 
 # ¿Como sé que estoy violando el Liskov?
 
