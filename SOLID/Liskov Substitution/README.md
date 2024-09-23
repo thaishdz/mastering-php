@@ -1,7 +1,6 @@
 
 
 # Liskov Substitution Principle
-> Grande Barbara ❤️
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/f4f054b8-2315-4153-a462-3849e9fd891c" height="400" />
@@ -46,7 +45,7 @@ class Duck
 
 class Penguin 
 {
-  public function move(): string
+  public function fly(): string
   {
       throw new Exception("Penguins cannot fly"); ❌❌❌
   }
@@ -61,9 +60,9 @@ class Penguin
 
 class Bird 
 {
-  public function move(): string
+  public function move()
   {
-    echo "I can moving!";
+    echo "I can moving!\n";
   }
 }
 ```
@@ -74,9 +73,9 @@ class Bird
 
 class Duck 
 {
-  public function move(): string
+  public function move()
   {
-    echo "Duckie is flying";
+    echo "Duckie is flying\n";
   }
 }
 ```
@@ -87,11 +86,43 @@ class Duck
 
 class Penguin 
 {
-  public function fly(): string
+  public function move()
   {
       echo "Penguin is swimming 🏊‍♂️";
   }
 }
+```
+
+
+## index.php
+
+```php
+
+$bird = new Bird();
+echo $bird->move();
+$penguin = new Penguin();
+echo $penguin->move();
+
+
+// Cambiamos las implementaciones y todo sigue funcionando igual
+
+$bird = new Penguin();
+echo $bird->move();
+$penguin = new Bird();
+echo $penguin->move();
+
+```
+```plaintext
+I can moving!
+Penguin is swimming
+Penguin is swimming
+I can moving!
+```
+<img src="https://github.com/user-attachments/assets/3c668693-7ebb-45b4-8c6e-f91c099fb5f9" height="300" />
+
+<em>Barbara happy</em>
+
+
 
 # ¿Como sé que estoy violando el Liskov?
 
