@@ -46,7 +46,7 @@ class Duck
 
 class Penguin 
 {
-  public function fly(): string
+  public function move(): string
   {
       throw new Exception("Penguins cannot fly"); ❌❌❌
   }
