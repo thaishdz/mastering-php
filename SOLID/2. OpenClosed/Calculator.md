@@ -1,9 +1,9 @@
 
 
-Desarrolla una calculadora que necesita realizar diversas operaciones matemáticas.
-
 ## Requisitos 🎯
-Debes diseñar un sistema que permita agregar nuevas operaciones utilizando el OCP.
+Debes desarrollar una calculadora y diseñarla de tal manera que permita agregar nuevas operaciones cumpliendo con el `OCP`.
+
+<img src="https://media.tenor.com/D8zWQW3ZduwAAAAM/math-calculator.gif" width="300" />
 
 ## Instrucciones ⚙️
 
