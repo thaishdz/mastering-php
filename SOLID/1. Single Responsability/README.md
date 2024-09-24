@@ -16,17 +16,17 @@
 </p>
 
 
-# ¿Cómo sé que no cumple con el `Single Responsability`? ⚠️
+# ¿Cómo sé que estoy violando el `SRP`? 
 
-- Clases con demasiadas líneas de código.
-- Cuando se nos indica un cambio tenemos que modificar en muchos ficheros.
-- No cumplir la separación de capas en la arquitectura de software.
-- No analizar bien las responsabilidades a la hora de desarrollar software.
-- Al explicar que hace la clase se enumera más de una responsabilidad.
-- Tener más de un método público. 
-- Dificultad a la hora de testear la clase.
+- Clases con demasiadas líneas de código ❌
+- Cuando se nos indica un cambio tenemos que modificar en muchos ficheros ❌
+- No cumplir la separación de capas en la arquitectura de software ❌
+- No analizar bien las responsabilidades a la hora de desarrollar software ❌
+- Al explicar que hace la clase se enumera más de una responsabilidad ❌
+- Tener más de un método público ❌
+- Dificultad a la hora de testear la clase ❌
 
-# Ejemplo - "El hombre orquesta" 🎷
+# Bad Design 🤮 - El hombre orquesta 🎷
 
 ## User.php
 
@@ -49,23 +49,21 @@ class User
 }
 ```
 
-Para detectar si cumple el SRP, vamos a hacernos 2 preguntitas:
+Para detectar si cumple el `SRP`, vamos a hacernos 2 preguntitas:
 
 ### 1. ¿La clase `User` qué metas tiene en la vida?
 
-Creación de un usuario y ... no sé qué más.
+Creación de un usuario y ... ahora mismo esas.
 
 ### 2. ¿Cuántas responsabilidades tiene ahora mismo?
-Parece que tiene 3:
-   - Crear al usuario
-   - Guardarlo en BBDD
-   - Enviar un mail
+Hmmm ... tiene 3:
+   - Crear al usuario 👍
+   - Guardarlo en BBDD ⚠️
+   - Enviar un mail ⚠️
 
-... joder es la clase más Fullstack que he visto jamás, como le encasquetemos más mierda nos denuncia por burnout.
+... joder es la clase más Fullstack que he visto jamás.
 
-## Momento Deep Thinking 🤔
-
-Entonces ...
+# Entonces ... 👇👇👇
 
 - La responsabilidad de _crear un usuario_ tiene sentido como meta universal de la clase `User`, 👍 así que nos la quedamos.
 
@@ -75,11 +73,11 @@ Entonces ...
 
 ---
 
-# ¿Cómo lo arreglamos? 
+# ¿Cómo lo arreglo? 
 
-SEPARANDO responsabilidades 
+✨ __SEPARANDO responsabilidades__ ✨ 
 
-## User.php
+## `User.php`
 ```php
 
 class User
@@ -89,7 +87,7 @@ class User
 
 ```
 
-## UserRepository.php
+## `UserRepository.php`
 ```php
 
 class UserRepository // Tiene que ver con el Repository Pattern 
@@ -99,7 +97,7 @@ class UserRepository // Tiene que ver con el Repository Pattern
 
 ```
 
-## Email.php
+## `Email.php`
 ```php
 
 class EmailService
