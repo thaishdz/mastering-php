@@ -43,7 +43,6 @@ class User
 
   public function sendEmail()
   {
-
       # haz cosas
   }  
 }
