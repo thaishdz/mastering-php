@@ -58,8 +58,8 @@ Creación de un usuario y ... ahora mismo esas.
 ### 2. ¿Cuántas responsabilidades tiene ahora mismo?
 Hmmm ... tiene 3:
    - Crear al usuario 👍
-   - Guardarlo en BBDD ⚠️
-   - Enviar un mail ⚠️
+   - Guardarlo en BBDD ❗❗❗
+   - Enviar un mail ❗❗❗
 
 ... joder es la clase más Fullstack que he visto jamás.
 
