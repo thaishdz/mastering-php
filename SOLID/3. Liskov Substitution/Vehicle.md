@@ -1,10 +1,10 @@
 
-## Instrucciones
+## Instrucciones ⚙️
 
 1. Crea la clase `Vehículo` 🚙.
 2. Añade 2 subclases de `Vehículo` 🚙.
 3. Implementa las operaciones `acelerar` y `frenar` como corresponda.
-4. Desarrolla un código que compruebe que se cumple el LSP.
+4. Desarrolla un código que compruebe que se cumple el `LSP`.
 
 <p align=center>
   <img src="https://github.com/user-attachments/assets/6a362881-703d-4b39-8727-a04343715149"  />
