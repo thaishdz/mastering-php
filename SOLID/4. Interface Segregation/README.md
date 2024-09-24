@@ -158,4 +158,4 @@ class Hulk implements HasSuperStrength, CanRegenerate {
 
 
 ### Ayuditas 🛎️
--[Principio Segregación Interfaces ~ by Secture📰](https://secture.com/blog/principios-solid-interface-segregation-principle/)
+- [Principio Segregación Interfaces ~ by Secture📰](https://secture.com/blog/principios-solid-interface-segregation-principle/)
