@@ -85,43 +85,43 @@ class Truck extends Vehicle
 
 class Airplane extends Vehicle
 {
-	private int $altitude;
-	private int $fuel;
+    private int $altitude;
+    private int $fuel;
 
-	public function __construct(int $fuel)
+    public function __construct(int $fuel)
+    {
+	parent::__construct();
+	$this->altitude = 0; // Empieza en tierra
+	$this->fuel = $fuel;
+    }
+
+    public function accelerate(int $increment)
+    {
+	// Si hay poco combustible, reduce aceleración || el avión está a 10.000m de altitud
+	if ($this->fuel < 500 || $this->altitude > 10000) 
 	{
-      parent::__construct();
-		  $this->altitude = 0; // Empieza en tierra
-		  $this->fuel = $fuel;
+	    $increment = (int)$increment / 2;
 	}
 
-	public function accelerate(int $increment)
-	{
-		// Si hay poco combustible, reduce aceleración || el avión está a 10.000m de altitud
-		if ($this->fuel < 500 || $this->altitude > 10000) 
-		{
-			$increment = (int)$increment / 2;
-		}
+	parent::accelerate($increment);
+	$this->fuel -= 100; // Reducir el combustible tras acelerar
+    }
 
-		parent::accelerate($increment);
-		$this->fuel -= 100; // Reducir el combustible tras acelerar
-	}
+    public function ascend(int $altitudeGain)
+    {
+	$this->altitude += $altitudeGain;
+    }
 
-	public function ascend(int $altitudeGain)
-	{
-		$this->altitude += $altitudeGain;
+    public function descend(int $altitudeLoss)
+    {
+	if ($this->altitude - $altitudeLoss >= 0) {
+	    $this->altitude -= $altitudeLoss;
+	} else {
+           $this->altitude = 0;
 	}
-	
-	public function descend(int $altitudeLoss)
-	{
-		if ($this->altitude - $altitudeLoss >= 0) {
-			$this->altitude -= $altitudeLoss;
-		} else {
-			$this->altitude = 0;
-		}
-	}
+    }
 
-	public function altitude(): int
+    public function altitude(): int
     {
         return $this->altitude;
     }
@@ -130,7 +130,6 @@ class Airplane extends Vehicle
     {
         return $this->fuel;
     }
-
 }
 
 ```
@@ -141,8 +140,8 @@ class Airplane extends Vehicle
 
 function test_vehicle(Vehicle $vehicle)
 {
-	$vehicle->accelerate(10);
-	$vehicle->brake(5);
+    $vehicle->accelerate(10);
+    $vehicle->brake(5);
 }
 
 $plane = new Airplane(500);
