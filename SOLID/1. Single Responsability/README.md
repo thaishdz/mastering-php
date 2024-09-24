@@ -2,11 +2,6 @@
 
 # Single Responsability Principle
 
-- Principio orientado a objetos.
-- La clase se tiene que encargar de __UNA SOLA RESPONSABILIDAD__.
-- NO PUEDEN EXISTIR funcionalidades casi iguales (rollo que se solapen) dentro una misma clase.
-- Debe tener una única razón para cambiar (significa que si la clase tiene más de una responsabilidad y cambia, se rompe la clase).
-
 <p align=center>
   <img src="https://github.com/user-attachments/assets/3f3f0373-3c1d-4d2a-a242-d91abe291063" height="400" />
 </p>
@@ -14,6 +9,11 @@
 <p align=center>
   <em>Créditos de la imagen a IngenieroBinario</em>
 </p>
+
+- Principio orientado a objetos.
+- La clase se tiene que encargar de __UNA SOLA RESPONSABILIDAD__.
+- __NO PUEDEN EXISTIR funcionalidades casi iguales__ (rollo que se solapen) dentro una misma clase.
+- Debe tener una única razón para cambiar (significa que si la clase tiene más de una responsabilidad y cambia, se rompe la clase).
 
 
 # ¿Cómo sé que estoy violando el `SRP`? 
