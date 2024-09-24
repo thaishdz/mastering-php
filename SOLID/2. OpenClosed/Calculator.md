@@ -10,7 +10,7 @@ Debes diseñar un sistema que permita agregar nuevas operaciones utilizando el O
 1. Implementa las operaciones de `suma`, `resta`, `multiplicación` y `división`.
 2. Comprueba que el sistema funciona.
 
-# `Add.php`
+### `Add.php`
 
 ```php
 
@@ -48,7 +48,7 @@ La asignación adicional con `+=` es redundante en este caso.
 
 ---
 
-# `Substract.php`
+### `Substract.php`
 
 ```php
 
@@ -83,7 +83,7 @@ class Subtract implements OperationInt
 
 ---
 
-# `Multi.php`
+### `Multi.php`
 
 ```php
 
@@ -127,7 +127,7 @@ $numbers = [2, 3, 4];
 
 ---
 
-# `Divide.php`
+### `Divide.php`
 
 ```php
 
