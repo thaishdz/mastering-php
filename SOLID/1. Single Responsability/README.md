@@ -26,9 +26,9 @@
 - Tener más de un método público ❌
 - Dificultad a la hora de testear la clase ❌
 
-# Bad Design 🤮 - El hombre orquesta 🎷
+## Bad Design 🤮 - El hombre orquesta 🎷
 
-## User.php
+## `User.php`
 
 ```php
 
@@ -76,6 +76,8 @@ Hmmm ... tiene 3:
 # ¿Cómo lo arreglo? 
 
 ✨ __SEPARANDO responsabilidades__ ✨ 
+
+## Good Design 👍
 
 ## `User.php`
 ```php
