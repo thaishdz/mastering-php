@@ -3,8 +3,9 @@
 # Interface Segregation Principle
 
 <p align=center>
-    <img src="https://github.com/user-attachments/assets/7f04abf3-8f40-44f3-bbe4-2cde1c1f5b56" height="300" />
+    <img src="https://github.com/user-attachments/assets/80249995-f039-4bbe-89f2-ce9d33aed483" height="400" />
 </p>
+
 <p align=center>
     <b>Una clase no debe estar obligada a implementar métodos que no utiliza</b>
 </p>
@@ -30,6 +31,10 @@ interface SuperHeroInt
 }
 
 ```
+
+<img src="https://github.com/user-attachments/assets/7f04abf3-8f40-44f3-bbe4-2cde1c1f5b56" height="300" />
+
+
 Si intentamos implementar esta interfaz con diferentes superhéroes, vamos a tener problemas. 
 
 Porque:
