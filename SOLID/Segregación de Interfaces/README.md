@@ -2,9 +2,12 @@
 
 # Interface Segregation Principle
 
-
-> Una clase no debe estar obligada a implementar métodos que no utiliza
-
+<p align=center>
+    <img src="https://github.com/user-attachments/assets/7f04abf3-8f40-44f3-bbe4-2cde1c1f5b56" height="300" />
+</p>
+<p align=center>
+    <b>Una clase no debe estar obligada a implementar métodos que no utiliza</b>
+</p>
 
 # ¿Cómo detecto que estoy violando el `ISP`?
 
@@ -61,7 +64,7 @@ class SpiderMan implements SuperHeroInt
 ![image](https://github.com/user-attachments/assets/c78854c3-c483-4617-8801-e5ba55ec4569)
 
 
-> This design violates the `ISP` because `SpiderMan` is forced to implement methods it doesn't need.
+> ⛔ This design violates the `ISP` because `SpiderMan` is forced to implement methods it doesn't need.
 
 
 # ¿Cómo lo arreglo? 
