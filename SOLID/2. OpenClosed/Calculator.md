@@ -196,7 +196,7 @@ class Power implements OperationInt
 
 ---
 
-# `index.php`
+### `index.php`
 
 Pega más que `Calculator` sea una clase que contenga toda esta parafernalia pero fui revaga, discúlpame.
 
@@ -231,8 +231,3 @@ calculator(new Multi(), [2, 3, 4]); // 24
 #calculator(new Divide(), [55, 0.0]); // 6.1111111111111
 
 ```
-
-
-
-
-
