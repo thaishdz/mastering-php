@@ -1,4 +1,3 @@
-// TODO: Quita el formato que no me funkaba
 
 ## Instrucciones
 
