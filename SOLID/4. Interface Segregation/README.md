@@ -155,7 +155,7 @@ class Hulk implements HasSuperStrength, CanRegenerate {
 
 
 > El `ISP` busca que las interfaces sean lo más pequeñas y específicas posible de modo que cada clase solo implemente los métodos que necesita.
-
+---
 
 ### Ayuditas 🛎️
 - [Principio Segregación Interfaces ~ by Secture📰](https://secture.com/blog/principios-solid-interface-segregation-principle/)
