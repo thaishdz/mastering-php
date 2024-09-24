@@ -1,25 +1,27 @@
 
+## Requisitos 🎯
 
-Desarrolla un sistema de gestión para una biblioteca. El sistema necesitará:
- * Registro de Libros ✔️
- * Gestión de Usuarios ✔️
- * Procesamiento de Préstamos de Libros ✔️
+Desarrolla un sistema de gestión para una biblioteca, necesitará:
+- __Registrar Libros__: El sistema debe permitir agregar nuevos libros con información básica como:
+   - `título`
+   - `autor`
+   - `número de copias disponibles`
+- __Registrar Usuarios__: El sistema debe permitir agregar nuevos usuarios con información básica como ...
+   - `nombre`
+   - `número de identificación`
+   - `email`
+- __Procesar Préstamos de Libros__: El sistema debe permitir a los usuarios
+   - `prestar libros`
+   - `devolver libros`.
 
+<img src="https://i.pinimg.com/originals/ac/b8/b2/acb8b2676e80ecb24cb62112baa6ba9e.gif" />
    
-///////////////////////////////////////////////////////////////////////////////
-# Use Cases
-1. __Registrar Libros__: El sistema debe permitir agregar nuevos libros con información básica como título, autor y número de copias disponibles.
- -------------------------------------------------------------------------------
-2. __Registrar Usuarios__: El sistema debe permitir agregar nuevos usuarios con información básica como nombre, número de identificación y correo electrónico.
- -------------------------------------------------------------------------------
-3. __Procesar Préstamos de Libros__: El sistema debe permitir a los usuarios tomar prestados y devolver libros.
 
-///////////////////////////////////////////////////////////////////////////////
-# Instrucciones
-## 1. Diseña una clase que no cumpla el `SRP`:
+# Instrucciones ⚙️
 
-Crea una clase `Library` que maneje los 3 aspectos mencionados anteriormente.
+1. __Diseña una clase que no cumpla el `SRP`__: Crea una clase `Library` que maneje los 3 aspectos mencionados anteriormente.
 
+## Bad Design 🤮
 
 ### `BadLibrary.php`
 ``` php
@@ -129,9 +131,11 @@ print_r($library->loans());
 
 
 ```
-## 2. Refactoriza el código
+--- 
+2. __Refactoriza el código__: Separa las responsabilidades en diferentes clases siguiendo el Principio de Responsabilidad Única.
 
-Separa las responsabilidades en diferentes clases siguiendo el Principio de Responsabilidad Única.
+
+## Good Design 👍
 
 Modelé 2 entidades : 
 - [User](https://github.com/thaishdz/mastering-php/blob/main/SOLID/Single%20Responsability/Kata/User.php)
@@ -148,7 +152,8 @@ Aparte que la misma idea la tuvo también un señor que hizo managers y me ayud�
 - [LoanManager](https://github.com/thaishdz/mastering-php/blob/main/SOLID/Single%20Responsability/Kata/LoanManager.md)
 
 
-# `GoodLibrary.php`
+
+### `GoodLibrary.php`
 
 ```php
 
@@ -257,9 +262,7 @@ class GoodLibrary
 }
 ```
 
-# `index.php`
-
-
+### `index.php`
 
 ```php
 
@@ -280,8 +283,6 @@ $goodLibrary->addBook('Juego de Tronos (Canción de Hielo y Fuego)', 'George R.R
 
 
 $goodLibrary->handleBook('6282178', ['Los Viajes de Gulliver', '1984'], 'loan');
-
-
 $goodLibrary->handleBook('6282178', ['Los Viajes de Gulliver', '1984'], 'return');
 
 ```
