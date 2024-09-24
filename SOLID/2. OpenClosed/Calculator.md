@@ -10,6 +10,20 @@ Debes desarrollar una calculadora y diseñarla de tal manera que permita agregar
 1. Implementa las operaciones de `suma`, `resta`, `multiplicación` y `división`.
 2. Comprueba que el sistema funciona.
 
+
+## Solución
+
+### `OperationInt.php`
+
+```php
+
+interface OperationInt
+{
+    public function calculate(array $numbers): float;
+}
+
+```
+
 ### `Add.php`
 
 ```php
