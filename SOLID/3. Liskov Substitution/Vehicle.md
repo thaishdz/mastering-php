@@ -17,27 +17,27 @@
 
 class Vehicle
 {
-	private int $speed;
+   private int $speed;
 	
-	public function __construct()
-	{
-		$this->speed = 0;
-	}
+   public function __construct()
+   {
+	$this->speed = 0;
+   }
 	
-	public function accelerate(int $increment)
-	{
-		$this->speed += $increment;
-	}
+   public function accelerate(int $increment)
+   {
+	$this->speed += $increment;
+   }
 	
-	public function brake(int $decrement)
+   public function brake(int $decrement)
+   {
+	if($this->speed - $decrement >= 0)
 	{
-		if($this->speed - $decrement >= 0)
-		{
-			$this->speed -= $decrement;
-		}else{
-			$this->speed = 0;
-		}
+	   $this->speed -= $decrement;
+	}else{
+	   $this->speed = 0;
 	}
+   }
 }
 
 ```
@@ -51,25 +51,25 @@ class Vehicle
 
 class Truck extends Vehicle
 {
-  private int $cargoWeight;
+    private int $cargoWeight;
 	
-	public function __construct(int $cargoWeight)
-	{
-    parent::__construct();
-		$this->cargoWeight = $cargoWeight;
-	}
+    public function __construct(int $cargoWeight)
+    {
+	parent::__construct();
+	$this->cargoWeight = $cargoWeight;
+    }
 
-	// Aplicamos polimorfismo
-	public function accelerate(int $increment)
+    // Aplicamos polimorfismo
+    public function accelerate(int $increment)
+    {
+	if ($this->cargoWeight >= 1000) 
 	{
-		if ($this->cargoWeight >= 1000) 
-		{
-			$increment = (int)$increment / 2;
-		}
-		
-  		// Llama al método madre (Vehicle)
-		  parent::accelerate($increment);
+	    $increment = (int)$increment / 2;
 	}
+		
+	// Llama al método madre (Vehicle)
+	 parent::accelerate($increment);
+    }
 }
 
 ```
