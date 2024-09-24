@@ -98,7 +98,7 @@ class UserRepository // Tiene que ver con el Repository Pattern
 
 ```
 
-## `Email.php`
+## `EmailService.php`
 ```php
 
 class EmailService
