@@ -135,7 +135,7 @@ class Airplane extends Vehicle
 
 ```
 
-## Comprobación del `LSP` con test (truco)
+## Comprobación del `LSP` con test ([truco](https://github.com/thaishdz/mastering-php/edit/main/SOLID/Liskov%20Substitution/#como-sé-que-estoy-violando-el-liskov))
 
 ```php
 
