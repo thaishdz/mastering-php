@@ -1,9 +1,9 @@
 // TODO: Quita el formato que no me funkaba
 
-## Instrucciones:
+## Instrucciones
 
 1. Crea la clase `Vehículo` 🚙.
-2. Añade tres subclases de `Vehículo`.
+2. Añade 2 subclases de `Vehículo` 🚙.
 3. Implementa las operaciones `acelerar` y `frenar` como corresponda.
 4. Desarrolla un código que compruebe que se cumple el LSP.
 
@@ -11,7 +11,7 @@
   <img src="https://github.com/user-attachments/assets/6a362881-703d-4b39-8727-a04343715149"  />
 </p>
 
-## `Vehicle.php`
+### `Vehicle.php` 🚙
 
 ```php
 
@@ -45,7 +45,7 @@ class Vehicle
 
 <img src="https://github.com/user-attachments/assets/81020006-5af2-4d75-a2f1-eed8b9f7e67e" height="300" />
 
-## `Truck.php`
+### `Truck.php` 
 
 ```php
 
@@ -76,7 +76,7 @@ class Truck extends Vehicle
 
 
 
-## `Airplane.php`
+### `Airplane.php` ✈️
 
 <img src="https://github.com/user-attachments/assets/302c2a59-cb4e-4b28-820a-63622ce87b66" height="300" />
 
