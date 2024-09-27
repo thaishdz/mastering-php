@@ -1,12 +1,7 @@
 
 Crea un gestor de impresoras
 
-<p align="center">
-
-  <img src="https://github.com/user-attachments/assets/3357ab55-6f0d-46a8-9294-42e3860bf82c" height="400" />
-
-</p>
-
+<img src="https://github.com/user-attachments/assets/3357ab55-6f0d-46a8-9294-42e3860bf82c" height="400" />
 
 ## Requisitos 🎯
 1. Algunas impresoras sólo imprimen en blanco y negro.
