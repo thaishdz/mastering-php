@@ -83,7 +83,8 @@ function testNotifier()
 }
 
 testNotifier();
+```
 
 ### Output
 
-<img width="616" alt="Captura de pantalla 2024-09-27 a las 18 59 09" src="https://github.com/user-attachments/assets/d115f0f1-c0df-473a-8273-6525267101db">
+<img width="616" alt="Captura de pantalla 2024-09-27 a las 19 47 34" src="https://github.com/user-attachments/assets/9c36eab4-fc94-48f7-97be-9253dd692035">
