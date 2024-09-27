@@ -19,7 +19,7 @@ Esto es problemático porque tienes que cambiar muchas partes del sistema.
 
 - Evaluando si estamos dependiendo de módulos de bajo nivel.
   
-- Notamos que en nuestros módulos de alto nivel, no disponemos de interfaces o nos faltan.
+- Nuestros módulos de alto nivel, carecen de interfaces.
   
 - Haciéndote la preguntas : __¿Qué ocurre si cambiamos un módulo de bajo nivel?__, Si al responder nos damos cuenta que para realizar el cambio de un módulo de bajo nivel hay que realizar cambios en el código del módulo de alto nivel, es que no estamos utilizando el principio correctamente.
   
