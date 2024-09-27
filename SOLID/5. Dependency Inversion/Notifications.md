@@ -26,33 +26,33 @@ Crea un sistema de notificaciones
 // Todas las notificaciones que implementemos dependerán de esta Abstracción
 interface NotifierInt
 {
-    function send(): void;
+    function send(string $message): void;
 }
 
 // Implementación de bajo nivel (la específica)
 class EmailNotifier implements NotifierInt
 {
-    public function send(): void 
+    public function send(string $message): void 
     {
-        echo "Sending email 📬...";
+        echo "Sending email 📬... $message";
     }
 }
 
 // Implementación de bajo nivel 🔻
 class PUSHNotifier implements NotifierInt
 {
-    public function send(): void 
+    public function send(string $message): void 
     {
-        echo "Sending PUSH 📲...";
+        echo "Sending PUSH 📲... $message";
     }
 }
 
 // Implementación de bajo nivel 🔻
 class SMSNotifier implements NotifierInt
 {
-    public function send(): void 
+    public function send(string $message): void 
     {
-        echo "Sending sms 📩 ...";
+        echo "Sending sms 📩 ... $message";
     }
 }
 
@@ -65,9 +65,9 @@ class NotificationService
         $this->notifier = $notifier;
     }
 
-    function send(): void 
+    function send(string $message): void 
     {
-        echo "{$this->notifier->send()}";
+        echo "{$this->notifier->send($message)}";
     }
 }
 
@@ -79,12 +79,10 @@ function testNotifier()
     $push = new PUSHNotifier();
 
     $notifier = new NotificationService($push);
-    $notifier->send();
+    $notifier->send('💩');
 }
 
 testNotifier();
-
-```
 
 ### Output
 
