@@ -17,6 +17,7 @@ Crea un sistema de notificaciones
 3. Crea el sistema de notificaciones usando el DIP.
 4. Desarrolla un código que compruebe que se cumple el principio.
 
+### `index.php`
 
 ```php
 
