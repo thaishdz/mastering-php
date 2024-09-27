@@ -3,7 +3,8 @@ Crea un gestor de impresoras
 
 <p align="center">
 
-  <img src="https://github.com/user-attachments/assets/44aa662e-2849-4beb-b320-85a5e2f6cc75" height="400" />
+  <img src="https://github.com/user-attachments/assets/3357ab55-6f0d-46a8-9294-42e3860bf82c" height="400" />
+
 </p>
 
 
