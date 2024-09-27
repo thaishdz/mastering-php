@@ -15,7 +15,18 @@
 Si una clase depende de algo muy específico (p.e, una base de datos MySQL), entonces si necesitas cambiar ese detalle (a otra base de datos, como PostgreSQL), tendrás que modificar la clase principal. 
 Esto es problemático porque tienes que cambiar muchas partes del sistema.
 
-### Sin `DIP`
+# ¿Cómo detectar que estamos violando el `DIP`?
+
+- Evaluando si estamos dependiendo de módulos de bajo nivel.
+  
+- Notamos que en nuestros módulos de alto nivel, no disponemos de interfaces o nos faltan.
+  
+- Haciéndote la preguntas : __¿Qué ocurre si cambiamos un módulo de bajo nivel?__, Si al responder nos damos cuenta que para realizar el cambio de un módulo de bajo nivel hay que realizar cambios en el código del módulo de alto nivel, es que no estamos utilizando el principio correctamente.
+  
+- Con Unit tests. Si testeando nos damos cuenta que tienen una gran complejidad debido a las dependencias podemos empezar a sospechar que estamos violando el principio.
+
+
+## Sin `DIP`
 
 ```php
 class MySQLConnection {
@@ -39,7 +50,12 @@ class UserService {
 
 `UserService` depende directamente de `MySQLConnection`, lo que crea un fuerte acoplamiento. Si necesitamos cambiar la base de datos a otro tipo (por ejemplo, PostgreSQL), tendríamos que modificar `UserService`.
 
-### Aplicando `DIP`
+# ¿Cómo solucionar la violación del principio?
+
+__Creando interfaces y abstracciones.__
+
+
+## Aplicando `DIP`
 
 ```php
 // Abstracción (interfaz)
@@ -77,10 +93,6 @@ class UserService {
 
 Aquí, `UserService` depende de una abstracción (`DatabaseConnectionInterface`), no de una implementación concreta. Esto permite que las implementaciones de la base de datos puedan cambiar sin afectar a `UserService`, haciendo el sistema más flexible y fácil de mantener.
 
-¿Cómo detectar que estamos violando el `DIP`?
-
-
-
 
 ### Ayuditas 🛎️
-- [Dependency inversion](https://secture.com/blog/solid-dependency-inversion-principle/)
+- [Dependency inversion by Secture 📰](https://secture.com/blog/solid-dependency-inversion-principle/)
