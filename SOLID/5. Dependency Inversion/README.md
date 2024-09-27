@@ -100,6 +100,7 @@ public function __construct(DatabaseConnectionInterface $dbConnection)
 
 Aquí, `UserService` depende de una abstracción (`DatabaseConnectionInterface`), no de una implementación concreta. Esto permite que las implementaciones de la base de datos puedan cambiar sin afectar a `UserService`, haciendo el sistema más flexible y fácil de mantener.
 
+---
 
 ### Ayuditas 🛎️
 - [Dependency inversion by Secture 📰](https://secture.com/blog/solid-dependency-inversion-principle/)
