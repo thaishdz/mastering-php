@@ -57,7 +57,7 @@ class SMSNotifier implements NotifierInt
 }
 
 // Implementación de ALTO nivel 🔺
-class Notifier
+class NotificationService
 {
     private NotifierInt $notifier;
 
@@ -78,7 +78,7 @@ function testNotifier()
     $email = new EmailNotifier();
     $push = new PUSHNotifier();
 
-    $notifier = new Notifier($push);
+    $notifier = new NotificationService($push);
     $notifier->send();
 }
 
