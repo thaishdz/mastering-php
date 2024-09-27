@@ -91,6 +91,16 @@ class UserService {
 }
 ```
 
+```php
+public function __construct(DatabaseConnectionInterface $dbConnection)
+{
+    $this->dbConnection = $dbConnection;
+}
+```
+
+- El constructor espera que se le pase un objeto que implemente la interfaz `DatabaseConnectionInterface`. Esto significa que cualquier objeto que cumpla con esa interfaz (como `MySQLConnection` o `PostgreSQLConnection`) puede ser inyectado.
+- Esto es lo que se llama inyección de dependencias, ya que el objeto `DatabaseConnectionInterface` (la dependencia) es “inyectado” en la clase `UserService`.
+
 Aquí, `UserService` depende de una abstracción (`DatabaseConnectionInterface`), no de una implementación concreta. Esto permite que las implementaciones de la base de datos puedan cambiar sin afectar a `UserService`, haciendo el sistema más flexible y fácil de mantener.
 
 
