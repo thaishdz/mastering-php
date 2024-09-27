@@ -20,7 +20,7 @@ Crea un gestor de impresoras
 3. Testea que efectivamente se cumple el ISP
 
 
-⚠️ No pongo las interfaces porque ya con sus implementaciones te haces una idea del contrato de cada una.
+> ⚠️ No pongo las interfaces porque ya con sus implementaciones te haces una idea del contrato de cada una.
 
 ### `index.php`
 ```php
