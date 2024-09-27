@@ -29,7 +29,7 @@ interface NotifierInt
 }
 
 // Implementación de bajo nivel (la específica)
-class Email implements NotifierInt
+class EmailNotifier implements NotifierInt
 {
     public function send(): void 
     {
@@ -38,7 +38,7 @@ class Email implements NotifierInt
 }
 
 // Implementación de bajo nivel 🔻
-class Push implements NotifierInt
+class PUSHNotifier implements NotifierInt
 {
     public function send(): void 
     {
@@ -47,7 +47,7 @@ class Push implements NotifierInt
 }
 
 // Implementación de bajo nivel 🔻
-class Sms implements NotifierInt
+class SMSNotifier implements NotifierInt
 {
     public function send(): void 
     {
@@ -73,9 +73,9 @@ class Notifier
 
 function testNotifier() 
 {
-    $sms = new Sms();
-    $email = new Email();
-    $push = new Push();
+    $sms = new SMSNotifier();
+    $email = new EmailNotifier();
+    $push = new PUSHNotifier();
 
     $notifier = new Notifier($push);
     $notifier->send();
