@@ -21,7 +21,7 @@ Esto es problemático porque tienes que cambiar muchas partes del sistema.
   
 - Nuestros módulos de alto nivel, carecen de interfaces.
   
-- Haciéndote la preguntas : __¿Qué ocurre si cambiamos un módulo de bajo nivel?__, Si al responder nos damos cuenta que para realizar el cambio de un módulo de bajo nivel hay que realizar cambios en el código del módulo de alto nivel, es que no estamos utilizando el principio correctamente.
+- __¿Qué ocurriría si cambias un módulo de bajo nivel?__, Si me respondes con que para realizar el cambio de un módulo de bajo nivel hay que realizar cambios en el código del módulo de alto nivel, es que no lo estás aplicando correctamente.
   
 - Con Unit tests. Si testeando nos damos cuenta que tienen una gran complejidad debido a las dependencias podemos empezar a sospechar que estamos violando el principio.
 
