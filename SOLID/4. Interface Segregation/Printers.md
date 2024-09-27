@@ -86,7 +86,7 @@ $multiPrinter->scan();
 
 ```php
 
-function test_printers()
+function testPrinters()
 {
     $printer = new Printer();
     $colorPrinter = new ColorPrinter();
@@ -101,7 +101,7 @@ function test_printers()
 }
 
 
-test_printers();
+testPrinters();
 ```
 ### Output
 <img width="609" alt="image" src="https://github.com/user-attachments/assets/836c6b78-679e-41e9-ae75-058be7a4a63b">
