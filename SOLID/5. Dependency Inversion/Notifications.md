@@ -2,7 +2,8 @@
 
 Crea un sistema de notificaciones
 
-<img src="https://github.com/user-attachments/assets/886a596b-f9e2-4dba-adfb-1a8156f04d1f" height="300" />
+<img src="https://github.com/user-attachments/assets/a66b1eb8-53a7-472c-b3a7-43f3a8172c50" height="300" />
+
 
 ## Requisitos 🎯
 
