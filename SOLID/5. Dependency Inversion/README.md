@@ -106,7 +106,7 @@ Aquí, `UserService` depende de una abstracción (`DatabaseConnectionInterface`)
 
 ```php
 
-function test_dip()
+function testDip()
 {
     $mysql = new MySQLConnection();
     $posgre = new PostgreSQLConnection();
@@ -115,7 +115,7 @@ function test_dip()
     $userService->getUser();
 }
 
-test_dip();
+testDip();
 ```
 ### Output
 
