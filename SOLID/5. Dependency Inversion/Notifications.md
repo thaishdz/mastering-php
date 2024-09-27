@@ -46,7 +46,7 @@ class Push implements NotifierInt
 }
 
 // Implementación de bajo nivel 🔻
-class SMS implements NotifierInt
+class Sms implements NotifierInt
 {
     public function send(): void 
     {
@@ -72,7 +72,7 @@ class Notifier
 
 function testNotifier() 
 {
-    $sms = new SMS();
+    $sms = new Sms();
     $email = new Email();
     $push = new Push();
 
