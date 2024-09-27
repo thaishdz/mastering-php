@@ -11,10 +11,6 @@
 - **Módulos de bajo nivel**: son los que implementan detalles concretos, como conexiones a bases de datos, interfaces con el usuario, etc.
 
 
-
-Si una clase depende de algo muy específico (p.e, una base de datos MySQL), entonces si necesitas cambiar ese detalle (a otra base de datos, como PostgreSQL), tendrás que modificar la clase principal. 
-Esto es problemático porque tienes que cambiar muchas partes del sistema.
-
 # ¿Cómo detectar que estamos violando el `DIP`?
 
 - Evaluando si estamos dependiendo de módulos de bajo nivel.
