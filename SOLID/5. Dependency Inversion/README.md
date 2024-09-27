@@ -63,6 +63,7 @@ interface DatabaseConnectionInterface {
 class MySQLConnection implements DatabaseConnectionInterface {
     public function connect() {
         // Conecta a MySQL
+        echo "Connecting with MySQL ✅";
     }
 }
 
@@ -70,6 +71,7 @@ class MySQLConnection implements DatabaseConnectionInterface {
 class PostgreSQLConnection implements DatabaseConnectionInterface {
     public function connect() {
         // Conecta a PostgreSQL
+        echo "Connecting with PosgreSQL ✅";
     }
 }
 
@@ -99,6 +101,28 @@ public function __construct(DatabaseConnectionInterface $dbConnection)
 - Esto es lo que se llama inyección de dependencias, ya que el objeto `DatabaseConnectionInterface` (la dependencia) es “inyectado” en la clase `UserService`.
 
 Aquí, `UserService` depende de una abstracción (`DatabaseConnectionInterface`), no de una implementación concreta. Esto permite que las implementaciones de la base de datos puedan cambiar sin afectar a `UserService`, haciendo el sistema más flexible y fácil de mantener.
+
+### El testeito que comprueba la `DIP`
+
+```php
+
+function test_dip()
+{
+    $mysql = new MySQLConnection();
+    $posgre = new PostgreSQLConnection();
+
+    $userService = new UserService($posgre);
+    $userService->getUser();
+}
+
+test_dip();
+```
+### Output
+
+Tirando con uno y luego el otro conseguimos:
+
+<img width="616" alt="Captura de pantalla 2024-09-27 a las 18 28 02" src="https://github.com/user-attachments/assets/31c2172e-3478-4bae-9ad5-c91a742188a3">
+
 
 ---
 
